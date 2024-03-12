@@ -1,9 +1,10 @@
 import type { PageLoad } from "./$types"
+import { base } from "$app/paths"
 export const ssr = false
 
 export const load: PageLoad = async ({ fetch }) => {
   // Fetch dice chart JSON
-  const diceChart = await fetch("/dice_chart.json").then((res) => res.json())
+  const diceChart = await fetch(`${base}/dice_chart.json`).then((res) => res.json())
 
   // Check whether dice chart is complete
   ;(function () {
@@ -24,7 +25,7 @@ export const load: PageLoad = async ({ fetch }) => {
 
   // Fetch play XML
   const res = await fetch(
-    `/neunhundert-neun-und-neunzig-und-noch-etliche-almanachs-lustspiele_2024-02-22.xml`
+    `${base}/neunhundert-neun-und-neunzig-und-noch-etliche-almanachs-lustspiele_2024-02-22.xml`
   )
 
   // Parse XML
