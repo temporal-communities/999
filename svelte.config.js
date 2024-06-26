@@ -17,7 +17,6 @@ const config = {
       precompress: false,
       strict: true,
       path: {
-        // base: "/fu7182rx/999"
         base: process.argv.includes("dev") ? "" : process.env.BASE_PATH
       }
     })
