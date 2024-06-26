@@ -1,13 +1,7 @@
 // The dice chart has a length of 200 and contains an array of six choices, one for each side of the die.
-export function generateRandomSequence(nRolls = 200): number[] {
+export function generateRandomSequence(n = 200): number[] {
   // Effectively generate 200 d6 rolls
-  const sequence = []
-
-  for (let i = 0; i < nRolls; i++) {
-    const roll = Math.floor(Math.random() * 6)
-    sequence.push(roll)
-  }
-  return sequence
+  return Array.from(new Array(n), () => Math.floor(Math.random() * 6) + 1)
 }
 
 export function getSegmentIdByIndex(diceChart: number[][], index: number, pips: number): number {
