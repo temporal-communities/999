@@ -11,10 +11,10 @@
   <br /> <small>durch den Würfel</small>
 </h1>
 
-<!-- Display all six versions side-by-side -->
+<!-- Display all six versions side by side -->
 <div class="versions">
   {#each Array.from(new Array(200), (_x, i) => i + 1) as index}
-    <h2>{index}</h2>
+    <h2 id={index.toString()}>{index}</h2>
     <div class="section">
       {#each Array.from(new Array(6), (_x, i) => i + 1) as pips}
         <div class="roll">
