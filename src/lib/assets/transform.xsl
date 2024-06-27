@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:tei="http://www.tei-c.org/ns/1.0"
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet
   xmlns:html="http://www.w3.org/1999/xhtml"
-  exclude-result-prefixes="tei html">
-  <xsl:output method="html" indent="yes" />
+  xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  exclude-result-prefixes="tei html"
+  version="1.0"
+>
+  <xsl:output indent="yes" method="html" />
 
   <xsl:template name="tei-class">
     <xsl:attribute name="class">
       <xsl:value-of select="concat('tei-', local-name())" />
     </xsl:attribute>
   </xsl:template>
-
 
   <!-- Identity template: copies all nodes and attributes -->
   <xsl:template match="@*|node()">
@@ -92,7 +94,4 @@
       <xsl:apply-templates select="@*|node()" />
     </div>
   </xsl:template>
-
-
 </xsl:stylesheet>
-
