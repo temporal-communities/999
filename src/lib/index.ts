@@ -1,9 +1,9 @@
+import { browser } from "$app/environment"
 import diceChart from "$lib/assets/dice_chart.json"
 import almanacText from "$lib/assets/neunhundert-neun-und-neunzig-und-noch-etliche-almanachs-lustspiele.xml?raw"
 import xslStyle from "$lib/assets/transform.xsl?raw"
 import { validateDiceChart, validateSegments } from "$lib/validate"
 import { xsltTransform } from "$lib/xslt"
-import { browser } from "$app/environment"
 
 /**
  * Get play XML DOM
