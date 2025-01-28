@@ -6536,7 +6536,7 @@
               konnten.</p>
           </sp>
         </div>
-        <div n="785" type="segment">
+        <div n="785" subtype="manicule-left" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Herr, wie das? Wie kann ich Ihren Namen wissen?</p>
@@ -7763,11 +7763,12 @@
         <div n="925" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Das Fragen kommt mir zu. Wer sind Sie? Irgend ein Marder im <pb n="209" />
-              Hühnerstall; ein Liebhaber, der wahrscheinlich kommt, sich für mich auszugeben? Nicht
-              wahr? <stage>(ihn äffend)</stage> Sie sind der junge Herr von **, den sein Herr Vater
-              her schickt, um das gnädige Fräulein dort zu heirathen – Hoho! Wir wissen Alles! Sie
-              sind entdeckt, der Rechte ist schon hier, und Sie müssen das Feld räumen – –</p>
+            <p>Das Fragen kommt mir zu. Wer sind <emph>Sie</emph>? Irgend ein Marder im <pb
+              n="209"
+            /> Hühnerstall; ein Liebhaber, der wahrscheinlich kommt, sich für mich auszugeben?
+              Nicht wahr? <stage>(ihn äffend)</stage> Sie sind der junge Herr von **, den sein Herr
+              Vater her schickt, um das gnädige Fräulein dort zu heirathen – Hoho! Wir wissen Alles!
+              Sie sind entdeckt, der Rechte ist schon hier, und Sie müssen das Feld räumen – –</p>
           </sp>
         </div>
         <div n="926" type="segment">
