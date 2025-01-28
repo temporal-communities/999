@@ -1,8 +1,12 @@
 <script lang="ts">
-  export let index: number
-  export let pips: number
-  export let segments: Record<string, string>
-  export let diceChart: number[][]
+  interface Props {
+    index: number
+    pips: number
+    segments: Record<string, string>
+    diceChart: number[][]
+  }
+
+  let { index, pips, segments, diceChart }: Props = $props()
 
   // Read segmentId from diceChart
   let segmentId = diceChart[index - 1][pips - 1]

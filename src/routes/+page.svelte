@@ -3,14 +3,15 @@
   import { page } from "$app/stores"
   import { generateRandomSequence } from "$lib/dice"
 
-  export let data: PageData
-
   import Segment from "$lib/components/Segment.svelte"
+  interface Props {
+    data: PageData
+  }
+
+  let { data }: Props = $props()
 
   // Wavy path back and forth
   const wavyPath = Array.from({ length: 200 }, (_, i) => 1 + (Math.abs((i % 10) - 5) % 6))
-
-  $: sequence = handleSequence($page.url.hash)
 
   function handleSequence(hash: string) {
     const sequence = hash.slice(1)
@@ -32,6 +33,7 @@
 
     return sequence
   }
+  let sequence = $derived(handleSequence($page.url.hash))
 </script>
 
 <header>
@@ -41,12 +43,12 @@
   </h1>
 
   <button
-    on:click={() => {
+    onclick={() => {
       document.location.hash = wavyPath.join("")
     }}>Wavy path</button
   >
   <button
-    on:click={() => {
+    onclick={() => {
       document.location.hash = generateRandomSequence().join("")
     }}>Random path</button
   >
@@ -62,8 +64,12 @@
           {#each Array.from(new Array(6), (_x, i) => i + 1) as pips}
             <div class="roll flex-1">
               <h3
-                class="text-center"
-                style:background={Number(sequence[index - 1]) === pips ? "goldenrod" : ""}
+                class={[
+                  "text-center",
+                  {
+                    "bg-amber-500": Number(sequence[index - 1]) === pips
+                  }
+                ]}
               >
                 {"●".repeat(pips)}
               </h3>
