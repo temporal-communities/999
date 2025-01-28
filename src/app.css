@@ -1,8 +1,22 @@
 @import "tailwindcss";
 
-body {
-  font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
-  font-weight: normal;
-  background: white;
-  color: #292524;
+@theme {
+  /* https://modernfontstacks.com/ */
+  --font-classical-humanist: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+}
+
+/* TEI styles */
+.tei {
+  .tei-speaker {
+    /*„Sperrsatz“*/
+    @apply font-bold tracking-wider;
+  }
+  .tei-set,
+  .tei-stage {
+    @apply italic;
+  }
+  .tei-sp {
+    /*Hanging indent*/
+    @apply ps-6 -indent-6;
+  }
 }
