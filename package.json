@@ -23,6 +23,8 @@
     "@types/eslint": "^9.6.1",
     "@typescript-eslint/eslint-plugin": "^8.22.0",
     "@typescript-eslint/parser": "^8.22.0",
+    "embla-carousel-svelte": "^8.5.2",
+    "embla-carousel-wheel-gestures": "^8.0.1",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-svelte": "^2.45.1",

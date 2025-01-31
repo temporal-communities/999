@@ -1,14 +1,14 @@
 <script lang="ts">
-  import type { PageData } from "./$types"
-  import { page } from "$app/stores"
+  import { page } from "$app/state"
   import { generateRandomSequence } from "$lib/dice"
+  import emblaCarouselSvelte from "embla-carousel-svelte"
 
-  import Segment from "$lib/components/Segment.svelte"
-  interface Props {
-    data: PageData
+  import Carousel from "$lib/components/Carousel.svelte"
+
+  emblaCarouselSvelte.globalOptions = {
+    loop: true,
+    skipSnaps: true // Allow the carousel to skip scroll snaps if it's dragged vigorously
   }
-
-  let { data }: Props = $props()
 
   // Wavy path back and forth
   const wavyPath = Array.from({ length: 200 }, (_, i) => 1 + (Math.abs((i % 10) - 5) % 6))
@@ -33,7 +33,7 @@
 
     return sequence
   }
-  let sequence = $derived(handleSequence($page.url.hash))
+  let sequence = $derived(handleSequence(page.url.hash))
 </script>
 
 <header>
@@ -58,25 +58,9 @@
   <!-- Display all six versions side by side -->
   <div class="versions flex flex-col gap-10">
     {#each Array.from(new Array(200), (_x, i) => i + 1) as index}
-      <div>
+      <div class="flex flex-col items-center">
         <h2 class="text-center text-xl font-bold" id={index.toString()}>{index}</h2>
-        <div class="section flex gap-2">
-          {#each Array.from(new Array(6), (_x, i) => i + 1) as pips}
-            <div class="roll flex-1">
-              <h3
-                class={[
-                  "text-center",
-                  {
-                    "bg-amber-500": Number(sequence[index - 1]) === pips
-                  }
-                ]}
-              >
-                {"●".repeat(pips)}
-              </h3>
-              <Segment {index} {pips} segments={data.segments} diceChart={data.diceChart} />
-            </div>
-          {/each}
-        </div>
+        <Carousel {index} focusPips={sequence ? Number(sequence[index - 1]) : null} />
       </div>
     {/each}
   </div>
