@@ -30,10 +30,12 @@
 
 <style>
   /* We need to apply this globally, as the elements are generated at runtime */
-  :global([subtype*="manicule-left"] + .number:after) {
-    content: " ☚";
-  }
-  :global([subtype*="manicule-right"] + .number:before) {
-    content: "☛ ";
+  :global {
+    .tei:has([subtype*="manicule-left"]) + .number:after {
+      content: " ☚";
+    }
+    .tei:has([subtype*="manicule-right"]) + .number:before {
+      content: "☛ ";
+    }
   }
 </style>
