@@ -8,8 +8,17 @@
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "prettier --check . && eslint .",
-    "format": "prettier --write ."
+    "lint": "prettier --check . && eslint . && npm run xml-length-check",
+    "format": "prettier --write .",
+    "xml-length-check": "echo 'Checking XML line length...' && ! grep -n -E '^.{101,}' $(find src -name *.xml -o -name *.xsl) | grep -v -E 'https?:' && echo 'OK.'"
+  },
+  "scriptsComments": {
+    "xml-length-check": [
+      "Crude XML formatting check.",
+      "Checks the line length, and if it’s over 100, it has likely not been formatted by Oxygen XML",
+      "Lines containing URLs are ignored, as they cannot be wrapped",
+      "This is meant as a guardrail against obvious formatting errors"
+    ]
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.5",
