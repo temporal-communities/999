@@ -5,9 +5,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title
-          type="main"
-        >Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele durch den Würfel</title>
+        <title type="main">Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele durch
+          den Würfel</title>
         <title type="sub">Ein Lustspiel für Kinder in einem Aufzuge</title>
         <author>
           <persName type="pseudo">Simplicius</persName>
@@ -37,15 +36,18 @@
       <sourceDesc>
         <bibl type="digitalSource">
           <name>Wikisource</name>
-          <idno
-            type="URL"
-          >https://de.wikisource.org/wiki/Neunhundert_neun_und_neunzig_und_noch_etliche_Almanachs-Lustspiele_durch_den_Würfel</idno>
+          <idno type="URL"
+            >https://de.wikisource.org/wiki/Neunhundert_neun_und_neunzig_und_noch_etliche_Almanachs-Lustspiele_durch_den_Würfel</idno>
           <availability status="free">
             <p>In the public domain.</p>
           </availability>
-          <bibl type="originalSource">Simplicius (= <author>Georg Nikolaus Bärmann</author>: <title
-          >Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele durch den Würfel. Das ist: Almanach Dramatischer Spiele für die Jahre 1829 bis 1961. Ein Noth- und Hülfs-Büchlein für alle stehenden, gehenden und verwehenden Bühnen, so wie für alle Liebhabertheater und Theaterliebhaber Deutschlands</title>. <pubPlace
-          >Zwickau</pubPlace>: <publisher>Gebrüder Schumann</publisher> <date>1829</date>.</bibl>
+          <bibl type="originalSource">Simplicius (= <author>Georg Nikolaus Bärmann</author>:
+              <title>Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele durch den
+              Würfel. Das ist: Almanach Dramatischer Spiele für die Jahre 1829 bis 1961. Ein Noth-
+              und Hülfs-Büchlein für alle stehenden, gehenden und verwehenden Bühnen, so wie für
+              alle Liebhabertheater und Theaterliebhaber Deutschlands</title>.
+              <pubPlace>Zwickau</pubPlace>: <publisher>Gebrüder Schumann</publisher>
+            <date>1829</date>.</bibl>
         </bibl>
       </sourceDesc>
     </fileDesc>
@@ -57,16 +59,15 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <pb />
+    <pb/>
     <front>
       <titlePage>
         <docTitle>
-          <titlePart
-            type="main"
-          >Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele durch den Würfel.</titlePart>
-          <titlePart
-            type="sub"
-          >Das ist: Almanach Dramatischer Spiele für die Jahre 1829 bis 1961. Ein Noth- und Hülfs-Büchlein für alle stehenden, gehenden und verwehenden Bühnen, so wie für alle Liebhabertheater und Theaterliebhaber Deutschlands,</titlePart>
+          <titlePart type="main">Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele
+            durch den Würfel.</titlePart>
+          <titlePart type="sub">Das ist: Almanach Dramatischer Spiele für die Jahre 1829 bis 1961.
+            Ein Noth- und Hülfs-Büchlein für alle stehenden, gehenden und verwehenden Bühnen, so wie
+            für alle Liebhabertheater und Theaterliebhaber Deutschlands,</titlePart>
         </docTitle>
         <docAuthor>von SIMPLICIUS der freien Künste Magister.</docAuthor>
         <epigraph>
@@ -80,14 +81,14 @@
         </docImprint>
       </titlePage>
     </front>
-    <pb />
-    <pb n="I" />
+    <pb/>
+    <pb n="I"/>
     <body>
       <div type="poem">
-        <head
-        >Schutzepistel an den weil. Dramaturgen und Aesthetiker Deutschlands: Gotthold Ephraim Lessing.</head>
-        <pb n="II" />
-        <pb n="III" />
+        <head>Schutzepistel an den weil. Dramaturgen und Aesthetiker Deutschlands: Gotthold Ephraim
+          Lessing.</head>
+        <pb n="II"/>
+        <pb n="III"/>
         <l rend="indent">Schwer hab’ ich mich am Zeitgeschmack vergangen,</l>
         <l>Indem ich <emph>tausendfach</emph> – <emph>in einer Nuß</emph></l>
         <l>Das dargestellt, was sehnendes Verlangen</l>
@@ -104,7 +105,7 @@
           <emph>O Bedlam’s Nachbarschaft, o Kammerdiener,</emph>
         </l>
         <l><emph>O sieben Mädchen</emph> mit dem <emph>Kuß nach Sicht,</emph></l>
-        <pb n="IV" />
+        <pb n="IV"/>
         <l>
           <emph>O Schülerschwänke durch gestohlne Hühner,</emph>
         </l>
@@ -122,7 +123,7 @@
         <l><emph>Kunst und Natur</emph>, dies Doppelt-Ausgekochte,</l>
         <l><emph>Ihr beiden Philiberts</emph> mit Sack und Pack,</l>
         <l><emph>Intriguen Pommerns</emph>, die kein Pommer mogte</l>
-        <pb n="V" />
+        <pb n="V"/>
         <l>Und <emph>humorist’scher Studien</emph> Schabernack – –</l>
         <l>Sie Alle rücken sicher auf mich Armen</l>
         <l>Mit Redekraft und Heeresmacht herein,</l>
@@ -138,7 +139,7 @@
         <l>Vom Donaustrande bis zur Elbe harrt,</l>
         <l>Daß wir ihm neue Translationen bringen,</l>
         <l>Und neuen Lorbeer um die Schläf’ uns schlingen?“</l>
-        <pb n="VI" />
+        <pb n="VI"/>
         <l rend="indent">Und auf mich ein seh’ ich sie furchtbar dringen,</l>
         <l>Eh’ noch mein Almanach zu Kauf sich trägt.</l>
         <l>Wie kann ich Einzelner ein Heer bezwingen?</l>
@@ -155,7 +156,7 @@
         <l>– Versteh mich recht! – sie ist’s, die mich verflucht;</l>
         <l>Sie, die aus Frankreich her verbot’ne Götter</l>
         <l>Im Lustspieltempel aufzurichten sucht.</l>
-        <pb n="VII" />
+        <pb n="VII"/>
         <l>Noch sucht? Ach nein, die sie schon aufgerichtet,</l>
         <l>Und die abgöttisch knechtisch sie verehrt;</l>
         <l>So daß man das, was Du einst hast gedichtet,</l>
@@ -169,7 +170,7 @@
         <l>Wie käme da die rauhe Römertugend</l>
         <l>Des <emph>Odoard</emph> bei uns noch in Betracht,</l>
         <l>Wo demagogische Quintanerjugend</l>
-        <pb n="VIII" />
+        <pb n="VIII"/>
         <l>Den Autor und den Recensenten macht?</l>
         <l>Wo das entweih’te Treiben auf den Brettern</l>
         <l>Thaliens – tausend Gänsekiele treibt,</l>
@@ -187,18 +188,17 @@
           <emph>Simplicius!</emph>
         </signed>
       </div>
-      <pb n="IX" />
+      <pb n="IX"/>
       <div type="preface">
-        <head type="main">Avis au lecteur!<note place="foot">Will etwa Herr <foreign
-        >M.</foreign> <emph
-        >Simplicius</emph> gleich von vorn herein zu verstehen geben, daß er auch französisch versteht? Du liebe Zeit! das kann heut zu Tage jede Stubenmagd. <emph
-        >Anm. d. Setzers.</emph></note></head>
-        <head
-          type="sub"
-        >Das ist: Wer ein Buch oder Büchlein kauft, dem gehört auch die Vorrede.</head>
+        <head type="main">Avis au lecteur!<note place="foot">Will etwa Herr <foreign>M.</foreign>
+            <emph>Simplicius</emph> gleich von vorn herein zu verstehen geben, daß er auch
+            französisch versteht? Du liebe Zeit! das kann heut zu Tage jede Stubenmagd. <emph>Anm.
+              d. Setzers.</emph></note></head>
+        <head type="sub">Das ist: Wer ein Buch oder Büchlein kauft, dem gehört auch die
+          Vorrede.</head>
         <p>(Placeholder)</p>
       </div>
-      <pb n="1" />
+      <pb n="1"/>
       <div type="main">
         <head>Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele</head>
         <epigraph>
@@ -208,8 +208,8 @@
           </quote>
           <bibl>Boileau.</bibl>
         </epigraph>
-        <pb n="2" />
-        <pb n="3" />
+        <pb n="2"/>
+        <pb n="3"/>
         <div n="1" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -241,7 +241,7 @@
             <p>Du weißt, daß mein Vormund – –</p>
           </sp>
         </div>
-        <pb n="4" />
+        <pb n="4"/>
         <div n="5" subtype="manicule-right" type="segment">
           <titlePart type="main">Er muß Ja sagen.</titlePart>
           <titlePart type="sub">Ein Lustspiel in einem Act.</titlePart>
@@ -258,17 +258,16 @@
           <sp>
             <speaker>Das Kammerm.</speaker>
             <stage>(bei Seite)</stage>
-            <p
-            >Rührender Anblick! Seit gestern Vormittag, wo sie sich zuletzt sahen und küßten, noch immer dieselbe Wärme des Herzens!</p>
+            <p>Rührender Anblick! Seit gestern Vormittag, wo sie sich zuletzt sahen und küßten, noch
+              immer dieselbe Wärme des Herzens!</p>
           </sp>
         </div>
         <div n="8" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
             <stage>(für sich)</stage>
-            <p
-            >Ich lasse sie allein, sich zu schnäbeln. Wahrscheinlich erwartet mein Tauber mich auch schon. <stage
-            >(Ab.)</stage></p>
+            <p>Ich lasse sie allein, sich zu schnäbeln. Wahrscheinlich erwartet mein Tauber mich
+              auch schon. <stage>(Ab.)</stage></p>
           </sp>
         </div>
         <div n="9" type="segment">
@@ -276,7 +275,7 @@
             <speaker>Der Liebh.</speaker>
             <p>Sprich, Königinn meines Herzens!</p>
           </sp>
-          <pb n="5" />
+          <pb n="5"/>
           <sp>
             <speaker>Die Nichte.</speaker>
             <p>Die Trennung, die uns bevorsteht – –</p>
@@ -315,7 +314,7 @@
             <p>Gram der Liebe wird uns im Uebermaaße – –</p>
           </sp>
         </div>
-        <pb n="6" />
+        <pb n="6"/>
         <div n="14" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -327,9 +326,12 @@
           <sp>
             <speaker>Die Nichte</speaker>
             <stage>(allein, ungeduldig auf und ab.)</stage>
-            <p
-            >Nein, schon ist’s zwei Minuten über die bestimmte Stunde, und noch ist er nicht da! Horch!– „Hör ich nicht Tritte erschallen?” Wird’s auf dem Gange nicht laut? – Nein, der Spitz ist’s in den Hallen, dem vor Miez, dem Kater grau’t. – – Ach! Ich komme mir vor, wie ein eingemauertes Klosterfräulein! – – Er kommt <emph
-            >noch</emph> nicht. Wenn ich ihn nicht so überaus lieb hätte, so würde ich ihn tüchtig schelten, daß er nicht pünktlich ist – – Aber still – Wer da? Ha! Mein Mädchen?</p>
+            <p>Nein, schon ist’s zwei Minuten über die bestimmte Stunde, und noch ist er nicht da!
+              Horch!– „Hör ich nicht Tritte erschallen?” Wird’s auf dem Gange nicht laut? – Nein,
+              der Spitz ist’s in den Hallen, dem vor Miez, dem Kater grau’t. – – Ach! Ich komme mir
+              vor, wie ein eingemauertes Klosterfräulein! – – Er kommt <emph>noch</emph> nicht. Wenn
+              ich ihn nicht so überaus lieb hätte, so würde ich ihn tüchtig schelten, daß er nicht
+              pünktlich ist – – Aber still – Wer da? Ha! Mein Mädchen?</p>
           </sp>
         </div>
         <div n="16" type="segment">
@@ -338,12 +340,12 @@
             <p>Mein Prozeß ist gewonnen, ich habe Vermögen; also sehe ich nicht ein – –</p>
           </sp>
         </div>
-        <pb n="7" />
+        <pb n="7"/>
         <div n="17" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
-            <p
-            >Könntest Du mich für so leichtsinnig halten, mein mütterliches Erbtheil in den Händen meines Oheims zu lassen, und flüchtigen Fußes mit Dir – –?</p>
+            <p>Könntest Du mich für so leichtsinnig halten, mein mütterliches Erbtheil in den Händen
+              meines Oheims zu lassen, und flüchtigen Fußes mit Dir – –?</p>
           </sp>
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -374,7 +376,7 @@
         <div n="21" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
-            <p>Was auch geschehen möge: <pb n="8" /> Bist Du mein, so trotz’ ich einer Welt voll
+            <p>Was auch geschehen möge: <pb n="8"/> Bist Du mein, so trotz’ ich einer Welt voll
               Widerwärtigkeiten.</p>
           </sp>
         </div>
@@ -420,7 +422,7 @@
             <p>Aber mein Herz verschenkte ich bereits – –</p>
           </sp>
         </div>
-        <pb n="9" />
+        <pb n="9"/>
         <div n="29" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -461,7 +463,7 @@
         <div n="35" subtype="manicule-left" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
-            <p>Theure Freundinn! Wird <pb n="10" /> der Ehe zartes Band mich jemals mit ihm
+            <p>Theure Freundinn! Wird <pb n="10"/> der Ehe zartes Band mich jemals mit ihm
               vereinigen?</p>
           </sp>
         </div>
@@ -502,7 +504,7 @@
               – – Böses Geschäft für manchen jungen Herrn!</p>
           </sp>
         </div>
-        <pb n="11" />
+        <pb n="11"/>
         <div n="42" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -542,7 +544,7 @@
         <div n="48" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>List? „Das gehört in mein <pb n="12" /> Departement!“ sagt ein berühmter Lust- und
+            <p>List? „Das gehört in mein <pb n="12"/> Departement!“ sagt ein berühmter Lust- und
               List-Spieldichter.</p>
           </sp>
         </div>
@@ -575,7 +577,7 @@
         <div n="53" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Wie? Nur nicht auf verbrauchtem, <pb n="13" /> gleichsam gemißbrauchtem Komödienwege
+            <p>Wie? Nur nicht auf verbrauchtem, <pb n="13"/> gleichsam gemißbrauchtem Komödienwege
               –</p>
           </sp>
         </div>
@@ -606,8 +608,7 @@
             <p>Hm! Ob ich’s wage? Ja, ich wag’ es. Würde meine Verschwörung auch verrathen, würde
               sie auch dem Alten hinterbracht; wäre dieser auch klüger als in ähnlichem Falle
               weiland der alte Herr Doria von Genua – dennoch behalt’ ich den Muth; gleichsam <pb
-              n="14"
-            /> ein <emph>Fiesko</emph> in der Republik der schlauen Bedienten. Auch
+                n="14"/> ein <emph>Fiesko</emph> in der Republik der schlauen Bedienten. Auch
               verräth mein Herr mich nicht und dir <stage>(zum Kammermädchen, die er küssen will,
                 die ihn aber abwehrt, oder es auch geschehen lassen kann, wenn sie Lust hat)</stage>
               – Dir drück’ ich ein Siegel auf den Mund.</p>
@@ -640,7 +641,7 @@
               verdient werden.</p>
           </sp>
         </div>
-        <pb n="15" />
+        <pb n="15"/>
         <div n="62" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -671,7 +672,7 @@
             <p>Meine Angebetete!</p>
           </sp>
         </div>
-        <pb n="16" />
+        <pb n="16"/>
         <div n="66" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -713,7 +714,7 @@
             <p>Endlich nahst du diesem Herzen!</p>
           </sp>
         </div>
-        <pb n="17" />
+        <pb n="17"/>
         <div n="71" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -745,7 +746,7 @@
               sie sich wieder neu. Liebe, wie sie sich selbst auf dem Theater kaum darbietet!</p>
           </sp>
         </div>
-        <pb n="18" />
+        <pb n="18"/>
         <div n="76" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -787,7 +788,7 @@
         <div n="81" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
-            <p>So gehe voran und thue nach <pb n="19" /> Deinen vorherigen Redensarten. Du bist ja
+            <p>So gehe voran und thue nach <pb n="19"/> Deinen vorherigen Redensarten. Du bist ja
               hier die Seele; ich bin nur der Leib.</p>
           </sp>
         </div>
@@ -818,7 +819,7 @@
           <sp>
             <speaker>Das Kammerm.</speaker>
             <stage>(für sich)</stage>
-            <p>Ei, ei! Wie <pb n="20" /> zappelt mir das Herzchen bei diesem Anblick! Hinaus zu
+            <p>Ei, ei! Wie <pb n="20"/> zappelt mir das Herzchen bei diesem Anblick! Hinaus zu
               meinem Schätzchen; sicher ist er nicht weit. <stage>(Ab.)</stage></p>
           </sp>
         </div>
@@ -852,7 +853,7 @@
           <head>Zwölfter Auftritt.</head>
           <stage>Der Onkel. Der Liebhaber. (Beide zugleich herein.)</stage>
         </div>
-        <pb n="21" />
+        <pb n="21"/>
         <div n="90" subtype="manicule-right" type="segment">
           <head>Vierter Auftritt.</head>
           <stage>Die Nichte. Der Liebhaber.</stage>
@@ -883,7 +884,7 @@
             <p>Warum versagen Sie mir meine Bitte?</p>
           </sp>
         </div>
-        <pb n="22" />
+        <pb n="22"/>
         <div n="94" type="segment">
           <head>Eilfter Auftritt.</head>
           <stage>Das Kammermädchen.</stage>
@@ -923,7 +924,7 @@
               Vormünder.</p>
           </sp>
         </div>
-        <pb n="23" />
+        <pb n="23"/>
         <div n="99" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -959,9 +960,7 @@
         <div n="104" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
-            <p>Frei hervorgehen aus des Kerkers <pb
-              n="24"
-            /> Nacht wird meine Geliebte, die Sie, wie
+            <p>Frei hervorgehen aus des Kerkers <pb n="24"/> Nacht wird meine Geliebte, die Sie, wie
               einst Elisabeth die schottische Maria, widerrechtlich gefangen halten. Allein trotz
               Ihrer eigensinnigen Laune werden Sie dennoch selbst, wenn der Holden Gefängnißpforte
               sich aufthut, Kerkermeisters Dienste dabei verrichten müssen!</p>
@@ -995,7 +994,7 @@
             <p>Da hören Sie’s!</p>
           </sp>
         </div>
-        <pb n="25" />
+        <pb n="25"/>
         <div n="109" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -1038,7 +1037,7 @@
             <p>Ich bin der Tugend, wie der Liebe treu; also –</p>
           </sp>
         </div>
-        <pb n="26" />
+        <pb n="26"/>
         <div n="116" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -1094,7 +1093,7 @@
             <stage>(öffnet die Mittelthür.)</stage>
           </sp>
         </div>
-        <pb n="27" />
+        <pb n="27"/>
         <div n="123" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -1124,7 +1123,7 @@
             <p>Allerdings, wenn – –</p>
           </sp>
         </div>
-        <pb n="28" />
+        <pb n="28"/>
         <div n="126" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -1160,7 +1159,7 @@
         <div n="131" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Kann es jenem wichtigen Schreiben an der Nennung meines Namens fehlen. <pb n="29" />
+            <p>Kann es jenem wichtigen Schreiben an der Nennung meines Namens fehlen. <pb n="29"/>
               Demnach, um Unterschleif, Verwechselung und Betrug zu verhüten, muß <emph>ich
                 Sie</emph> fragen, wie mein Name ist, also: Wie heiß’ ich, mein Herr – – –</p>
           </sp>
@@ -1191,7 +1190,7 @@
           <stage>Die Vorigen. Das Kammermädchen.</stage>
           <sp>
             <speaker>Das Kammerm.</speaker>
-            <p>Schnell! Schnell! Wollen <pb n="30" /> Sie hier ertappt werden? Der Herr kommt durch
+            <p>Schnell! Schnell! Wollen <pb n="30"/> Sie hier ertappt werden? Der Herr kommt durch
               den Corridor. Fort! Hier hinaus! <stage>(Alle ab.)</stage></p>
           </sp>
         </div>
@@ -1218,7 +1217,7 @@
             <p>Nun, ich denke; aber – –</p>
           </sp>
         </div>
-        <pb n="31" />
+        <pb n="31"/>
         <div n="138" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -1242,7 +1241,7 @@
             <p>„Die Austern sind da, der Kaviar ist da, die Pastete ist da; folglich ist Verlobung!“
               sagt der berühmte Kotzebue in dem berühmteren Lustspiele: Das Epigramm; das eben darum
               das berühmteste aller Epigramme ist, weil keines Menschen Ohr es jemals gehört hat.
-              Ich spreche: der Brief ist da, ich bin da, und meine Nichte <pb n="32" /> ist da, und
+              Ich spreche: der Brief ist da, ich bin da, und meine Nichte <pb n="32"/> ist da, und
               der Bräutigam Thaddäus Bocklümmel wird kommen, heut oder morgen. Also ist morgen
               Verlobung und damit Punktum! Fräulein Nichte, des Gesperres und Geliebels mit dem
               Monsieur da, sind wir überdrüßig. – Heda! Wo steckt sie denn? <stage>(Er klingelt. Das
@@ -1277,7 +1276,7 @@
             <speaker>Der Oheim.</speaker>
             <p>Was? Wie wäre das?</p>
           </sp>
-          <pb n="33" />
+          <pb n="33"/>
           <sp>
             <speaker>Das Kammerm.</speaker>
             <stage>(heimlich zum Diener)</stage>
@@ -1312,9 +1311,7 @@
         <div n="147" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
-            <p>Ich brauche nicht zu Worte <pb
-              n="34"
-            /> zu kommen. Nein ist bald gesagt und also sage
+            <p>Ich brauche nicht zu Worte <pb n="34"/> zu kommen. Nein ist bald gesagt und also sage
               ich: Nein, nein, nein!</p>
           </sp>
           <sp>
@@ -1342,7 +1339,7 @@
               das himmelschreiendste Unrecht anzuthun, und das werd’ ich. So wie ich jenen
               vermaledeiten Contract werde unterschrieben haben, thue ich Ihnen alles zum
               Schabernack, was ich nur vermag. Ihr Hühnerhof, ich weiß es, Ihre Fasanerie – im
-              Wirthshause <pb n="35" /> erzählte man mir’s – ist Ihr <foreign>Sans-Souci</foreign>,
+              Wirthshause <pb n="35"/> erzählte man mir’s – ist Ihr <foreign>Sans-Souci</foreign>,
               Ihr <foreign>Mon-Repos</foreign>. Warten Sie nur! die rührige Jugend des Orts treib’
               ich zusammen, und ehe zehn Minuten vergehen, laufen Ihre Fasanen nackt herum und die
               gerupften Hühner sollen solches Geschrei erheben – –</p>
@@ -1366,9 +1363,7 @@
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Sie sind leidenschaftlicher Raucher, das ist stadtkundig. Gut! So wie Sie eine Pfeife
-              in den Mund nehmen, wird sie inwendig mit Aloe und Ipecacuanha bestrichen <pb
-              n="36"
-            />
+              in den Mund nehmen, wird sie inwendig mit Aloe und Ipecacuanha bestrichen <pb n="36"/>
               seyn; den Tabak vergift’ ich nicht, aber ich menge Salpeter d’runter.</p>
           </sp>
         </div>
@@ -1403,7 +1398,7 @@
             <speaker>Der Oheim.</speaker>
             <p>Aber aus Barmherzigkeit! So hören Sie doch!</p>
           </sp>
-          <pb n="37" />
+          <pb n="37"/>
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Ich will nichts hören, aber von mir sollen Sie hören, soll dieser Herr hören, sollen
@@ -1460,7 +1455,7 @@
             <p>Dann haben meine Geliebte und ich längst unsern Wohnort vertauscht.</p>
           </sp>
         </div>
-        <pb n="38" />
+        <pb n="38"/>
         <div n="162" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -1492,8 +1487,7 @@
           </sp>
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Richtig, und: „Nach dem <pb n="39" /> Englischen: <foreign
-            >„As you like it;“</foreign>
+            <p>Richtig, und: „Nach dem <pb n="39"/> Englischen: <foreign>„As you like it;“</foreign>
               damit doch nicht <emph>alle</emph> Abende auf dem Comödienzettel stehe: „Nach dem
               Französischen.“</p>
           </sp>
@@ -1524,7 +1518,7 @@
           <sp>
             <speaker>Die Nichte</speaker>
             <stage>(allein am Fenster.)</stage>
-            <p>Vergebens starr’ ich hinaus in das Frühroth. <pb n="40" /> Ich sehe ihn nicht kommen.
+            <p>Vergebens starr’ ich hinaus in das Frühroth. <pb n="40"/> Ich sehe ihn nicht kommen.
               Und er weiß doch, daß dies die beste Stunde ist, ein vertraulich Wort mit mir zu
               kosen. Ach! ich bin recht unglücklich. Freilich soll es schon vielen Mädchen so
               gegangen seyn, wie mir: Aus hundert und abermal hundert Comödien soll sich das
@@ -1553,7 +1547,7 @@
               wird es haben, wenn der Brief, den der Herr Onkel gestern Abend spät – –</p>
           </sp>
         </div>
-        <pb n="41" />
+        <pb n="41"/>
         <div n="172" type="segment">
           <castList>
             <head>Personen.</head>
@@ -1597,9 +1591,7 @@
           <stage>Die Nichte. Der Liebhaber.</stage>
           <sp>
             <speaker>Die Nichte.</speaker>
-            <p>Laß uns mäßig nippen <pb
-              n="42"
-            /> vom Kelche der Liebe und vor Allem bedenken – –</p>
+            <p>Laß uns mäßig nippen <pb n="42"/> vom Kelche der Liebe und vor Allem bedenken – –</p>
           </sp>
         </div>
         <div n="177" type="segment">
@@ -1643,7 +1635,7 @@
             <p>Schnell! Der alte Herr kommt. Folgen Sie mir. <stage>(Alle ab.)</stage></p>
           </sp>
         </div>
-        <pb n="43" />
+        <pb n="43"/>
         <div n="183" type="segment">
           <head>Siebenter Auftritt.</head>
           <stage>Der Oheim. Die Nichte.</stage>
@@ -1678,7 +1670,7 @@
             <p>Wirklich also meynst Du, ich handelte unvernünftig, wenn ich mein nicht unbedeutendes
               Vermögen in meines Oheims Händen ließe, um mit Dir –</p>
           </sp>
-          <pb n="44" />
+          <pb n="44"/>
           <sp>
             <speaker>Der Liebh.</speaker>
             <p>Wäre meine Liebe rein, wenn sie auf Deine Mitgift sähe?</p>
@@ -1722,7 +1714,7 @@
             <p>Ist Sache Ihres unwiderruflich bestimmten Eheherrn.</p>
           </sp>
         </div>
-        <pb n="45" />
+        <pb n="45"/>
         <div n="194" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -1766,7 +1758,7 @@
               die Rede, und diese befiehlt Dir, zu gehorchen und zwar ohne alle Widerrede.</p>
           </sp>
         </div>
-        <pb n="46" />
+        <pb n="46"/>
         <div n="201" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -1809,7 +1801,7 @@
             <p>Grausamer Alter!</p>
           </sp>
         </div>
-        <pb n="47" />
+        <pb n="47"/>
         <div n="208" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
@@ -1845,7 +1837,7 @@
                 <emph>List</emph>!</p>
           </sp>
         </div>
-        <pb n="48" />
+        <pb n="48"/>
         <div n="213" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -1876,7 +1868,7 @@
               Immerhin! mein Beifall ist dennoch golden.</p>
           </sp>
         </div>
-        <pb n="49" />
+        <pb n="49"/>
         <div n="217" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
@@ -1908,9 +1900,7 @@
         <div n="221" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Wohlan denn! Der Bräutigam <pb
-              n="50"
-            /> Ihrer Geliebten wird nicht mehr erwartet – er
+            <p>Wohlan denn! Der Bräutigam <pb n="50"/> Ihrer Geliebten wird nicht mehr erwartet – er
               ist schon hier!</p>
           </sp>
         </div>
@@ -1951,7 +1941,7 @@
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Pst! Das hieße das Kind mit dem Bade verschütten. Wer soll hier den Triumph der List
-              davon tragen? Antwort: ich! <pb n="51" /> Sie bekommen nur die Braut und damit müssen
+              davon tragen? Antwort: ich! <pb n="51"/> Sie bekommen nur die Braut und damit müssen
               Sie sich begnügen.</p>
           </sp>
         </div>
@@ -1997,7 +1987,7 @@
         <div n="232" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
-            <p>Laufe noch nicht weg. Nimm <pb n="52" /> erst dies Handgeld zu treuem Dienste unter
+            <p>Laufe noch nicht weg. Nimm <pb n="52"/> erst dies Handgeld zu treuem Dienste unter
               Amors Fahne.</p>
           </sp>
         </div>
@@ -2040,7 +2030,7 @@
             <p>Wie heißt solche Handlung?</p>
           </sp>
         </div>
-        <pb n="53" />
+        <pb n="53"/>
         <div n="239" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -2079,7 +2069,7 @@
               meine Nichte und ihr Geldsack ist.</p>
           </sp>
         </div>
-        <pb n="54" />
+        <pb n="54"/>
         <div n="245" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -2125,7 +2115,7 @@
         <div n="251" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
-            <p>Immerhin! So wie sie frei <pb n="55" /> seyn wird, ist sie verschwunden, und ich bin
+            <p>Immerhin! So wie sie frei <pb n="55"/> seyn wird, ist sie verschwunden, und ich bin
               es mit ihr.</p>
           </sp>
         </div>
@@ -2163,7 +2153,7 @@
             <p>Aus dem Wege, mein Herr.</p>
           </sp>
         </div>
-        <pb n="56" />
+        <pb n="56"/>
         <div n="257" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -2196,7 +2186,7 @@
               Persifflanten, Obscuranten, Pedanten, Maleficanten –</p>
           </sp>
         </div>
-        <pb n="57" />
+        <pb n="57"/>
         <div n="262" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -2225,7 +2215,7 @@
             <p>O weh! Er ist toll!</p>
           </sp>
         </div>
-        <pb n="58" />
+        <pb n="58"/>
         <div n="265" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -2243,7 +2233,7 @@
               Milchkammer, in der Schöffensession und in der Barbierstube. Ich spiele mit Plastik
               und Gymnastik, mit Heraldik und Metaphysik, mit Geometrie und Astrologie, mit
               Todtenköpfen und Homöopathie, mit der Natur und der Hungerkur, mit Rossini und Weber,
-              mit Beefstacke und Gänseleber, mit Instrumenten und Complimenten, <pb n="59" /> mit
+              mit Beefstacke und Gänseleber, mit Instrumenten und Complimenten, <pb n="59"/> mit
               Meynungen, Erscheinungen und Verneinungen – –</p>
           </sp>
           <sp>
@@ -2277,7 +2267,7 @@
         <div n="270" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>Fort mit Dir in Dein Zimmer, <pb n="60" /> oder ich lasse eine Brücke bauen, wie die
+            <p>Fort mit Dir in Dein Zimmer, <pb n="60"/> oder ich lasse eine Brücke bauen, wie die
               weiland, jetzt eingestürzte, Brücke zu Kenilworth und dich mit sammt Deinem Liebhaber
               hinüber peitschen.</p>
           </sp>
@@ -2318,7 +2308,7 @@
                 dem Diener heimliche Winke.)</stage></p>
           </sp>
         </div>
-        <pb n="61" />
+        <pb n="61"/>
         <div n="275" subtype="manicule-left" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -2354,7 +2344,7 @@
         <div n="279" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Doch lassen wir das. Ich brenne vor Verlangen, Ihre Fräulein Nichte zu <pb n="62" />
+            <p>Doch lassen wir das. Ich brenne vor Verlangen, Ihre Fräulein Nichte zu <pb n="62"/>
               sehen, ihr zu gefallen, sie zu heirathen – Führen Sie mich zu ihr.</p>
           </sp>
         </div>
@@ -2391,7 +2381,7 @@
         <div n="283" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Nichts Rath annehmen, nichts bedenken, nichts hören, nichts ändern in <pb n="63" />
+            <p>Nichts Rath annehmen, nichts bedenken, nichts hören, nichts ändern in <pb n="63"/>
               seinen Entschlüssen; beharren, veststehen, unbiegsam, hartnäckig und eisenköpfig seyn:
               das ist’s, was der Zeitgeist von einem Jüngling meiner Natur fordert.</p>
           </sp>
@@ -2419,9 +2409,7 @@
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Was muß ich hören? Sie machen mich zu einem Verwiesenen, Verbannten, Verachteten,
-              Verspotteten, Verdrängten, Verschmähten, Vernichteten? Hat Ihr Herr <pb
-              n="64"
-            /> Onkel
+              Verspotteten, Verdrängten, Verschmähten, Vernichteten? Hat Ihr Herr <pb n="64"/> Onkel
               mich darum verschrieben? Hat er darum Sie gewiß mit den väterlichsten Worten ermahnt,
               mich mit Liebe zu empfangen? Hat er darum Ihr Vermögen auf die einträglichsten Zinsen
               gelegt, daß es mir mit sammt Ihrer werthen Person entgehen soll?</p>
@@ -2444,7 +2432,7 @@
               quälen, martern.</p>
           </sp>
         </div>
-        <pb n="65" />
+        <pb n="65"/>
         <div n="288" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -2472,7 +2460,7 @@
         <div n="290" subtype="manicule-left" type="segment">
           <sp>
             <p>Wahrhaftig! Er schließt sie ein. Ach, mein armes Fräulein. – Horch! der Alte brummt
-              Trepp an. Er geht in die Bibliothek – <stage>(zur Thür <pb n="66" />
+              Trepp an. Er geht in die Bibliothek – <stage>(zur Thür <pb n="66"/>
                 hinaussprechend)</stage> Geschwind, komm herein. <stage>(Der Diener tritt
                 ein.)</stage> Ist Dein Herr mit Dir?</p>
           </sp>
@@ -2516,7 +2504,7 @@
               Verrath!</p>
           </sp>
         </div>
-        <pb n="67" />
+        <pb n="67"/>
         <div n="294" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
@@ -2553,7 +2541,7 @@
         <div n="297" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
-            <p>Ja. Er ist es, dem ich mein <pb n="68" /> Glück verdanke, der hier die versprochenen
+            <p>Ja. Er ist es, dem ich mein <pb n="68"/> Glück verdanke, der hier die versprochenen
               Goldstücke empfängt und der sich mit seiner Herzgeliebten da ergötzen mag, wo und wie
               es ihm beliebt, während wir Beide uns ungestört dem Genusse der Liebe widmen
               wollen.</p>
@@ -2587,7 +2575,7 @@
               entwendet!“</p>
           </sp>
         </div>
-        <pb n="69" />
+        <pb n="69"/>
         <div n="301" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -2621,7 +2609,7 @@
               ihnen schon vorher eine Dankadresse auswendig lernen.</p>
           </sp>
         </div>
-        <pb n="70" />
+        <pb n="70"/>
         <div n="304" type="segment">
           <head>Erster Auftritt.</head>
           <sp>
@@ -2645,7 +2633,7 @@
             <p>Ei, wer wird den Muth verlieren?</p>
           </sp>
         </div>
-        <pb n="71" />
+        <pb n="71"/>
         <div n="307" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
@@ -2683,7 +2671,7 @@
         <div n="312" type="segment">
           <head>Dritter Auftritt.</head>
           <stage>Die Vorigen. Der Liebhaber.</stage>
-          <pb n="72" />
+          <pb n="72"/>
           <sp>
             <speaker>Der Liebh.</speaker>
             <stage>(hereinstürzend)</stage>
@@ -2720,7 +2708,7 @@
               Statt.</p>
           </sp>
         </div>
-        <pb n="73" />
+        <pb n="73"/>
         <div n="317" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -2757,7 +2745,7 @@
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Gleich sollst Du’s hören. Längst bin ich Deines Gepinsels überdrüßig. Morgen nimmt’s
-              aber ein Ende, vielleicht heut noch. <pb n="74" /> Der junge Herr von **, Dein
+              aber ein Ende, vielleicht heut noch. <pb n="74"/> Der junge Herr von **, Dein
               bestimmter Bräutigam, wird nunmehr erscheinen. Mache Dich bereit, Deine Verlobung mit
               ihm zu feiern.</p>
           </sp>
@@ -2792,7 +2780,7 @@
             <p>Türke von einem Vormund!</p>
           </sp>
         </div>
-        <pb n="75" />
+        <pb n="75"/>
         <div n="326" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -2832,7 +2820,7 @@
             <p>Dafür wird Dein Bräutigam schon sorgen.</p>
           </sp>
         </div>
-        <pb n="76" />
+        <pb n="76"/>
         <div n="332" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -2872,7 +2860,7 @@
             <p>– ein beklagenswerthes vielmehr –</p>
           </sp>
         </div>
-        <pb n="77" />
+        <pb n="77"/>
         <div n="338" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -2910,7 +2898,7 @@
           <head>Achter Auftritt.</head>
           <stage>Das Kammermädchen (welches horchte, tritt auf.)</stage>
         </div>
-        <pb n="78" />
+        <pb n="78"/>
         <div n="344" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -2950,7 +2938,7 @@
             <p>Schalksknecht. – – Aber man belauscht uns doch nicht?</p>
           </sp>
         </div>
-        <pb n="79" />
+        <pb n="79"/>
         <div n="350" subtype="manicule-left" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -2994,7 +2982,7 @@
         <div n="355" subtype="manicule-left" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
-            <p>Das angedrohte Schicksal bricht endlich herein; es kommt und naht in <pb n="80" />
+            <p>Das angedrohte Schicksal bricht endlich herein; es kommt und naht in <pb n="80"/>
               Gestalt eines Bräutigams, zwar auch eines verschriebenen, doch nicht des vielbeliebten
               Bräutigams aus Mexico; es kommt morgen, vielleicht heute noch – der Alte sprach
               es.</p>
@@ -3028,7 +3016,7 @@
             <stage>(zugleich)</stage>
           </spGrp>
         </div>
-        <pb n="81" />
+        <pb n="81"/>
         <div n="359" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
@@ -3063,7 +3051,7 @@
               Im Rocke steckt der Held und der Popanz. Geschwind, den Alten zu bearbeiten!</p>
           </sp>
         </div>
-        <pb n="82" />
+        <pb n="82"/>
         <div n="364" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -3100,7 +3088,7 @@
               willst.</p>
           </sp>
         </div>
-        <pb n="83" />
+        <pb n="83"/>
         <div n="369" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -3138,7 +3126,7 @@
           <head>Eilfter Auftritt.</head>
           <stage>Das Kammermädchen.</stage>
         </div>
-        <pb n="84" />
+        <pb n="84"/>
         <div n="375" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
@@ -3168,7 +3156,7 @@
             <speaker>Der Liebh.</speaker>
             <p>Sehr bündig gesprochen.</p>
           </sp>
-          <pb n="85" />
+          <pb n="85"/>
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Ist einmal meine Art so. Uebrigens ist meine Nichte eingesperrt, folglich für Niemand
@@ -3214,7 +3202,7 @@
             <p>Ist er da?</p>
           </sp>
         </div>
-        <pb n="86" />
+        <pb n="86"/>
         <div n="384" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
@@ -3256,7 +3244,7 @@
               widersinnig, für rasend, für besessen, für – – –</p>
           </sp>
         </div>
-        <pb n="87" />
+        <pb n="87"/>
         <div n="389" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -3294,7 +3282,7 @@
           <sp>
             <speaker>Der Diener.</speaker>
             <p>So ist’s. Wären Sie mit sich einig, so würden Sie mich anders behandeln. Aber weil
-              Sie vielleicht meynen, daß <pb n="88" /> die Leute auf dem Theater sich oft setzen, wo
+              Sie vielleicht meynen, daß <pb n="88"/> die Leute auf dem Theater sich oft setzen, wo
               sie stehen sollten, und da stehen, wo sie sitzen sollten, so wollen Sie aus mir
               solchen Comödiennarren machen, deswegen bieten Sie mir keinen Stuhl und fragen nicht
               einmal: „Mein Herr, mit wem hab’ ich die Ehre?“ –</p>
@@ -3324,7 +3312,7 @@
         <div n="398" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Es findet doch von Seiten <pb n="89" /> Ihrer Nichte keine Unzufriedenheit mit dieser
+            <p>Es findet doch von Seiten <pb n="89"/> Ihrer Nichte keine Unzufriedenheit mit dieser
               Heirath Statt?</p>
           </sp>
         </div>
@@ -3352,7 +3340,7 @@
               nichts von mir wissen, hören, sehen, vernehmen, erfahren, empfangen, behalten und es
               aufbewahren bis Sie’s – –</p>
           </sp>
-          <pb n="90" />
+          <pb n="90"/>
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Mein Gott, der Mensch räsonnirt fürchterlich! Lassen Sie doch meine Nichte zu Worte
@@ -3389,8 +3377,7 @@
             <speaker>Der Diener.</speaker>
             <p>Sie brechen mir das Herz. Was sag’ ich? Sie haben es schon gebrochen. Meine Lippe
               lallt, meine Zunge starrt, meine Fiebern beben, meine Pulse stocken, meine Nerven <pb
-              n="91"
-            /> zucken bei dem Todeswort, das Sie aussprechen.</p>
+                n="91"/> zucken bei dem Todeswort, das Sie aussprechen.</p>
             <stage>(parodirend)</stage>
             <l>„Ich soll mich Aermster nicht beklagen,</l>
             <l>Daß solch ein Leid an mir geschicht?</l>
@@ -3432,7 +3419,7 @@
             <speaker>Der Oheim.</speaker>
             <p>Tollhäusler!</p>
           </sp>
-          <pb n="92" />
+          <pb n="92"/>
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Ihrer Schachmaschine, die von selber spielt, nehme ich die messingene Seele aus, daß
@@ -3469,7 +3456,7 @@
               ich nemlich darin bleibe.</p>
           </sp>
         </div>
-        <pb n="93" />
+        <pb n="93"/>
         <div n="410" subtype="manicule-left" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -3507,7 +3494,7 @@
             <p>Frischen Muth, schönes Fräulein!</p>
           </sp>
         </div>
-        <pb n="94" />
+        <pb n="94"/>
         <div n="415" type="segment">
           <spGrp>
             <sp>
@@ -3541,7 +3528,7 @@
               den Ihr Herr Vormund gestern Abend spät erhielt!</p>
           </sp>
         </div>
-        <pb n="95" />
+        <pb n="95"/>
         <div n="418" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -3588,7 +3575,7 @@
             <p>Schicksal! Wie soll es mit uns werden?</p>
           </sp>
         </div>
-        <pb n="96" />
+        <pb n="96"/>
         <div n="424" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -3634,7 +3621,7 @@
           <sp>
             <speaker>Das Kammerm.</speaker>
             <p>Schnell! Bitt’ ihn herein zu kommen. <stage>(Der Diener wieder ab) (allein)</stage>
-              Der <pb n="97" /> Hausbär hat sich in den Winkel gezogen; der Schauplatz ist leer und
+              Der <pb n="97"/> Hausbär hat sich in den Winkel gezogen; der Schauplatz ist leer und
               nur dieser pfiffige Bedienter kann ihn wieder füllen. Er muß helfen. Mein Fräulein muß
               gerettet werden.</p>
           </sp>
@@ -3668,7 +3655,7 @@
         <div n="434" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
-            <p>Höre, was ich erlauschte. Im Briefe steht es. Der Alte läßt den <pb n="98" />
+            <p>Höre, was ich erlauschte. Im Briefe steht es. Der Alte läßt den <pb n="98"/>
               Bräutigam endlich kommen; morgen – heute schon –</p>
           </sp>
         </div>
@@ -3721,7 +3708,7 @@
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Schad’t nichts. Als ob man nicht errathen könnte, wie er heißt! Sein Name wird
-              Plumper seyn, oder Theophilus Feldkümmel, <pb n="99" /> oder Thaddäus Bocklümmel, oder
+              Plumper seyn, oder Theophilus Feldkümmel, <pb n="99"/> oder Thaddäus Bocklümmel, oder
               Sebastian Lämmerzahn, oder Hans von Birken, oder wie die ehrlichen Pommern in den
               Comödien sonst heißen.</p>
           </sp>
@@ -3751,7 +3738,7 @@
         <div n="444" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
-            <p>Freilich, freilich! Ich <pb n="100" /> sehe zu, daß ich ihn dem alten Murrkater
+            <p>Freilich, freilich! Ich <pb n="100"/> sehe zu, daß ich ihn dem alten Murrkater
               wegstibitze.</p>
           </sp>
         </div>
@@ -3798,9 +3785,7 @@
         <div n="450" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Sein Name ist also unbekannt? <pb
-              n="101"
-            /> Sein Character, seine Person sind’s auch?
+            <p>Sein Name ist also unbekannt? <pb n="101"/> Sein Character, seine Person sind’s auch?
                 <foreign>Tant mieux</foreign>, so repräsentire ich ihn aus dem Stegreife.</p>
           </sp>
         </div>
@@ -3838,7 +3823,7 @@
         <div n="456" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
-            <p>Nun, voran mit Dir, daß <pb n="102" /> ich dir als meinem Leitstern den schuldigen
+            <p>Nun, voran mit Dir, daß <pb n="102"/> ich dir als meinem Leitstern den schuldigen
               Respect – –</p>
           </sp>
         </div>
@@ -3874,7 +3859,7 @@
         <div n="461" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>In der That, mein Herr; ich weiß nicht, was ich von Ihnen denken soll. <pb n="103" />
+            <p>In der That, mein Herr; ich weiß nicht, was ich von Ihnen denken soll. <pb n="103"/>
               Sind Sie von Sinnen? Sie fragen nach mir? Nach <emph>mir</emph>, der ich Ihnen längst
               erklärte, daß wir geschiedene Leute wären.</p>
           </sp>
@@ -3912,7 +3897,7 @@
         <div n="466" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>Allerdings; ich werde sogar <pb n="104" /> mich selbst dazu zwingen, allein keine
+            <p>Allerdings; ich werde sogar <pb n="104"/> mich selbst dazu zwingen, allein keine
               Minute eher, als es Zeit dazu ist.</p>
           </sp>
         </div>
@@ -3948,7 +3933,7 @@
         <div n="471" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
-            <p>Den Alten sicher zu machen. <pb n="105" /> Er ertappte mich ja mit meinem Diener –
+            <p>Den Alten sicher zu machen. <pb n="105"/> Er ertappte mich ja mit meinem Diener –
               –</p>
           </sp>
         </div>
@@ -3985,7 +3970,7 @@
               anatomiren, ballotiren, copiren, escamotiren, alligiren, amalgamiren, renoviren,
               restauriren, chiffoniren –</p>
           </sp>
-          <pb n="106" />
+          <pb n="106"/>
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Herr, Sie ruiniren mein Gehör – –</p>
@@ -4016,7 +4001,7 @@
               Demagog? Der Jurist und der Sublimist oder Sublimatist? Ich, der ich in Russland die
               Lebensgeschichte eines Kaviars und in Berlin einen Taschenalmanach über die
               sämmtlichen Folianten Deutschlands schrieb? Ich, der ich classisch schreibe wie
-              Clauren, und doch nicht Verfasser des Mannes im Monde bin? Ich der <pb n="107" /> ich
+              Clauren, und doch nicht Verfasser des Mannes im Monde bin? Ich der <pb n="107"/> ich
               besser dichte als Goethe, weil ich noch mehr schreibe als Gustav Schilling? Ich, der
               ich declamire wie Talma und der deutsche Schuster und agire wie Kean, Macready und die
               Statisten auf dem Hamburger Theater? Ich der ich commandire wie weiland Rinaldo
@@ -4039,7 +4024,7 @@
             <p>Was wollen Sie? Was meynen Sie? Was denken Sie? Was vermuthen Sie? Was ahnden Sie?
               Was hoffen Sie? Was erwarten Sie? Was wünschen Sie? Was begehren Sie? Was verlangen
               Sie? Was entdecken Sie? Was bezwecken Sie? Sie haben mich hieher verschrieben – ich
-              bin da, nach Ihrem <pb n="108" /> Willen; drum gilt jetzt auch mein Wille. Auf Ihren
+              bin da, nach Ihrem <pb n="108"/> Willen; drum gilt jetzt auch mein Wille. Auf Ihren
               Antrieb werden <emph>Sie jetzt von mir</emph> angetrieben, aufgetrieben,
               fortgetrieben, ausgetrieben, in die Enge getrieben –</p>
           </sp>
@@ -4081,7 +4066,7 @@
             <p>Und doch machten Sie mir so eben diese Frage zur Pflicht?</p>
           </sp>
         </div>
-        <pb n="109" />
+        <pb n="109"/>
         <div n="487" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -4112,7 +4097,7 @@
         <div n="491" type="segment">
           <head>Funfzehnter Auftritt.</head>
           <stage>Der Oheim. Der Diener. Die Nichte. Das Kammermädchen.</stage>
-          <pb n="110" />
+          <pb n="110"/>
           <sp>
             <speaker>Der Oheim.</speaker>
             <stage>(vorstellend)</stage>
@@ -4153,7 +4138,7 @@
         <div n="496" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>Sogleich soll meine Nichte <pb n="111" /> hier seyn. <stage>(Heimlich zum
+            <p>Sogleich soll meine Nichte <pb n="111"/> hier seyn. <stage>(Heimlich zum
                 Kammerm.)</stage> Geschwind! Ich habe Sie eingeschlossen. Hier ist der Schlüssel;
               hole sie!</p>
           </sp>
@@ -4186,7 +4171,7 @@
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Nein; aber ich will Sie von Sinnen bringen. Ich gebe Sie an als einen Carbonaro, zu
-              deutsch Kohlenbrenner, als <pb n="112" /> einen Häuptling irgend einer entsetzlichen
+              deutsch Kohlenbrenner, als <pb n="112"/> einen Häuptling irgend einer entsetzlichen
               Verschwörung, die Sie erst anzetteln wollen, und geht’s gut, so habe ich Sie nach
               kurzer Frist in die Bleikammern von Venedig gebracht. Mögen Sie’s dann machen, wie
               Casanova – wahrheitsliebenden Andenkens – ich will Sie nicht daran hindern, aber
@@ -4221,7 +4206,7 @@
             <p>Abgeschmackte Romanennärrinn!</p>
           </sp>
         </div>
-        <pb n="113" />
+        <pb n="113"/>
         <div n="503" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -4253,7 +4238,7 @@
               verschmitzten Diener, der ihm aus der Klemme helfen soll, Etwas zu Gute halten.</p>
           </sp>
         </div>
-        <pb n="114" />
+        <pb n="114"/>
         <div n="506" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -4293,7 +4278,7 @@
             <p>Adieu. Glückliche Reise! <stage>(Ab.)</stage></p>
           </sp>
         </div>
-        <pb n="115" />
+        <pb n="115"/>
         <div n="509" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -4325,8 +4310,7 @@
         <div n="512" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Dann mag der Herr Bräutigam <pb n="116" /> noch ein Lustspiel <emph
-            >nach</emph> meinem
+            <p>Dann mag der Herr Bräutigam <pb n="116"/> noch ein Lustspiel <emph>nach</emph> meinem
               Lustspiele spielen; denn daß mein heutiger Schwank auf die Bühne kommt, ist gewiß. Er
               ist genau so interessant, als wär’ er aus dem Französischen übersetzt.</p>
           </sp>
@@ -4356,7 +4340,7 @@
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Allerliebst! Mag dann der rechte Herr Bräutigam vor leeren Schalen sich zu Tische
-              setzen, wie Banquo’s Geist im Trauerspiele. <pb n="117" /> Wir tunken in die
+              setzen, wie Banquo’s Geist im Trauerspiele. <pb n="117"/> Wir tunken in die
               süßgewürzte Schüssel der Liebe, damit aus dem heutigen Hokus Pokus ein Lustspiel
               werde.</p>
           </sp>
@@ -4390,9 +4374,7 @@
         <div n="520" subtype="manicule-left" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
-            <p>So geh denn voran, Du, der Du die verkehrte Welt mit mir spielst, indem <pb
-              n="118"
-            />
+            <p>So geh denn voran, Du, der Du die verkehrte Welt mit mir spielst, indem <pb n="118"/>
               <emph>Du</emph> mich zum Knechte machst und Dich den Herrn nennst.</p>
           </sp>
         </div>
@@ -4422,9 +4404,7 @@
             <stage>(ein Notenblatt in der Hand.)</stage>
             <p>„Es seufzt’ einmal um Mitternacht –“ Ei was! <stage>(das Blatt wegwerfend)</stage>
               Das paßt ja gar nicht auf meinen Zustand. Es ist jetzt heller Tag und ich seufze – muß
-              seufzen; ach! Sollt’ er <pb
-              n="119"
-            /> treulos geworden seyn? Seit gestern sah’ ich ihn
+              seufzen; ach! Sollt’ er <pb n="119"/> treulos geworden seyn? Seit gestern sah’ ich ihn
               nicht, und die Stunde des Wiedersehens hat doch schon geschlagen! Aber er kommt nicht
               – – Bist Du es, getreue Aja?</p>
           </sp>
@@ -4467,7 +4447,7 @@
             <p>Was soll das heißen?</p>
           </sp>
         </div>
-        <pb n="120" />
+        <pb n="120"/>
         <div n="531" type="segment">
           <head>Vierter Auftritt.</head>
           <stage>Die Nichte. Der Liebhaber.</stage>
@@ -4501,7 +4481,7 @@
             <speaker>Der Diener.</speaker>
             <p>Gehorsamer Diener! Mag ein pfiffiger Bedienter in oder außer der Comödie noch so
               ungeschliffen gegen seinen Herrn seyn; kein Herr, folglich auch kein Publikum darf’s
-                <pb n="121" /> ihm übel nehmen; sobald er nur zu rechter Zeit, auf dem Theater, etwa
+                <pb n="121"/> ihm übel nehmen; sobald er nur zu rechter Zeit, auf dem Theater, etwa
               kurz vor seinem Abgehn, einlenkt, und irgend eine Handlung begeht, die ihn ersichtlich
               von seinem Herrn geziemend unterscheidet.</p>
           </sp>
@@ -4522,7 +4502,7 @@
               Maulspitzen, hier muß gepfiffen seyn.</p>
           </sp>
         </div>
-        <pb n="122" />
+        <pb n="122"/>
         <div n="537" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -4562,7 +4542,7 @@
             <p>Mein Herz ist aber schon verschenkt.</p>
           </sp>
         </div>
-        <pb n="123" />
+        <pb n="123"/>
         <div n="543" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -4607,7 +4587,7 @@
             <p>Herr Vormund, Sie mißbrauchen Ihre Gewalt über mich!</p>
           </sp>
         </div>
-        <pb n="124" />
+        <pb n="124"/>
         <div n="550" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -4656,7 +4636,7 @@
             <p>Er steht vor der Thür.</p>
           </sp>
         </div>
-        <pb n="125" />
+        <pb n="125"/>
         <div n="557" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -4687,7 +4667,7 @@
         <div n="561" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>– Sich einem Manne hinzugeben. <pb n="126" /> Wie viele tausend Mädchen haben das
+            <p>– Sich einem Manne hinzugeben. <pb n="126"/> Wie viele tausend Mädchen haben das
               schon gethan!</p>
           </sp>
         </div>
@@ -4721,7 +4701,7 @@
               Bestimmung! <stage>(Ab.)</stage></p>
           </sp>
         </div>
-        <pb n="127" />
+        <pb n="127"/>
         <div n="566" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -4758,7 +4738,7 @@
             <p>Wie entledigen wir uns des Kommenden?</p>
           </sp>
         </div>
-        <pb n="128" />
+        <pb n="128"/>
         <div n="572" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -4788,7 +4768,7 @@
               benommen? Dennoch suchen Sie mich auf?</p>
           </sp>
         </div>
-        <pb n="129" />
+        <pb n="129"/>
         <div n="576" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
@@ -4843,7 +4823,7 @@
         <div n="582" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Das macht nichts aus. Ich <pb n="130" /> mystificire den Alten, da nennt er mir den
+            <p>Das macht nichts aus. Ich <pb n="130"/> mystificire den Alten, da nennt er mir den
               Namen, ohne daß er’s weiß. Das ist ein noch nicht ganz abgenutzter Kunstgriff, dessen
               ich mich also nicht zu schämen habe.</p>
           </sp>
@@ -4883,7 +4863,7 @@
         <div n="587" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
-            <p>Einen Augenblick! Der Brief, <pb n="131" /> dessen vorhin erwähnt ward, könnte uns
+            <p>Einen Augenblick! Der Brief, <pb n="131"/> dessen vorhin erwähnt ward, könnte uns
               vielleicht Licht geben; hätten wir ihn nur!</p>
           </sp>
         </div>
@@ -4926,7 +4906,7 @@
             <p>Nach Ihrem Gefallen.</p>
           </sp>
         </div>
-        <pb n="132" />
+        <pb n="132"/>
         <div n="594" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -4959,7 +4939,7 @@
         <div n="598" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>Wie, mein Herr? Sie haben <pb n="133" /> die Frechheit hieher zu kommen? sogar nach
+            <p>Wie, mein Herr? Sie haben <pb n="133"/> die Frechheit hieher zu kommen? sogar nach
               mir zu verlangen?</p>
           </sp>
         </div>
@@ -5000,7 +4980,7 @@
           <stage>Der Oheim. Der Liebhaber.</stage>
           <stage>(kommen Beide zugleich.)</stage>
         </div>
-        <pb n="134" />
+        <pb n="134"/>
         <div n="604" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -5044,7 +5024,7 @@
             <speaker>Der Liebh.</speaker>
             <p>Sie sind sehr kurz angebunden.</p>
           </sp>
-          <pb n="135" />
+          <pb n="135"/>
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Bin nun einmal so, und um diesem Gespräch ein Ende zu machen, erfahren Sie, daß Ihre
@@ -5090,7 +5070,7 @@
             <p>Ich ziehe mich zurück –</p>
           </sp>
         </div>
-        <pb n="136" />
+        <pb n="136"/>
         <div n="617" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -5131,7 +5111,7 @@
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Herr, ich begreife Sie nicht. Gehe ich nicht ganz ein in das Wesen heutiger Moden-
-              Romanen- und Comödien-Welt? Thue <pb n="137" /> ich nicht Alles, was ein Onkel und
+              Romanen- und Comödien-Welt? Thue <pb n="137"/> ich nicht Alles, was ein Onkel und
               Vormund thun muß, um interessant zu seyn?</p>
           </sp>
         </div>
@@ -5184,7 +5164,7 @@
             <stage>(thut es.)</stage>
           </sp>
         </div>
-        <pb n="138" />
+        <pb n="138"/>
         <div n="625" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -5217,7 +5197,7 @@
             <p>Nun ja doch, aber – –</p>
           </sp>
         </div>
-        <pb n="139" />
+        <pb n="139"/>
         <div n="629" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -5256,7 +5236,7 @@
               ich heiße.</p>
           </sp>
         </div>
-        <pb n="140" />
+        <pb n="140"/>
         <div n="634" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -5296,9 +5276,7 @@
         <div n="639" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>Zu dienen, mein Herr. Meine Nichte soll gleich hier seyn. Rufe sie her! <pb
-              n="141"
-            />
+            <p>Zu dienen, mein Herr. Meine Nichte soll gleich hier seyn. Rufe sie her! <pb n="141"/>
               <stage>(Er spricht dem Kammermädchen in’s Ohr und reicht ihr heimlich einen
                 Schlüssel)</stage></p>
           </sp>
@@ -5331,7 +5309,7 @@
             <p>Wie? Sie halten es nicht der Mühe werth, mich zu lieben? Mich nicht? Wissen Sie, wer
               ich bin? Ich bin der junge Herr von **, der beste, vortrefflichste, gelehrteste,
               belesenste, erfahrenste, liebenswürdigste, unvergleichlichste, unnachahmlichste,
-              vollkommenste <pb n="142" /> Sohn meines Vaters; denn ich bin sein einziger Sohn, also
+              vollkommenste <pb n="142"/> Sohn meines Vaters; denn ich bin sein einziger Sohn, also
               – –</p>
           </sp>
           <sp>
@@ -5368,7 +5346,7 @@
         <div n="646" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Was Contract? Was Notar? <pb n="143" /> Meine Hand wird nur durch die Liebe
+            <p>Was Contract? Was Notar? <pb n="143"/> Meine Hand wird nur durch die Liebe
               verschenkt, nicht durch einen Bogen Papier, und wenn alle Behörden der Welt ihre
               Stempel drauf gedrückt hätten.</p>
           </sp>
@@ -5403,7 +5381,7 @@
             <speaker>Der Oheim.</speaker>
             <p>Herr, lassen Sie sich doch bedeuten –</p>
           </sp>
-          <pb n="144" />
+          <pb n="144"/>
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Ich mag nicht, ich will nicht, ich thu’s nicht!</p>
@@ -5437,9 +5415,7 @@
         <div n="652" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Sie haben einen Marstall, ich weiß es, einen köstlichen: Gut! An meinem <pb
-              n="145"
-            />
+            <p>Sie haben einen Marstall, ich weiß es, einen köstlichen: Gut! An meinem <pb n="145"/>
               Hochzeittage vernagele ich Ihre sämmtlichen Pferde, und will Ihnen nichts zum Ersatz
               lassen, als die lahmste Stute, die ich zehn Meilen in der Runde auftreiben kann.</p>
           </sp>
@@ -5469,7 +5445,7 @@
             <p>Seyn Sie unbesorgt! Noch haben Sie das letzte Hemd nicht an; aber ich werde den
               Wunsch nach demselben in Ihnen rege zu machen wissen. Alle Lebensfreude werde ich
               Ihnen versalzen, verpfeffern, vergällen, verbittern! Ich weiß es, Sie sind kein Freund
-              von Blaseinstrumenten, Sie bekommen Krämpfe, <pb n="146" /> wenn Sie dieselben hören:
+              von Blaseinstrumenten, Sie bekommen Krämpfe, <pb n="146"/> wenn Sie dieselben hören:
               Gut! Ich blase das Waldhorn – Trurutrutru! Ich will Sie schon ängstigen.</p>
           </sp>
         </div>
@@ -5508,7 +5484,7 @@
             <speaker>Der Liebh.</speaker>
             <p>Einerlei! uns hohlt er nicht ein: wir sind dann längst fort –</p>
           </sp>
-          <pb n="147" />
+          <pb n="147"/>
           <sp>
             <speaker>Die Nichte.</speaker>
             <p>Weit hin, zur Freistatt der Liebe!</p>
@@ -5551,7 +5527,7 @@
             <speaker>Der Diener.</speaker>
             <p>Und was ich dabei that, geschah hauptsächlich um Deine Hand, Du allerliebste
               Schelminn, dadurch zu gewinnen. Also heiße das Stück: <emph>Alles für sein
-                Mädchen</emph>, <pb n="148" /> nach dem Spanischen: <foreign>Todo por su
+                Mädchen</emph>, <pb n="148"/> nach dem Spanischen: <foreign>Todo por su
                 dama</foreign>. Das wird den Leuten spanisch vorkommen. Aber um so eher applaudiren
               sie wohl.</p>
           </sp>
@@ -5593,7 +5569,7 @@
             <p>Da bin ich. Ohne mich geht es nicht.</p>
           </sp>
         </div>
-        <pb n="149" />
+        <pb n="149"/>
         <div n="668" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
@@ -5637,7 +5613,7 @@
             <p>Laß Dich umarmen!</p>
           </sp>
         </div>
-        <pb n="150" />
+        <pb n="150"/>
         <div n="674" type="segment">
           <head>Dritter Auftritt.</head>
           <stage>Die Vorigen. Der Liebhaber.</stage>
@@ -5677,9 +5653,7 @@
         <div n="679" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
-            <p>Mit nichten. Ich will klüger seyn, als manche andere verliebte Mädchen. <pb
-              n="151"
-            />
+            <p>Mit nichten. Ich will klüger seyn, als manche andere verliebte Mädchen. <pb n="151"/>
               Ich will meine reiche Mitgift nicht leichtsinnig in die Schanze schlagen. Also laß uns
               auf Mittel sinnen.</p>
           </sp>
@@ -5714,7 +5688,7 @@
               nachsinnen.</p>
           </sp>
         </div>
-        <pb n="152" />
+        <pb n="152"/>
         <div n="684" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -5739,7 +5713,7 @@
               ein Ende hätte; denn nehmen muß sie Sie, mein Herr Jeremias. Sie sind brav, reich, gut
               erzogen, strotzen gleichsam von Kenntnissen aller Art – welche treffliche Partie für
               meine Nichte. – Aber wo ist sie denn? Sie pflegt doch sonst um diese Zeit hier zu
-              seyn? <pb n="153" /> – Holla! <stage>(Er klingelt. Das Kammermädchen tritt in die
+              seyn? <pb n="153"/> – Holla! <stage>(Er klingelt. Das Kammermädchen tritt in die
                 Thür)</stage> Meine Nichte will ich sprechen, unverzüglich!</p>
           </sp>
           <sp>
@@ -5783,9 +5757,7 @@
           <sp>
             <speaker>Das Kammerm.</speaker>
             <p>Schnetterdeng! blies der Postillion. Die Passagiere stiegen ab, ein junger Herr fragt
-              mit flüchtigen Worten den <pb
-              n="154"
-            /> Schirrmeister nach Etwas; dieser zeigt mit dem
+              mit flüchtigen Worten den <pb n="154"/> Schirrmeister nach Etwas; dieser zeigt mit dem
               Finger und der junge Herr bewegt sich auf unser Haus zu.</p>
           </sp>
         </div>
@@ -5821,7 +5793,7 @@
               gingen Sie auch nach Wolle, wo für Sie keine Schäfchen zu scheeren sind?</p>
           </sp>
         </div>
-        <pb n="155" />
+        <pb n="155"/>
         <div n="696" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -5866,7 +5838,7 @@
             <p>Mit nichten! Ein abgeschmacktes.</p>
           </sp>
         </div>
-        <pb n="156" />
+        <pb n="156"/>
         <div n="703" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -5917,7 +5889,7 @@
             <p>Aber ich komme wieder.</p>
           </sp>
         </div>
-        <pb n="157" />
+        <pb n="157"/>
         <div n="711" type="segment">
           <sp>
             <stage>(hinausredend)</stage>
@@ -5945,7 +5917,7 @@
           <head>Neunter Auftritt.</head>
           <stage>Das Kammermädchen. Der Liebhaber. Der Diener.</stage>
         </div>
-        <pb n="158" />
+        <pb n="158"/>
         <div n="715" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -5987,7 +5959,7 @@
             <speaker>Das Kammerm.</speaker>
             <p>Der junge Herr tritt ins Haus.</p>
           </sp>
-          <pb n="159" />
+          <pb n="159"/>
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Herauf mit ihm!</p>
@@ -6024,7 +5996,7 @@
         </div>
         <div n="725" subtype="manicule-left" type="segment">
           <stage>Der Oheim. Das Kammermädchen.</stage>
-          <pb n="160" />
+          <pb n="160"/>
           <sp>
             <speaker>Der Diener</speaker>
             <stage>(in ridikülem Aufzuge, der aus allen Modejournalen Europa’s stückweise entlehnt
@@ -6063,7 +6035,7 @@
             <p>Ja. Hier steht er. Ich bins, ich spiele den feinen Herrn von ** – – Wie heißt er?</p>
           </sp>
         </div>
-        <pb n="161" />
+        <pb n="161"/>
         <div n="730" subtype="manicule-left" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -6117,7 +6089,7 @@
         <div n="735" subtype="manicule-left" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>Mein Herr, ein wenig Verwunderung, <pb n="162" /> die Sie mir einflößen, abgerechnet,
+            <p>Mein Herr, ein wenig Verwunderung, <pb n="162"/> die Sie mir einflößen, abgerechnet,
               bin ich entzückt – –</p>
           </sp>
         </div>
@@ -6158,7 +6130,7 @@
             <p>Verwunderung? Entzücken? Was will das heißen? Wie sagt der Franzose? Was müssen Sie
               werden durch meinen Anblick? <foreign>troublé</foreign>, <foreign>cajolé</foreign>,
                 <foreign>écrasé</foreign>, <foreign>mortifié</foreign>, <foreign>massacré</foreign>,
-                <pb n="163" />
+                <pb n="163"/>
               <foreign>transformé</foreign>, <foreign>analysé</foreign> – <foreign>sacré nom de
                 Dieu</foreign>! Wie sagt der Engländer? <foreign>troubled</foreign>,
                 <foreign>bubbled</foreign>, <foreign>coaxed</foreign>, <foreign>boxed</foreign>,
@@ -6198,7 +6170,7 @@
             <p>Wie aber? Was hab’ ich bei der Sache zu thun?</p>
           </sp>
         </div>
-        <pb n="164" />
+        <pb n="164"/>
         <div n="745" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -6220,7 +6192,7 @@
         <div n="746" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Freilich geziemt <emph>mir</emph> das <pb n="165" /> Prädicat Herr hier; jedoch ich
+            <p>Freilich geziemt <emph>mir</emph> das <pb n="165"/> Prädicat Herr hier; jedoch ich
               werde bescheiden seyn.</p>
           </sp>
         </div>
@@ -6251,8 +6223,7 @@
               gekommen wäre, so wäre ich nicht hier; wenn ich nicht hier wäre, könnte ich Ihre
               Demoiselle Nichte nicht heirathen; wenn ich Ihre Demoiselle Nichte nicht heirathe,
               wird sie höchst wahrscheinlich eine alte Jungfer; wenn sie eine alte Jungfer wird, <pb
-              n="166"
-            /> so wird sie unstreitig abgeschmackt, albern, bigott, lästermäulig,
+                n="166"/> so wird sie unstreitig abgeschmackt, albern, bigott, lästermäulig,
               habsüchtig, neidisch, geizig, zänkisch! Wer also ist hier die Hauptperson? Warum
               fallen Sie mir also in’s Wort?</p>
           </sp>
@@ -6289,7 +6260,7 @@
             <stage>(folgt ihm.)</stage>
           </sp>
         </div>
-        <pb n="167" />
+        <pb n="167"/>
         <div n="755" subtype="manicule-left" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -6329,7 +6300,7 @@
               Ihnen. Ich fand Sie nicht sichtbar –</p>
           </sp>
         </div>
-        <pb n="168" />
+        <pb n="168"/>
         <div n="760" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -6355,7 +6326,7 @@
             <p>Nun dann, sobald sie frei seyn wird, gehe ich mit ihr durch.</p>
           </sp>
         </div>
-        <pb n="169" />
+        <pb n="169"/>
         <div n="763" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -6394,7 +6365,7 @@
               dazu vorhanden seyn.</p>
           </sp>
         </div>
-        <pb n="170" />
+        <pb n="170"/>
         <div n="768" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
@@ -6437,7 +6408,7 @@
             <speaker>Das Kammerm.</speaker>
             <p>Er ist schon gekommen.</p>
           </sp>
-          <pb n="171" />
+          <pb n="171"/>
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>wirklich? Was sagst Du?</p>
@@ -6478,9 +6449,8 @@
         <div n="779" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Was soll das? Wollen Sie mich ignoriren, verkennen, verlachen, verhöhnen, <pb
-              n="172"
-            /> verspotten, verachten, hintansetzen, geringschätzen –?</p>
+            <p>Was soll das? Wollen Sie mich ignoriren, verkennen, verlachen, verhöhnen, <pb n="172"
+              /> verspotten, verachten, hintansetzen, geringschätzen –?</p>
           </sp>
         </div>
         <div n="780" subtype="manicule-right" type="segment">
@@ -6503,9 +6473,7 @@
             <stage>(Letzterer in lächerlicher von den Gesetzen der jüngsten Mode dictirten Kleidung,
               die an Handels- oder sonstigen Lehrjungen, auch an angehenden jugendlichen
               Aesthetikern aus Quarta oder Tertia, auch an etlichen solcher jungen Herren abzunehmen
-              ist, denen schon in der Wiege eine <pb
-              n="173"
-            /> väterliche oder mütterliche Erbschaft
+              ist, denen schon in der Wiege eine <pb n="173"/> väterliche oder mütterliche Erbschaft
               von achtzig bis hunderttausend Thalern garantirt worden ist.)</stage>
           </sp>
           <sp>
@@ -6542,7 +6510,7 @@
             <p>Herr, wie das? Wie kann ich Ihren Namen wissen?</p>
           </sp>
         </div>
-        <pb n="174" />
+        <pb n="174"/>
         <div n="786" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -6571,7 +6539,7 @@
             <speaker>Der Diener.</speaker>
             <p><foreign>Ergo!</foreign> zu deutsch eigentlich: Aergre Dich! Muß ein so wichtiger
               Brief nicht meinen bedeutungsvollen Namen enthalten? Wie? d’rum, damit Sie mich und
-              auch keinen <pb n="175" /> Andern, auch uns Beide nicht hintergehen, ist’s an mir zu
+              auch keinen <pb n="175"/> Andern, auch uns Beide nicht hintergehen, ist’s an mir zu
               fragen. Also mein Herr, wie heiß ich?</p>
           </sp>
         </div>
@@ -6604,7 +6572,7 @@
         <div n="793" type="segment">
           <head>Funfzehnter Auftritt.</head>
           <stage>Der Oheim. Der Diener. Die Nichte. Das Kammermädchen.</stage>
-          <pb n="176" />
+          <pb n="176"/>
           <sp>
             <speaker>Der Oheim.</speaker>
             <stage>(vorstellend)</stage>
@@ -6632,9 +6600,7 @@
               wüßten? Das ist ein Affront. Was wäre mancher Mensch, mancher Autor ohne Namen? Der
               Name ist des Menschen eigentliches Eigenthum, drum ist kein Mensch zu tadeln, wenn er
               mit seinem guten Namen liederlich umgeht; denn der Mensch kann mit seinem Namen
-              machen, was er will. Warum aber tasten Sie mein Eigenthum an? Geschwind, <pb
-              n="177"
-            />
+              machen, was er will. Warum aber tasten Sie mein Eigenthum an? Geschwind, <pb n="177"/>
               geben Sie es zurück und sagen Sie mir, wie ich heiße.</p>
           </sp>
         </div>
@@ -6680,7 +6646,7 @@
             <p>Thörinn, die Du bist!</p>
           </sp>
         </div>
-        <pb n="178" />
+        <pb n="178"/>
         <div n="800" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -6711,8 +6677,7 @@
               Jagd. Ich könnte Ihnen wie Hugo Uhu dem Carlos in der <emph>Schuld</emph> auflauern –
               „da blitzt es auf vom Schloß“ – und weg wären Sie. Hinterher thäte ich als entleibte
               ich mich selbst und die Sache würde als veraltet bei Seite gelegt; aber nein! Ich habe
-                <pb n="179" /> solidere einfachere Mittel, Sie todt zu <emph
-            >ärgern</emph>. Ich drehe
+                <pb n="179"/> solidere einfachere Mittel, Sie todt zu <emph>ärgern</emph>. Ich drehe
               z. B. Ihrem Lieblingshunde, dem Waldmann – der Wirth bei dem ich abstieg, hat ihn mir
               genau beschrieben, den Hals um – weg sind Sie, Sie sterben am Gallenfieber; oder
               kürzer noch, ich pfropfe Ihre Kugelbüchse mit einem Talglichtstumpf, daß Sie beim
@@ -6732,7 +6697,7 @@
           </sp>
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>Nun, nun! Sie fallen ja <pb n="180" /> mit der Thür in’s Haus. Wann meine Nichte sich
+            <p>Nun, nun! Sie fallen ja <pb n="180"/> mit der Thür in’s Haus. Wann meine Nichte sich
               wird gefaßt und Worte gefunden haben so – –</p>
           </sp>
         </div>
@@ -6764,7 +6729,7 @@
         <div n="805" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Sehen Sie Ihren Irrthum <pb n="181" /> ein? Oder vielmehr sehen Sie’s ein, daß Ihr
+            <p>Sehen Sie Ihren Irrthum <pb n="181"/> ein? Oder vielmehr sehen Sie’s ein, daß Ihr
               Irrthum eigentlich doch kein Irrthum war? daß Sie <emph>doch</emph> hätten fragen
               müssen?</p>
           </sp>
@@ -6798,7 +6763,7 @@
             <p>– Mein Wunsch nach –</p>
           </sp>
         </div>
-        <pb n="182" />
+        <pb n="182"/>
         <div n="809" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -6826,7 +6791,7 @@
             <speaker>Der Liebh.</speaker>
             <p>Wie? Mein Herr, Sie wagen solche Rede mir ins Angesicht? <stage>(zum Oheim)</stage>
               Sehen Sie denn nicht ein, daß der Mensch den Verstand verloren hat? Gehen Sie doch in
-              sich! Lassen Sie doch den vermaledeiten Heirathsplan <pb n="183" /> fahren! Geben Sie
+              sich! Lassen Sie doch den vermaledeiten Heirathsplan <pb n="183"/> fahren! Geben Sie
               mir die Hand Ihrer Mündel und – <stage>(leise)</stage> über die Hälfte des
               Brautschatzes stelle ich Ihnen eine Schenkungsacte aus.</p>
           </sp>
@@ -6851,7 +6816,7 @@
               Frieden vor mir haben.</p>
           </sp>
         </div>
-        <pb n="184" />
+        <pb n="184"/>
         <div n="815" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -6885,7 +6850,7 @@
             <speaker>Der Oheim.</speaker>
             <p>Sapperment! Was reden Sie?</p>
           </sp>
-          <pb n="185" />
+          <pb n="185"/>
           <sp>
             <speaker>Das Kammerm.</speaker>
             <p>Alle Tausend! Er geht zu weit; wenn’s der Alte nur nicht merkt. <stage>(Sie winkt
@@ -6920,7 +6885,7 @@
               hat er gestern Abends spät wieder einen Brief –</p>
           </sp>
         </div>
-        <pb n="186" />
+        <pb n="186"/>
         <div n="825" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -6951,7 +6916,7 @@
           <titlePart type="main">Schlauer Knecht hilft dem Herrn zurecht.</titlePart>
           <titlePart type="sub">Ein Vorspiel in einem Act.</titlePart>
         </div>
-        <pb n="187" />
+        <pb n="187"/>
         <div n="830" subtype="manicule-left" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -6992,7 +6957,7 @@
         <div n="834" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
-            <p>Glühende Liebe, die <pb n="188" /> seit gestern Nachmittag, wo sie sich zuletzt
+            <p>Glühende Liebe, die <pb n="188"/> seit gestern Nachmittag, wo sie sich zuletzt
               sprachen, bis heute so hoch sich steigerte! <stage>(für sich)</stage></p>
           </sp>
         </div>
@@ -7033,7 +6998,7 @@
             <p>Ich schlage den Freier todt.</p>
           </sp>
         </div>
-        <pb n="189" />
+        <pb n="189"/>
         <div n="840" subtype="manicule-left" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -7065,7 +7030,7 @@
             <stage>(tritt ein, einen offenen Brief in der Hand.)</stage>
             <p>Willkommener Brief, der meinem Werke endlich die Krone aufzusetzen bestehlt. Der
               Bräutigam kommt, heute, morgen – wohlan! Jetzt muß ich, jetzt will ich mein Wort
-              lösen, das ich <pb n="190" /> meinem ehrlichen Degenknopf, meinem guten alten Freunde
+              lösen, das ich <pb n="190"/> meinem ehrlichen Degenknopf, meinem guten alten Freunde
               Plumper gegeben habe. Sein Sohn Hans oder Michel oder Lebrecht, oder wie er sonst
               heißen mag, soll meine Mündel haben, und das Dirnchen soll mir nicht mucksen. – Heda!
               Fräulein Nichte! Wo steckt sie denn? <stage>(Er klingelt. Das Kammermädchen tritt
@@ -7093,8 +7058,7 @@
             <p>Eigensinn bei Frauenzimmern ist mir verhaßt; jedoch Zwang der Vormünder ist mir noch
               verhaßter. „Der Mensch ist frei geboren, ist frei; kann heirathen, wen ihm beliebt!“
               sagt ein berühmter Dichter, den ich verbessert heraus zu geben gedenke, in Gotha <pb
-              n="191"
-            /> oder Stuttgardt, wo verbesserte Uebersetzungen berühmter ausländischer
+                n="191"/> oder Stuttgardt, wo verbesserte Uebersetzungen berühmter ausländischer
               Klassiker erscheinen. – Ah, gewiß Ihre Demoiselle Nichte!</p>
           </sp>
         </div>
@@ -7132,7 +7096,7 @@
               geleite.</p>
           </sp>
         </div>
-        <pb n="192" />
+        <pb n="192"/>
         <div n="851" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -7182,7 +7146,7 @@
             <p>Sie machen, daß meine letzte Stunde schlägt</p>
           </sp>
         </div>
-        <pb n="193" />
+        <pb n="193"/>
         <div n="859" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -7224,7 +7188,7 @@
         <div n="865" subtype="manicule-left" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Weh mir Unseligen! Was muß ich hören? Sie verschmähen mich? Ich <pb n="194" /> kniee
+            <p>Weh mir Unseligen! Was muß ich hören? Sie verschmähen mich? Ich <pb n="194"/> kniee
               gleichsam vor Ihnen wie Graf Lester vor der Königin Elisabeth; ich stehe gleichsam
               demüthig und doch hochnasig vor Ihnen, wie Essex vor eben derselben; ich bin besser
               gegen Sie gesonnen als Hamlet gegen die Ophelia, denn ich sage nicht zu Ihnen: „Geh’
@@ -7250,7 +7214,7 @@
         <div n="867" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>Fort, sag’ ich! dergleichen <pb n="195" /> Rotomontaden kennen wir. Eingesperrt –
+            <p>Fort, sag’ ich! dergleichen <pb n="195"/> Rotomontaden kennen wir. Eingesperrt –
               Hunger – Bedenklichkeit – Nachgiebigkeit – Gehorsam! Punctum!</p>
           </sp>
         </div>
@@ -7285,7 +7249,7 @@
               Mädchen kopuliren lassen.</p>
           </sp>
         </div>
-        <pb n="196" />
+        <pb n="196"/>
         <div n="872" type="segment">
           <head>Neunter Auftritt.</head>
           <stage>Das Kammermädchen. Der Liebhaber. Der Diener.</stage>
@@ -7313,9 +7277,8 @@
           </sp>
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>Erzürnen Sie sich doch nicht! Bedenken Sie, werther Herr von **, daß hier <pb
-              n="197"
-            /> vom Willen gar nicht die Rede seyn kann. Hören Sie nur Ihres Herrn Vaters Willen
+            <p>Erzürnen Sie sich doch nicht! Bedenken Sie, werther Herr von **, daß hier <pb n="197"
+              /> vom Willen gar nicht die Rede seyn kann. Hören Sie nur Ihres Herrn Vaters Willen
               und den meinigen.</p>
           </sp>
         </div>
@@ -7353,7 +7316,7 @@
           </sp>
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>Possen! Ihres Herrn Vaters <pb n="198" /> Ausspruch gilt, und der meinige in dieser
+            <p>Possen! Ihres Herrn Vaters <pb n="198"/> Ausspruch gilt, und der meinige in dieser
               Sache. Meine Nichte aber wird nicht gefragt und der Contract liegt schon unter der
               Feder meines Notars.</p>
           </sp>
@@ -7381,7 +7344,7 @@
               deswegen eine wahre Tragödie ist.</p>
           </sp>
         </div>
-        <pb n="199" />
+        <pb n="199"/>
         <div n="884" type="segment">
           <spGrp>
             <sp>
@@ -7418,7 +7381,7 @@
               Jeremias von Eschen oder Plumper schlecht weg.</p>
           </sp>
         </div>
-        <pb n="200" />
+        <pb n="200"/>
         <div n="887" type="segment">
           <spGrp>
             <sp>
@@ -7464,7 +7427,7 @@
             <speaker>Der Oheim.</speaker>
             <p>Aha! Fügen wir uns?</p>
           </sp>
-          <pb n="201" />
+          <pb n="201"/>
           <sp>
             <speaker>Das Kammerm.</speaker>
             <p>Wie? Ist er nicht wohl gescheidt? <stage>(bei Seite)</stage></p>
@@ -7509,7 +7472,7 @@
             <speaker>Der Diener.</speaker>
             <p>Nein, aber ich will Sie plagen.</p>
           </sp>
-          <pb n="202" />
+          <pb n="202"/>
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Gehen Sie, verlassen Sie uns.</p>
@@ -7549,7 +7512,7 @@
             <speaker>Der Oheim.</speaker>
             <p>Bei dem Menschen ist’s im Oberstübchen nicht richtig.</p>
           </sp>
-          <pb n="203" />
+          <pb n="203"/>
           <sp>
             <speaker>Die Nichte.</speaker>
             <p>Dennoch soll ich ihn heirathen?</p>
@@ -7587,7 +7550,7 @@
               geendigtem Lustspiel sind sich die Comödianten wieder alle gleich.</p>
           </sp>
         </div>
-        <pb n="204" />
+        <pb n="204"/>
         <div n="905" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -7623,7 +7586,7 @@
             <speaker>Der Oheim.</speaker>
             <p>Ich armer, gequälter Mann!</p>
           </sp>
-          <pb n="205" />
+          <pb n="205"/>
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Hoffen Sie kein Mitleiden vom Publikum. Das Publikum hat noch nie Mitleiden mit einem
@@ -7650,7 +7613,7 @@
               bitte also – –</p>
           </sp>
         </div>
-        <pb n="206" />
+        <pb n="206"/>
         <div n="913" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -7684,8 +7647,7 @@
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Possen! Man wird sie nicht eher frei geben, als bis sie in neuen Ketten und <pb
-              n="207"
-            /> Banden liegt, nemlich in den Armen Dessen, der da kommen wird –</p>
+                n="207"/> Banden liegt, nemlich in den Armen Dessen, der da kommen wird –</p>
           </sp>
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -7722,7 +7684,7 @@
               nicht eher frei, bis – –</p>
           </sp>
         </div>
-        <pb n="208" />
+        <pb n="208"/>
         <div n="920" subtype="manicule-right" type="segment">
           <head>Sechszehnter Auftritt.</head>
           <stage>Die Vorigen. Der Liebhaber.</stage>
@@ -7763,9 +7725,8 @@
         <div n="925" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Das Fragen kommt mir zu. Wer sind <emph>Sie</emph>? Irgend ein Marder im <pb
-              n="209"
-            /> Hühnerstall; ein Liebhaber, der wahrscheinlich kommt, sich für mich auszugeben?
+            <p>Das Fragen kommt mir zu. Wer sind <emph>Sie</emph>? Irgend ein Marder im <pb n="209"
+              /> Hühnerstall; ein Liebhaber, der wahrscheinlich kommt, sich für mich auszugeben?
               Nicht wahr? <stage>(ihn äffend)</stage> Sie sind der junge Herr von **, den sein Herr
               Vater her schickt, um das gnädige Fräulein dort zu heirathen – Hoho! Wir wissen Alles!
               Sie sind entdeckt, der Rechte ist schon hier, und Sie müssen das Feld räumen – –</p>
@@ -7800,7 +7761,7 @@
             <p>Mit Freuden seh’ ich Sie; mit Entzücken, wiewohl auch mit ein wenig Verwunderung.</p>
           </sp>
         </div>
-        <pb n="210" />
+        <pb n="210"/>
         <div n="930" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -7841,7 +7802,7 @@
           <sp>
             <speaker>Der Liebh.</speaker>
             <p>Und diesem Rasenden wollen Sie Ihre Mündel opfern? Herr, bedenken Sie doch Ihr
-              Gewissen, Ihre Ruhe, Ihr Lebensglück! <pb n="211" />
+              Gewissen, Ihre Ruhe, Ihr Lebensglück! <pb n="211"/>
               <stage>(leise)</stage> Die spanischen Schafe, 200 an der Zahl, auf meinem Gütchen: sie
               gefielen Ihnen stets; geben Sie mir Ihre Nichte, und die Schafe sind die Ihrigen.</p>
           </sp>
@@ -7875,7 +7836,7 @@
             <p>Herr, wie kann ich – –</p>
           </sp>
         </div>
-        <pb n="212" />
+        <pb n="212"/>
         <div n="939" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -7918,7 +7879,7 @@
           <sp>
             <speaker>Der Diener.</speaker>
             <stage>(einlenkend)</stage>
-            <p>Doch für diesmal <pb n="213" /> genug zu Ihrer Belehrung. Lassen Sie Ihre Fräulein
+            <p>Doch für diesmal <pb n="213"/> genug zu Ihrer Belehrung. Lassen Sie Ihre Fräulein
               Nichte rufen und stellen Sie mich ihr vor.</p>
           </sp>
         </div>
@@ -7950,7 +7911,7 @@
             <p>Ihre Nichte ist doch nicht abgeneigt gegen eine Heirath mit mir?</p>
           </sp>
         </div>
-        <pb n="214" />
+        <pb n="214"/>
         <div n="949" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -7990,7 +7951,7 @@
             <speaker>Das Kammerm.</speaker>
             <p>Wie? Plagt ihn der Kukuck? <stage>(bei Seite)</stage></p>
           </sp>
-          <pb n="215" />
+          <pb n="215"/>
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Sie sind Botaniker. Ich weiß es, Sie haben sogar Ruf als Botaniker, der Ritter Linné
@@ -8017,8 +7978,7 @@
               Gut, meine schöne Spröde. – <foreign>Manus manibus laxat!</foreign> oder wie das
               Sprichwort heißen mag – Wie Du mir, so ich Dir – Wurst wider Wurst – Wie man in den
               Wald schreit, hallt’s wieder – Kommst du mir so, komm’ ich Dir so! Erfahren <pb
-              n="216"
-            /> Sie also die Folge Ihres Nein. Diese ist: Ich will Sie auch nicht!</p>
+                n="216"/> Sie also die Folge Ihres Nein. Diese ist: Ich will Sie auch nicht!</p>
           </sp>
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -8055,7 +8015,7 @@
             <p>Unsinnige, Du unterstehst Dich?</p>
           </sp>
         </div>
-        <pb n="217" />
+        <pb n="217"/>
         <div n="958" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -8094,9 +8054,7 @@
             <speaker>Die Nichte.</speaker>
             <stage>(allein, am Stickrahmen.)</stage>
             <p>Wie diese Rose sich glühend über dies Vergißmeinnicht bückt – so, Liebe, sollst Du
-              stets <pb
-              n="218"
-            /> in meinem Herzen das Andenken an meinen Erwählten bewachen. – Aber
+              stets <pb n="218"/> in meinem Herzen das Andenken an meinen Erwählten bewachen. – Aber
               wo bleibt er? Es ist doch kein Hinderniß vorgefallen? Er weiß doch die Stunde! Warum
               kommt er denn nicht? Doch still! ich höre Tritte – Nun? Bist <emph>Du</emph> es
               endlich?</p>
@@ -8134,7 +8092,7 @@
             <p>Nachher mehr davon. Jetzt ist es Zeit, den Geliebten zu empfangen.</p>
           </sp>
         </div>
-        <pb n="219" />
+        <pb n="219"/>
         <div n="967" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -8179,7 +8137,7 @@
             <stage>(zugleich)</stage>
           </spGrp>
         </div>
-        <pb n="220" />
+        <pb n="220"/>
         <div n="972" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -8208,7 +8166,7 @@
         <div n="974" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
-            <p>Nicht zu rasch. Vorsicht kann <pb n="221" /> niemals schaden. Die Liebe soll mich
+            <p>Nicht zu rasch. Vorsicht kann <pb n="221"/> niemals schaden. Die Liebe soll mich
               nicht blind machen. Ohne meine Mitgift folg’ ich Dir nicht; drum lass’ uns – –</p>
           </sp>
         </div>
@@ -8241,7 +8199,7 @@
               wie er kommt, bist Du seine Braut.</p>
           </sp>
         </div>
-        <pb n="222" />
+        <pb n="222"/>
         <div n="979" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -8286,7 +8244,7 @@
         <div n="985" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Vortrefflich! Wir jubiliren. <pb n="223" /> Der Herr Bräutigam mag sich dem Kummer
+            <p>Vortrefflich! Wir jubiliren. <pb n="223"/> Der Herr Bräutigam mag sich dem Kummer
               hingeben. Aber er wirds nicht thun. Ich hörte, er habe Paris und London gesehen. Dort
               lernt man allerlei Lebensweisheit. So wird er über meinen Schwank lachen, selbst wenn
               er ihn auf’s Theater gebracht sähe, und auf’s Theater kommt er gewiß, da der Mangel an
@@ -8318,7 +8276,7 @@
             <p>So wäre ich nach Ihrer Meynung –</p>
           </sp>
         </div>
-        <pb n="224" />
+        <pb n="224"/>
         <div n="990" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
@@ -8364,7 +8322,7 @@
             <speaker>Der Liebh.</speaker>
             <p>Oder: <emph>Sie, der Alte und Er</emph>.</p>
           </sp>
-          <pb n="225" />
+          <pb n="225"/>
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Oder: <emph>Er, der Alte und Sie</emph>. – Das Stück muß ungeheuer vortrefflich
@@ -8399,7 +8357,7 @@
               da?</p>
           </sp>
         </div>
-        <pb n="226" />
+        <pb n="226"/>
         <div n="995" subtype="manicule-right" type="segment">
           <stage>(Der Vorhang fällt.)</stage>
         </div>
@@ -8437,7 +8395,7 @@
         <div n="1001" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
-            <p>Wie? Soll ich gleich der <pb n="227" /> unschuldigen schottischen Königinn um meiner
+            <p>Wie? Soll ich gleich der <pb n="227"/> unschuldigen schottischen Königinn um meiner
               Liebe willen dem Tode geopfert werden?</p>
           </sp>
         </div>
@@ -8478,7 +8436,7 @@
         <div n="1008" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
-            <p>Nimmermehr, und müßte ich <pb n="228" /> mich selbst in Gold verwandeln. Für die
+            <p>Nimmermehr, und müßte ich <pb n="228"/> mich selbst in Gold verwandeln. Für die
               Freiheit meiner Geliebten opfre ich Alles –</p>
           </sp>
         </div>
@@ -8519,7 +8477,7 @@
             <p>Wohlan, rede Du Erzschelm! – Uns belauscht doch Niemand?</p>
           </sp>
         </div>
-        <pb n="229" />
+        <pb n="229"/>
         <div n="1015" type="segment">
           <spGrp>
             <sp>
@@ -8575,9 +8533,7 @@
         <div n="1021" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
-            <p>Glücklicher Gedanke! <pb
-              n="230"
-            /> der Brief muß dem Alten gestohlen werden. Ich will
+            <p>Glücklicher Gedanke! <pb n="230"/> der Brief muß dem Alten gestohlen werden. Ich will
               mein Talent daran probiren.</p>
           </sp>
         </div>
@@ -8610,7 +8566,7 @@
             <p>Zuverlässig gebührt mir diese Ehre, aber ich werde keinen Gebrauch davon machen.</p>
           </sp>
         </div>
-        <pb n="231" />
+        <pb n="231"/>
         <div n="1026" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -8655,7 +8611,7 @@
           <stage>Der Liebhaber. Der Oheim.</stage>
           <stage>(Beide zugleich hastig durch die Mittelthür.)</stage>
         </div>
-        <pb n="232" />
+        <pb n="232"/>
         <div n="1033" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -8693,7 +8649,7 @@
         <div n="1038" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>Geht mich nichts an. Gesagt <pb n="233" /> – gethan! Das Mädchen bekommen Sie
+            <p>Geht mich nichts an. Gesagt <pb n="233"/> – gethan! Das Mädchen bekommen Sie
               nicht.</p>
           </sp>
         </div>
@@ -8735,7 +8691,7 @@
             <p>Da hören Sie’s! Hier ist Nichts für Sie zu thun.</p>
           </sp>
         </div>
-        <pb n="234" />
+        <pb n="234"/>
         <div n="1045" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -8759,7 +8715,7 @@
         </div>
         <div n="1047" type="segment">
           <stage>Der Oheim. Das Kammermädchen. Der Diener.</stage>
-          <stage>(Der Letztere ist auffallend als Stutzer gekleidet. Er spricht <pb n="235" /> im
+          <stage>(Der Letztere ist auffallend als Stutzer gekleidet. Er spricht <pb n="235"/> im
             Berlinischen, sächsischen, pommerschen oder im Mecklenburger-Bauern-Dialekt; wie es dem
             berühmten Schauspieler, der diese Rolle zu seinem unabläßigen Studium macht, am
             bequemsten oder eigentlich am maulgerechtesten ist. Auch kann er alle beliebigen
@@ -8783,7 +8739,7 @@
               und Poetik, Logik und Demagogik, Ornitologie, Periphrasie und Allegorie, meine
               Rotomondaten und Jeremiaden, meine Plastik und Gymnastik kennen –</p>
           </sp>
-          <pb n="236" />
+          <pb n="236"/>
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Hören Sie auf! Lassen Sie andere Leute auch zu Worte!</p>
@@ -8806,7 +8762,7 @@
               Klopstocks Oden; Schakespears Coriolan und die unruhige Matrone von Pfyrt; Hufelands
               Makrobiotik und Schillings Weib wie es ist; Dante’s Hölle und die Gedichte des
               Improvisators Wolff; die Minnelieder und die Berliner in Wien; die Lehre vom
-              Unendlichen und Jean Pauls Flegeljahre; Krusensterns <pb n="237" /> Reise um die Welt
+              Unendlichen und Jean Pauls Flegeljahre; Krusensterns <pb n="237"/> Reise um die Welt
               und das berühmte Lustspiel „Komm her!“ Gedichte der Magyaren und von Heß
               topographische Beschreibung der Stadt Hamburg; Tieks gestiefelten Kater und den Hund
               des Aubry; Engelmanns Lithographie und die Berliner Schnellpost –</p>
@@ -8843,7 +8799,7 @@
         <div n="1055" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
-            <p>Der Kerl macht mich confus! <pb n="238" /> Und warum denn nun wieder ich und nicht
+            <p>Der Kerl macht mich confus! <pb n="238"/> Und warum denn nun wieder ich und nicht
               Sie? und nicht Sie, sondern ich?</p>
           </sp>
         </div>
@@ -8874,9 +8830,7 @@
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Ja, ja, mein Herr, aus Vorsicht. Wenn ich nun nicht ich wäre? Wenn ich nun ein
-              verkleideter Liebhaber des Fräuleins <pb
-              n="239"
-            /> wäre? Wenn ich nun auf solche Weise
+              verkleideter Liebhaber des Fräuleins <pb n="239"/> wäre? Wenn ich nun auf solche Weise
               Ihre Nichte erschnappen wollte?</p>
           </sp>
         </div>
@@ -8910,7 +8864,7 @@
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Ha! so ist mein Schicksal denn bestimmt. Sie wollen mich nicht, Mamsell, gut! so will
-              ich Sie auch nicht! und keine <pb n="240" /> Macht der Erde soll mich je vermögen von
+              ich Sie auch nicht! und keine <pb n="240"/> Macht der Erde soll mich je vermögen von
               diesem meinen eben gefaßten, vesten, unabänderlichen, unumstößlichen Entschlusse auch
               nur um den tausendmillionsten Theil eines Seidenhärchens abzuweichen. Da haben Sie
               meinen rectificirtesten Schwur!</p>
@@ -8943,9 +8897,7 @@
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Nein, mein Herr. Der Notar ist hier höchst wichtig. Ich weiß, was ich mit Ihrem Herrn
-              Vater wegen des Heirathsgutes <pb
-              n="241"
-            /> meiner Mündel stipulirt habe; das wird der
+              Vater wegen des Heirathsgutes <pb n="241"/> meiner Mündel stipulirt habe; das wird der
               Herr Notar bekräftigen, und Sie werden meine Nichte heirathen müssen.</p>
           </sp>
         </div>
@@ -8984,7 +8936,7 @@
             <speaker>Der Oheim.</speaker>
             <p>Lassen Sie mich!</p>
           </sp>
-          <pb n="242" />
+          <pb n="242"/>
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Nein! Ich lasse Sie nicht! Sie wollen mich mit dieser Dame verheirathen, die mich
@@ -9036,7 +8988,7 @@
               Morgennebel immer dicker wird, sollen Sie ein Stündchen Schlaf finden können.</p>
           </sp>
         </div>
-        <pb n="243" />
+        <pb n="243"/>
         <div n="1072" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -9071,7 +9023,7 @@
             <stage>(zum Kammerm.)</stage>
             <p>Wir doch auch?</p>
           </sp>
-          <pb n="244" />
+          <pb n="244"/>
           <sp>
             <speaker>Das Kammerm.</speaker>
             <p>Es wird wohl nicht anders werden.</p>
@@ -9112,7 +9064,7 @@
             <p>Ich winkte ihm. Gleich tritt er ein.</p>
           </sp>
         </div>
-        <pb n="245" />
+        <pb n="245"/>
         <div n="1083" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -9155,7 +9107,7 @@
           <sp>
             <speaker>Die Nichte.</speaker>
             <p>Nur gemach! Mein Heirathsgut muß ich mit haben, wenn ich Dir folge. Es könnte bei
-              einem so jungen Sausewind, wie <pb n="246" /> du bist, leicht einmal die Frage
+              einem so jungen Sausewind, wie <pb n="246"/> du bist, leicht einmal die Frage
               aufgeworfen werden: Was werden wir essen, was werden wir trinken, womit werden wir uns
               kleiden? Dann sind meine sechstausend Thaler gute Rathgeber; drum lass’ uns vorsichtig
               bedenken – –</p>
@@ -9183,7 +9135,7 @@
             <p>Kurzer Prozeß soll gemacht werden. – Ha! das Bräutchen! Nun, Fräulein Nichte?</p>
           </sp>
         </div>
-        <pb n="247" />
+        <pb n="247"/>
         <div n="1090" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -9222,7 +9174,7 @@
             <p>Davon wird keine Notiz genommen.</p>
           </sp>
         </div>
-        <pb n="248" />
+        <pb n="248"/>
         <div n="1096" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -9262,7 +9214,7 @@
               Klügeren besonnen haben wirst. <stage>(Er führt sie hinaus)</stage></p>
           </sp>
         </div>
-        <pb n="249" />
+        <pb n="249"/>
         <div n="1102" type="segment">
           <sp>
             <speaker>Die Nichte.</speaker>
@@ -9298,7 +9250,7 @@
             <p>– das den Kelch des Leidens leeren soll –</p>
           </sp>
         </div>
-        <pb n="250" />
+        <pb n="250"/>
         <div n="1107" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -9339,7 +9291,7 @@
             <p>Was haben Sie gegen mich?</p>
           </sp>
         </div>
-        <pb n="251" />
+        <pb n="251"/>
         <div n="1113" type="segment">
           <sp>
             <stage>(Von der Seite herein)</stage>
@@ -9373,7 +9325,7 @@
             <speaker>Der Liebh.</speaker>
             <p>Ein Bescheid, den nur ein Mann wie Sie geben kann.</p>
           </sp>
-          <pb n="252" />
+          <pb n="252"/>
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Ganz recht! soll so seyn; will’s so, und um alle dem nutzlosen Hin- und Herreden ein
@@ -9411,7 +9363,7 @@
             <p>Nun? Wo bleibt denn der angekommene Bräutigam meiner Nichte?</p>
           </sp>
         </div>
-        <pb n="253" />
+        <pb n="253"/>
         <div n="1123" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -9442,7 +9394,7 @@
         <div n="1126" type="segment">
           <head>Vierzehnter Auftritt.</head>
           <stage>Der Oheim. Das Kammermädchen. Der Diener.</stage>
-          <pb n="254" />
+          <pb n="254"/>
           <stage>(Letzterer in lächerlichem Aufzuge, der ihn als Modenarren der jüngsten Zeit
             characterisirt. Da nun nichts schneller veraltet als die Mode, so wird der Verf. dieses
             Lustspiels sich wohl hüten hier eine Costümsvorschrift zu geben.)</stage>
@@ -9485,9 +9437,7 @@
         <div n="1131" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Nun ja! Als ob ich nicht <pb
-              n="255"
-            /> ein Anderer oder vielmehr ein Anderer ich seyn
+            <p>Nun ja! Als ob ich nicht <pb n="255"/> ein Anderer oder vielmehr ein Anderer ich seyn
               könnte oder seyn wollte, um sich hier einzuschleichen und Ihnen, als verkappter
               Liebhaber, Ihre Nichte wegzuschnappen.</p>
           </sp>
@@ -9515,7 +9465,7 @@
               von den ABC-Buben zerzaus’t wurde.</p>
           </sp>
         </div>
-        <pb n="256" />
+        <pb n="256"/>
         <div n="1135" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -9553,7 +9503,7 @@
               daß selbst kein Tropfbad Sie kuriren soll.</p>
           </sp>
         </div>
-        <pb n="257" />
+        <pb n="257"/>
         <div n="1138" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -9579,7 +9529,7 @@
               zu seyn scheint.</p>
           </sp>
         </div>
-        <pb n="258" />
+        <pb n="258"/>
         <div n="1140" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -9609,7 +9559,7 @@
               ausfliegen, daß die Gassenbuben zu sammeln haben.</p>
           </sp>
         </div>
-        <pb n="259" />
+        <pb n="259"/>
         <div n="1143" type="segment">
           <sp>
             <speaker>Der Oheim.</speaker>
@@ -9640,7 +9590,7 @@
           </sp>
           <sp>
             <speaker>Der Liebh.</speaker>
-            <p>Ei freilich! Lassen Sie ihn <pb n="260" /> doch laufen. Hören Sie lieber mich. Ich
+            <p>Ei freilich! Lassen Sie ihn <pb n="260"/> doch laufen. Hören Sie lieber mich. Ich
               will ein Uebriges thun, ich will Ihre Nichte ohne alle Aussteuer nehmen. Sind Sie nun
               zufrieden? Willigen Sie ein?</p>
           </sp>
@@ -9693,7 +9643,7 @@
             <speaker>Der Oheim.</speaker>
             <p>Wollen Sie mich rasend machen?</p>
           </sp>
-          <pb n="261" />
+          <pb n="261"/>
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Ja, mein Herr, das will ich. Ich will in Ihrem Hause das Unterste zu oberst kehren.
@@ -9730,9 +9680,7 @@
             <speaker>Der Diener.</speaker>
             <p>Oder: <emph>Der Bräutigam ohne Braut</emph> – doch genug des Oders. Das verehrte
               Publikum mag selbst wählen. Titelmachen kann Jeder; mit dem Stücke, besonders mit dem
-              Lustspiel haperts oft. Man sehe die kritischen <pb
-              n="262"
-            /> Journale, Artikel: Schöne
+              Lustspiel haperts oft. Man sehe die kritischen <pb n="262"/> Journale, Artikel: Schöne
               Künste u. a. a. O.</p>
           </sp>
         </div>
@@ -9765,7 +9713,7 @@
             <p>Nur Geduld, er ist nicht fern mehr.</p>
           </sp>
         </div>
-        <pb n="263" />
+        <pb n="263"/>
         <div n="1156" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -9807,9 +9755,7 @@
           <sp>
             <speaker>Der Oheim.</speaker>
             <p>Nichts von Frist, nichts von Aufschub, nichts von Bedenkzeit. Ich habe keinen Sinn
-              für dergleichen neupoetische Floskeln. <pb
-              n="264"
-            /> Zu meiner Zeit lernten Kinder und
+              für dergleichen neupoetische Floskeln. <pb n="264"/> Zu meiner Zeit lernten Kinder und
               Untergebene gehorchen. Heut zu Tage sind sie nicht selten superklug und spotten des
               Alters.</p>
           </sp>
@@ -9853,7 +9799,7 @@
             <p>Geduld! Nur List kann uns retten.</p>
           </sp>
         </div>
-        <pb n="265" />
+        <pb n="265"/>
         <div n="1168" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
@@ -9911,7 +9857,7 @@
         <div n="1177" type="segment">
           <sp>
             <speaker>Das Kammerm.</speaker>
-            <p>Behüte, das verdürbe <pb n="266" /> ja unsern ganzen Plan. – Gieb’s nur von Dir,
+            <p>Behüte, das verdürbe <pb n="266"/> ja unsern ganzen Plan. – Gieb’s nur von Dir,
               Schelm!</p>
           </sp>
         </div>
@@ -9956,7 +9902,7 @@
             <stage>(zugleich)</stage>
           </spGrp>
         </div>
-        <pb n="267" />
+        <pb n="267"/>
         <div n="1183" type="segment">
           <spGrp>
             <sp>
@@ -10010,7 +9956,7 @@
           <head>Zehnter Auftritt.</head>
           <stage>Der Liebhaber. Der Diener.</stage>
         </div>
-        <pb n="268" />
+        <pb n="268"/>
         <div n="1190" type="segment">
           <sp>
             <speaker>Der Liebh.</speaker>
@@ -10049,7 +9995,7 @@
             <p>Was zum Henker machen Sie denn hier?</p>
           </sp>
         </div>
-        <pb n="269" />
+        <pb n="269"/>
         <div n="1196" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
@@ -10072,7 +10018,7 @@
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Wie weise Sie sich stellen und wie wenig Sie es sind! Mein Herr, ich bin nicht
-              abgeneigt, Sie für einen Moralphilosophen <pb n="270" /> zu halten, der der Modewelt
+              abgeneigt, Sie für einen Moralphilosophen <pb n="270"/> zu halten, der der Modewelt
               eine Lobrede hersagt. Müssen Sie meinen Namen doch wissen! Warum stellen Sie sich
               denn, als wüßten Sie ihn nicht? Warum verleugnen Sie Ihr eigentliches Selbst, ihre
               eigenthümliche Natur, Ihr wahres Wesen, Ihr ideales oder reales Ich, Ihren innern
