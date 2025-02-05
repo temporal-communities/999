@@ -55,6 +55,7 @@
       <listChange>
         <change when="2024-02-22">initial conversion from source</change>
         <change when="2024-06-26">minor corrections</change>
+        <change when="2025-02-05">minor corrections</change>
       </listChange>
     </revisionDesc>
   </teiHeader>
@@ -6718,20 +6719,20 @@
           </sp>
           <sp>
             <speaker>Der Diener.</speaker>
-            <p>Keineswegs, aber Sie sollen glauben, Sie wären behext, so arg will ichs mit Ihnen
-              treiben. Ein Epigramm will ich auf Sie machen, das will ich drucken lassen, das
-              stachlige, in die Morgen- Mittag- Abend- und Mitternachtzeitung; ferner will ich es
-              selbst in Musik setzen, es auf der Gasse mit der Drehorgel absingen lassen und auf dem
-              Titelblatte der Broschüre, die ich zu Tausenden gratis vertheilen will, steche ich Ihr
-              wohlgetroffenes Portrait in Zinn oder Kupfer.</p>
+            <p>Keineswegs, aber <emph>Sie</emph> sollen glauben, Sie wären behext, so arg will ichs
+              mit Ihnen treiben. Ein Epigramm will ich auf Sie machen, das will ich drucken lassen,
+              das stachlige, in die Morgen- Mittag- Abend- und Mitternachtzeitung; ferner will ich
+              es selbst in Musik setzen, es auf der Gasse mit der Drehorgel absingen lassen und auf
+              dem Titelblatte der Broschüre, die ich zu Tausenden gratis vertheilen will, steche ich
+              Ihr wohlgetroffenes Portrait in Zinn oder Kupfer.</p>
           </sp>
         </div>
         <div n="805" subtype="manicule-right" type="segment">
           <sp>
             <speaker>Der Diener.</speaker>
             <p>Sehen Sie Ihren Irrthum <pb n="181"/> ein? Oder vielmehr sehen Sie’s ein, daß Ihr
-              Irrthum eigentlich doch kein Irrthum war? daß Sie <emph>doch</emph> hätten fragen
-              müssen?</p>
+              Irrthum eigentlich <emph>doch</emph> kein Irrthum war? daß Sie <emph>doch</emph>
+              hätten fragen müssen?</p>
           </sp>
         </div>
         <div n="806" type="segment">
@@ -7221,7 +7222,7 @@
         <div n="868" type="segment">
           <sp>
             <p>O weh, o weh, Arme Prinzessin! Grausamer, barbarischer, tückischer, türkischer Herr
-              Oheim – aber er hört mich nicht. Er poltert hinab ins Hinterhaus. – Geschwinde, komm
+              Oheim – aber er hört mich nicht. Er poltert hinab in’s Hinterhaus. – Geschwinde, komm
               herein! Dein Herr ist auch da?</p>
           </sp>
         </div>
