@@ -1,12 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="grid">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%sveltekit.assets%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     %sveltekit.head%
   </head>
-  <body data-sveltekit-preload-data="hover" class="bg-white font-classical-humanist text-stone-800">
+  <body
+    data-sveltekit-preload-data="hover"
+    class="relative bg-[url(/src/lib/assets/wallpaper.jpg)] font-classical-humanist text-stone-800 before:absolute before:inset-0 before:z-[-2] before:bg-white before:opacity-20 before:content-['']"
+  >
     <div style="display: contents">%sveltekit.body%</div>
   </body>
 </html>
