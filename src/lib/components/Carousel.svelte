@@ -32,7 +32,7 @@
 </script>
 
 <div
-  class="embla rounded-box max-w-xl overflow-hidden p-4"
+  class="embla rounded-box max-w-xl p-4"
   use:emblaCarouselSvelte={{ plugins, options: {} }}
   onemblaInit={onInit}
 >
