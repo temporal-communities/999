@@ -37,7 +37,7 @@
 </script>
 
 <header>
-  <h1 class="m-4 text-center text-2xl font-bold">
+  <h1 class="m-4 pt-10 text-center text-2xl font-bold">
     Neunhundert neun und neunzig <br /> <small>und noch etliche</small> <br /> Almanachs-Lustspiele
     <br /> <small>durch den Würfel</small>
   </h1>
