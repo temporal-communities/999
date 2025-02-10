@@ -2,6 +2,7 @@
   import { page } from "$app/state"
   import { generateRandomSequence } from "$lib/dice"
   import emblaCarouselSvelte from "embla-carousel-svelte"
+  import Dice3D from "$lib/components/Dice3D.svelte"
 
   import Carousel from "$lib/components/Carousel.svelte"
 
@@ -34,6 +35,10 @@
     return sequence
   }
   let sequence = $derived(handleSequence(page.url.hash))
+
+  function handleRandomPath() {
+    document.location.hash = generateRandomSequence().join("")
+  }
 </script>
 
 <header>
@@ -42,16 +47,9 @@
     <br /> <small>durch den Würfel</small>
   </h1>
 
-  <button
-    onclick={() => {
-      document.location.hash = wavyPath.join("")
-    }}>Wavy path</button
-  >
-  <button
-    onclick={() => {
-      document.location.hash = generateRandomSequence().join("")
-    }}>Random path</button
-  >
+  <div class="flex justify-center" title="Würfeln">
+    <Dice3D onClick={handleRandomPath} />
+  </div>
 </header>
 
 <main class="p-4">
