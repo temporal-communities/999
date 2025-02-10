@@ -1,11 +1,27 @@
 <script lang="ts">
+  import { onMount } from "svelte"
   export let onClick: () => void
 
   let isRolling = false
   let isHovering = false
+  let currentRotation = { x: 0, y: 0 }
+
+  const faceRotations = [
+    { x: 0, y: 0 }, // front (1)
+    { x: 0, y: 180 }, // back (2)
+    { x: 0, y: 90 }, // right (3)
+    { x: 0, y: -90 }, // left (4)
+    { x: 90, y: 0 }, // top (5)
+    { x: -90, y: 0 } // bottom (6)
+  ]
+
+  onMount(() => {
+    const randomIndex = Math.floor(Math.random() * faceRotations.length)
+    currentRotation = faceRotations[randomIndex]
+  })
 
   function handleMouseEnter() {
-    isHovering = true
+    if (!isRolling) isHovering = true
   }
 
   function handleMouseLeave() {
@@ -14,11 +30,29 @@
 
   function handleClick() {
     isRolling = true
+    isHovering = false
+
+    // Get a different random face
+    let newIndex = Math.floor(Math.random() * faceRotations.length)
+    while (
+      faceRotations[newIndex].x === currentRotation.x &&
+      faceRotations[newIndex].y === currentRotation.y
+    ) {
+      newIndex = Math.floor(Math.random() * faceRotations.length)
+    }
+    currentRotation = faceRotations[newIndex]
+
     setTimeout(() => {
       isRolling = false
       onClick()
-    }, 1000)
+    }, 2000)
   }
+
+  $: diceTransform = isRolling
+    ? undefined
+    : isHovering
+      ? `rotateX(45deg) rotateY(45deg)`
+      : `rotateX(${currentRotation.x}deg) rotateY(${currentRotation.y}deg)`
 </script>
 
 <button
@@ -31,51 +65,68 @@
   disabled={isRolling}
   aria-label="Roll dice"
 >
-  <div class="dice">
+  <div
+    class="dice"
+    style:--final-x={currentRotation.x}
+    style:--final-y={currentRotation.y}
+    style:transform={diceTransform}
+  >
     <div class="face front">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="10" fill="#075985" />
-      </svg>
+      <div class="side">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="10" fill="#075985" />
+        </svg>
+      </div>
     </div>
     <div class="face back">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="30" cy="30" r="10" fill="#075985" />
-        <circle cx="70" cy="70" r="10" fill="#075985" />
-      </svg>
+      <div class="side">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="10" fill="#075985" />
+          <circle cx="70" cy="70" r="10" fill="#075985" />
+        </svg>
+      </div>
     </div>
     <div class="face right">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="30" cy="30" r="10" fill="#075985" />
-        <circle cx="50" cy="50" r="10" fill="#075985" />
-        <circle cx="70" cy="70" r="10" fill="#075985" />
-      </svg>
+      <div class="side">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="10" fill="#075985" />
+          <circle cx="50" cy="50" r="10" fill="#075985" />
+          <circle cx="70" cy="70" r="10" fill="#075985" />
+        </svg>
+      </div>
     </div>
     <div class="face left">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="30" cy="30" r="10" fill="#075985" />
-        <circle cx="30" cy="70" r="10" fill="#075985" />
-        <circle cx="70" cy="30" r="10" fill="#075985" />
-        <circle cx="70" cy="70" r="10" fill="#075985" />
-      </svg>
+      <div class="side">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="10" fill="#075985" />
+          <circle cx="30" cy="70" r="10" fill="#075985" />
+          <circle cx="70" cy="30" r="10" fill="#075985" />
+          <circle cx="70" cy="70" r="10" fill="#075985" />
+        </svg>
+      </div>
     </div>
     <div class="face top">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="30" cy="30" r="10" fill="#075985" />
-        <circle cx="30" cy="70" r="10" fill="#075985" />
-        <circle cx="50" cy="50" r="10" fill="#075985" />
-        <circle cx="70" cy="30" r="10" fill="#075985" />
-        <circle cx="70" cy="70" r="10" fill="#075985" />
-      </svg>
+      <div class="side">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="10" fill="#075985" />
+          <circle cx="30" cy="70" r="10" fill="#075985" />
+          <circle cx="50" cy="50" r="10" fill="#075985" />
+          <circle cx="70" cy="30" r="10" fill="#075985" />
+          <circle cx="70" cy="70" r="10" fill="#075985" />
+        </svg>
+      </div>
     </div>
     <div class="face bottom">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="30" cy="20" r="10" fill="#075985" />
-        <circle cx="30" cy="50" r="10" fill="#075985" />
-        <circle cx="30" cy="80" r="10" fill="#075985" />
-        <circle cx="70" cy="20" r="10" fill="#075985" />
-        <circle cx="70" cy="50" r="10" fill="#075985" />
-        <circle cx="70" cy="80" r="10" fill="#075985" />
-      </svg>
+      <div class="side">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="20" r="10" fill="#075985" />
+          <circle cx="30" cy="50" r="10" fill="#075985" />
+          <circle cx="30" cy="80" r="10" fill="#075985" />
+          <circle cx="70" cy="20" r="10" fill="#075985" />
+          <circle cx="70" cy="50" r="10" fill="#075985" />
+          <circle cx="70" cy="80" r="10" fill="#075985" />
+        </svg>
+      </div>
     </div>
   </div>
 </button>
@@ -95,23 +146,24 @@
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 1s;
-  }
-
-  .hovering .dice {
-    transform: rotateX(45deg) rotateY(45deg);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .rolling .dice {
-    animation: roll 2s ease-in-out;
+    transition: none; /* Disable transition during roll animation */
+    animation: roll 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 
+  .side {
+    background: white;
+    border: 6px solid #075985;
+    border-radius: 20px;
+  }
   .face {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: white;
-    border: 6px solid #075985;
+    background: #075985;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,8 +197,11 @@
     0% {
       transform: rotateX(0) rotateY(0);
     }
-    100% {
+    80% {
       transform: rotateX(720deg) rotateY(360deg);
+    }
+    100% {
+      transform: rotateX(var(--final-x)) rotateY(var(--final-y));
     }
   }
 </style>

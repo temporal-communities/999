@@ -57,14 +57,16 @@
   </h1>
 
   <div class="flex justify-center" title="Würfeln">
-    <Dice3D
-      onClick={() => {
-        if (!isRolling) {
-          roll()
-          sequence = generateRandomSequence()
-        }
-      }}
-    />
+    <div class="flex items-center justify-center rounded-full bg-sky-800 p-3" title="Würfeln">
+      <Dice3D
+        onClick={() => {
+          if (!isRolling) {
+            roll()
+            sequence = generateRandomSequence()
+          }
+        }}
+      />
+    </div>
   </div>
 </header>
 
