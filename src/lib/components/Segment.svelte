@@ -16,20 +16,22 @@
 {#await segmentPromise}
   <p>Loading...</p>
 {:then { id, html }}
-  <div class="relative flex justify-center">
-    <div
-      class="relative mb-4 h-14 w-14 overflow-hidden rounded-xl border-4 border-sky-800 text-center after:absolute after:bottom-[-4] after:h-14 after:border-red-100 after:content-['']"
-    >
-      <img src="/src/lib/assets/dice-{pips}.svg" alt="dice" class="h-full w-full" />
+  <div class="flex size-full flex-col justify-between">
+    <div class="relative flex justify-center">
+      <div
+        class="relative mb-4 h-14 w-14 overflow-hidden rounded-xl border-4 border-sky-800 text-center"
+      >
+        <img src="/src/lib/assets/dice-{pips}.svg" alt="dice" class="h-full w-full" />
+      </div>
     </div>
-  </div>
-  <div
-    id="s{id}"
-    class="segment flex size-full flex-col justify-between border-4 border-sky-800 bg-amber-50 p-8"
-  >
-    <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-    <div class="tei">{@html html}</div>
-    <span class="number mt-2 block text-center text-xs">{id}</span>
+    <div
+      id="s{id}"
+      class="segment flex size-full flex-col justify-between border-4 border-sky-800 bg-amber-50 p-8"
+    >
+      <!-- eslint-disable-next-line svelte/no-at-html-tags -->
+      <div class="tei">{@html html}</div>
+      <span class="number mt-2 block text-center text-xs">{id}</span>
+    </div>
   </div>
 {:catch error}
   <p>Error: {error.message}</p>
