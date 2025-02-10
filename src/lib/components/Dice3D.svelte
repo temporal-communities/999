@@ -29,8 +29,13 @@
   }
 
   function handleClick() {
+    if (isRolling) return // Prevent multiple clicks during animation
+
     isRolling = true
     isHovering = false
+
+    // Trigger the onClick handler immediately
+    onClick()
 
     // Get a different random face
     let newIndex = Math.floor(Math.random() * faceRotations.length)
@@ -42,9 +47,9 @@
     }
     currentRotation = faceRotations[newIndex]
 
+    // Reset rolling state after animation
     setTimeout(() => {
       isRolling = false
-      onClick()
     }, 2000)
   }
 
