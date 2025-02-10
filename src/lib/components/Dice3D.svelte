@@ -1,10 +1,11 @@
 <script lang="ts">
-  import { onMount } from "svelte"
+  import { onMount, onDestroy } from "svelte"
   export let onClick: () => void
 
   let isRolling = false
   let isHovering = false
   let currentRotation = { x: 0, y: 0 }
+  let hoverInterval: ReturnType<typeof setInterval>
 
   const faceRotations = [
     { x: 0, y: 0 }, // front (1)
@@ -15,9 +16,30 @@
     { x: -90, y: 0 } // bottom (6)
   ]
 
+  function triggerHoverAnimation() {
+    if (!isRolling) {
+      isHovering = true
+      setTimeout(() => {
+        isHovering = false
+      }, 2000) // Hover effect lasts 2 seconds
+    }
+  }
+
   onMount(() => {
     const randomIndex = Math.floor(Math.random() * faceRotations.length)
     currentRotation = faceRotations[randomIndex]
+
+    // Trigger hover animation immediately
+    triggerHoverAnimation()
+
+    // Set up interval for repeated hover animation
+    hoverInterval = setInterval(triggerHoverAnimation, 15000)
+  })
+
+  onDestroy(() => {
+    if (hoverInterval) {
+      clearInterval(hoverInterval)
+    }
   })
 
   function handleMouseEnter() {
