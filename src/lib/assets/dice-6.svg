@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Ebene_2" viewBox="0 0 74.54 74.54">
+  <defs>
+    <style>.cls-1{fill:#fff;}</style>
+  </defs>
+  <g id="Ebene_1-2">
+    <rect class="cls-1" height="74.54" width="74.54" />
+    <circle cx="53.24" cy="19.3" fill="#075985" r="8.14" />
+    <circle cx="21.3" cy="55.24" fill="#075985" r="8.14" />
+    <circle cx="21.3" cy="19.3" fill="#075985" r="8.14" />
+    <circle cx="21.3" cy="37.27" fill="#075985" r="8.14" />
+    <circle cx="53.24" cy="37.27" fill="#075985" r="8.14" />
+    <circle cx="53.24" cy="55.24" fill="#075985" r="8.14" />
+  </g>
+</svg>

@@ -18,9 +18,9 @@
 {:then { id, html }}
   <div class="relative flex justify-center">
     <div
-      class="relative mb-4 h-14 w-14 rounded-xl border-4 border-sky-800 bg-amber-50 p-2 pb-4 text-center after:absolute after:bottom-[-4] after:h-14 after:border-red-100 after:content-['']"
+      class="relative mb-4 h-14 w-14 overflow-hidden rounded-xl border-4 border-sky-800 text-center after:absolute after:bottom-[-4] after:h-14 after:border-red-100 after:content-['']"
     >
-      {"●".repeat(pips)}
+      <img src="/src/lib/assets/dice-{pips}.svg" alt="dice" class="h-full w-full" />
     </div>
   </div>
   <div
