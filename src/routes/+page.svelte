@@ -48,7 +48,7 @@
   </h1>
 
   <div class="flex justify-center">
-    <div class="flex items-center justify-center rounded-full bg-sky-800 p-3" title="Würfeln">
+    <div class="m-5 flex items-center justify-center rounded-full bg-sky-800 p-3" title="Würfeln">
       <Dice3D onClick={handleRandomPath} />
     </div>
   </div>
