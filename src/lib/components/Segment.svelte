@@ -16,9 +16,16 @@
 {#await segmentPromise}
   <p>Loading...</p>
 {:then { id, html }}
+  <div class="relative flex justify-center">
+    <div
+      class="relative mb-4 h-14 w-14 rounded-xl border-4 border-sky-800 bg-amber-50 p-2 pb-4 text-center after:absolute after:bottom-[-4] after:h-14 after:border-red-100 after:content-['']"
+    >
+      {"●".repeat(pips)}
+    </div>
+  </div>
   <div
     id="s{id}"
-    class="segment flex size-full flex-col justify-between rounded-md border border-stone-200 bg-amber-50 p-8 shadow-md"
+    class="segment flex size-full flex-col justify-between border-4 border-sky-800 bg-amber-50 p-8"
   >
     <!-- eslint-disable-next-line svelte/no-at-html-tags -->
     <div class="tei">{@html html}</div>
