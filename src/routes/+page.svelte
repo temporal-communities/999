@@ -2,6 +2,7 @@
   import { page } from "$app/state"
   import { generateRandomSequence } from "$lib/dice"
   import emblaCarouselSvelte from "embla-carousel-svelte"
+  import Dice3D from "$lib/components/Dice3D.svelte"
 
   import Carousel from "$lib/components/Carousel.svelte"
   import { onMount } from "svelte"
@@ -55,17 +56,16 @@
     <br /> <small>durch den Würfel</small>
   </h1>
 
-  <!-- Placeholder -->
-  <button
-    class="my-8 inline-block cursor-pointer text-6xl hover:animate-bounce"
-    onclick={() => {
-      if (!isRolling) {
-        roll()
-        sequence = generateRandomSequence()
-      }
-    }}
-    disabled={isRolling}>🎲</button
-  >
+  <div class="flex justify-center" title="Würfeln">
+    <Dice3D
+      onClick={() => {
+        if (!isRolling) {
+          roll()
+          sequence = generateRandomSequence()
+        }
+      }}
+    />
+  </div>
 </header>
 
 <main class="p-4">
