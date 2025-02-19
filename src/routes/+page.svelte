@@ -10,9 +10,6 @@
     skipSnaps: true // Allow the carousel to skip scroll snaps if it's dragged vigorously
   }
 
-  // Wavy path back and forth
-  const wavyPath = Array.from({ length: 200 }, (_, i) => 1 + (Math.abs((i % 10) - 5) % 6))
-
   function handleSequence(hash: string) {
     const sequence = hash.slice(1)
 
@@ -36,21 +33,18 @@
   let sequence = $derived(handleSequence(page.url.hash))
 </script>
 
-<header>
+<header class="flex flex-col">
   <h1 class="m-4 pt-10 text-center text-2xl font-bold">
     Neunhundert neun und neunzig <br /> <small>und noch etliche</small> <br /> Almanachs-Lustspiele
     <br /> <small>durch den Würfel</small>
   </h1>
 
+  <!-- Placeholder -->
   <button
-    onclick={() => {
-      document.location.hash = wavyPath.join("")
-    }}>Wavy path</button
-  >
-  <button
+    class="my-8 cursor-pointer text-6xl hover:animate-bounce"
     onclick={() => {
       document.location.hash = generateRandomSequence().join("")
-    }}>Random path</button
+    }}>🎲</button
   >
 </header>
 
