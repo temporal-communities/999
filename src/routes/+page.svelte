@@ -33,6 +33,11 @@
   let sequence = $derived(handleSequence(page.url.hash))
 </script>
 
+<!-- Center column backdrop -->
+<div
+  class="absolute inset-0 top-4 bottom-4 left-1/2 z-[-1] w-md -translate-x-1/2 border-4 border-sky-800 bg-amber-50"
+></div>
+
 <header class="mx-auto flex w-md flex-col items-center">
   <h1 class="m-4 pt-10 text-center text-2xl font-bold">
     Neunhundert neun und neunzig <br /> <small>und noch etliche</small> <br /> Almanachs-Lustspiele
