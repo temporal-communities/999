@@ -1,6 +1,17 @@
 <script lang="ts">
   import { Almanac } from "$lib/almanac"
 
+  // Object containing dice asset URLs: { "1": <url>, "2": <url> } etc.
+  const DiceAssets = Object.entries(
+    import.meta.glob("$lib/assets/dice-*.svg", { eager: true, import: "default" })
+  ).reduce((acc: { [key: string]: string }, [key, value]) => {
+    const match = key.match(/dice-(\d)/)
+    if (!match) throw Error("Error loading dice assets")
+    const diceNumber = match[1]
+    acc[diceNumber] = value as string
+    return acc
+  }, {})
+
   let {
     index,
     pips
@@ -21,7 +32,7 @@
       <div
         class="relative mb-4 h-14 w-14 overflow-hidden rounded-xl border-4 border-sky-800 text-center"
       >
-        <img src="/src/lib/assets/dice-{pips}.svg" alt="dice" class="h-full w-full" />
+        <img src={DiceAssets[pips]} alt="dice" class="h-full w-full" />
       </div>
     </div>
     <div
