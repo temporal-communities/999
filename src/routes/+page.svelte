@@ -33,7 +33,7 @@
   let sequence = $derived(handleSequence(page.url.hash))
 </script>
 
-<header class="flex flex-col">
+<header class="mx-auto flex w-md flex-col items-center">
   <h1 class="m-4 pt-10 text-center text-2xl font-bold">
     Neunhundert neun und neunzig <br /> <small>und noch etliche</small> <br /> Almanachs-Lustspiele
     <br /> <small>durch den Würfel</small>
@@ -41,7 +41,7 @@
 
   <!-- Placeholder -->
   <button
-    class="my-8 cursor-pointer text-6xl hover:animate-bounce"
+    class="my-8 inline-block cursor-pointer text-6xl hover:animate-bounce"
     onclick={() => {
       document.location.hash = generateRandomSequence().join("")
     }}>🎲</button

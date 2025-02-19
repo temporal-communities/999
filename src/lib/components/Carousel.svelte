@@ -32,12 +32,13 @@
 </script>
 
 <div
-  class="embla rounded-box max-w-xl p-4"
+  class="embla rounded-box max-w-screen p-4"
   use:emblaCarouselSvelte={{ plugins, options: {} }}
   onemblaInit={onInit}
 >
   <div class="flex">
-    {#each Array.from({ length: 6 }, (_, i) => i + 1) as pips}
+    <!-- Generate two rounds -->
+    {#each Array.from({ length: 6 * 2 }, (_, i) => (i % 6) + 1) as pips}
       <div class="roll me-10 select-none *:w-sm">
         <Segment {index} {pips} />
       </div>
