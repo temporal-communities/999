@@ -18,6 +18,19 @@
 
   function onInit(event: CustomEvent<EmblaCarouselType>) {
     emblaApi = event.detail
+    // Initialise position
+    handleFocusPips({ jump: true })
+
+    // Attach event listener for slide change
+    // settle: Runs when the carousel has settled after scroll has been triggered.
+    emblaApi.on("settle", () => {
+      focusPips = emblaApi.selectedScrollSnap() + 1
+    })
+  }
+
+  function handleFocusPips(options = { jump: false }) {
+    if (!focusPips || !emblaApi) return
+    emblaApi.scrollTo(focusPips - 1, options.jump)
   }
 
   // When the focusPips value changes, scroll to it

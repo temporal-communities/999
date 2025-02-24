@@ -4,33 +4,36 @@
   import emblaCarouselSvelte from "embla-carousel-svelte"
 
   import Carousel from "$lib/components/Carousel.svelte"
+  import { onMount } from "svelte"
 
   emblaCarouselSvelte.globalOptions = {
     loop: true,
     skipSnaps: true // Allow the carousel to skip scroll snaps if it's dragged vigorously
   }
 
-  function handleSequence(hash: string) {
-    const sequence = hash.slice(1)
+  let sequence: number[] = $state([])
 
-    function resetSequence() {
-      document.location.hash = ""
-      return []
+  function initialiseSequence() {
+    // On load, check if there's a sequence in the URL hash
+    const hashString = page.url.hash.slice(1)
+    if (!hashString) return generateRandomSequence()
+
+    // Check if it’s a valid sequence
+    const sequenceLength = 200
+    const sequenceRegex = new RegExp(`^[1-6]{${sequenceLength}}$`)
+    if (!sequenceRegex.test(hashString)) {
+      return generateRandomSequence()
     }
 
-    // Check if sequence is valid
-    if (sequence.length !== 200) {
-      console.warn("Invalid sequence length")
-      resetSequence()
-    }
-    if (!/^[1-6]+$/.test(sequence)) {
-      console.warn("Invalid characters in sequence")
-      resetSequence()
-    }
-
-    return sequence
+    // Valid, apply
+    const hashSequence = hashString.split("").map(Number)
+    // Reset hash
+    history.pushState("", document.title, window.location.pathname + window.location.search)
+    return hashSequence
   }
-  let sequence = $derived(handleSequence(page.url.hash))
+  onMount(() => {
+    sequence = initialiseSequence()
+  })
 </script>
 
 <!-- Center column backdrop -->
@@ -48,7 +51,7 @@
   <button
     class="my-8 inline-block cursor-pointer text-6xl hover:animate-bounce"
     onclick={() => {
-      document.location.hash = generateRandomSequence().join("")
+      sequence = generateRandomSequence()
     }}>🎲</button
   >
 </header>
@@ -59,7 +62,7 @@
     {#each Array.from(new Array(200), (_x, i) => i + 1) as index}
       <div class="flex flex-col items-center">
         <h2 class="text-center text-xl font-bold" id={index.toString()}>{index}</h2>
-        <Carousel {index} focusPips={sequence ? Number(sequence[index - 1]) : null} />
+        <Carousel {index} focusPips={sequence ? sequence[index - 1] : null} />
       </div>
     {/each}
   </div>
