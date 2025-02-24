@@ -5,6 +5,10 @@
   --font-classical-humanist: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
 }
 
+body {
+  @apply relative overflow-x-hidden bg-[url($lib/assets/wallpaper.svg)] font-classical-humanist text-sky-800 before:absolute before:inset-0 before:z-[-2] before:bg-sky-800 before:opacity-50 before:content-[''];
+}
+
 /* TEI styles */
 .tei {
   .tei-speaker {
