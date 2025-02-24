@@ -12,6 +12,14 @@
   }
 
   let sequence: number[] = $state([])
+  let isRolling = $state(false)
+
+  function roll() {
+    isRolling = true
+    setTimeout(() => {
+      isRolling = false
+    }, 2000)
+  }
 
   function initialiseSequence() {
     // On load, check if there's a sequence in the URL hash
@@ -51,8 +59,12 @@
   <button
     class="my-8 inline-block cursor-pointer text-6xl hover:animate-bounce"
     onclick={() => {
-      sequence = generateRandomSequence()
-    }}>🎲</button
+      if (!isRolling) {
+        roll()
+        sequence = generateRandomSequence()
+      }
+    }}
+    disabled={isRolling}>🎲</button
   >
 </header>
 
@@ -62,7 +74,7 @@
     {#each Array.from(new Array(200), (_x, i) => i + 1) as index}
       <div class="flex flex-col items-center">
         <h2 class="text-center text-xl font-bold" id={index.toString()}>{index}</h2>
-        <Carousel {index} focusPips={sequence ? sequence[index - 1] : null} />
+        <Carousel {index} focusPips={sequence ? sequence[index - 1] : null} {isRolling} />
       </div>
     {/each}
   </div>
