@@ -7,14 +7,17 @@
 
   let {
     index,
-    focusPips
+    focusPips,
+    isRolling = false
   }: {
     index: number
     focusPips: number | null
+    isRolling?: boolean
   } = $props()
 
   let emblaApi: EmblaCarouselType
   let plugins: EmblaPluginType[] = [WheelGesturesPlugin()]
+  let scrollInterval: ReturnType<typeof setInterval> | null = null
 
   function onInit(event: CustomEvent<EmblaCarouselType>) {
     emblaApi = event.detail
@@ -30,23 +33,51 @@
 
   function handleFocusPips(options = { jump: false }) {
     if (!focusPips || !emblaApi) return
-    emblaApi.scrollTo(focusPips - 1, options.jump)
+    // @ts-expect-error Third argument not typed. See https://github.com/davidjerleke/embla-carousel/issues/1120#issuecomment-2664709719
+    emblaApi.scrollTo(focusPips - 1, options.jump, -1)
   }
 
-  // When the focusPips value changes, scroll to it
+  // Start or stop rolling based on isRolling prop
   $effect(() => {
-    if (!focusPips || !emblaApi) return
+    if (isRolling && emblaApi) {
+      const intervalTime = 100 // Adjust for desired speed
+      scrollInterval = setInterval(() => {
+        emblaApi.scrollNext()
+      }, intervalTime)
+    } else if (scrollInterval) {
+      clearInterval(scrollInterval)
+      scrollInterval = null
+
+      // Go to the final position when rolling stops
+      if (!isRolling && focusPips && emblaApi) {
+        handleFocusPips()
+      }
+    }
+  })
+
+  // Handle focusPips changes when not rolling
+  $effect(() => {
+    if (!focusPips || !emblaApi || isRolling) return
     emblaApi.scrollTo(focusPips - 1)
   })
 
   onDestroy(() => {
+    if (scrollInterval) {
+      clearInterval(scrollInterval)
+    }
     emblaApi?.destroy()
   })
 </script>
 
 <div
   class="embla rounded-box w-screen max-w-(--breakpoint-2xl) p-4"
-  use:emblaCarouselSvelte={{ plugins, options: {} }}
+  use:emblaCarouselSvelte={{
+    plugins,
+    options: {
+      skipSnaps: isRolling,
+      containScroll: "keepSnaps"
+    }
+  }}
   onemblaInit={onInit}
 >
   <div class="flex">
