@@ -235,6 +235,7 @@
   .side {
     background: white;
     border: 6px solid #075985;
+    outline: 1px solid #075985;
     border-radius: 20px;
   }
   .face {
