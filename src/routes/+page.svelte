@@ -18,7 +18,7 @@
     isRolling = true
     setTimeout(() => {
       isRolling = false
-    }, 2000)
+    }, 1000)
   }
 
   function initialiseSequence() {
