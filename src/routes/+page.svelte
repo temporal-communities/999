@@ -74,7 +74,12 @@
     {#each Array.from(new Array(200), (_x, i) => i + 1) as index}
       <div class="flex flex-col items-center">
         <h2 class="text-center text-xl font-bold" id={index.toString()}>{index}</h2>
-        <Carousel {index} focusPips={sequence ? sequence[index - 1] : null} {isRolling} />
+        <!-- Only apply the rolling effect to the first ten carousels -->
+        <Carousel
+          {index}
+          focusPips={sequence ? sequence[index - 1] : null}
+          isRolling={index <= 10 ? isRolling : false}
+        />
       </div>
     {/each}
   </div>
