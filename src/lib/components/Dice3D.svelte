@@ -7,6 +7,13 @@
   let currentRotation = { x: 0, y: 0 }
   let hoverInterval: ReturnType<typeof setInterval>
 
+  // Animation variables
+  let animationId: number | null = null
+  let startRotation = { x: 0, y: 0 }
+  let targetRotation = { x: 0, y: 0 }
+  let animationStartTime = 0
+  let diceElement: HTMLElement
+
   const faceRotations = [
     { x: 0, y: 0 }, // front (1)
     { x: 0, y: 180 }, // back (2)
@@ -25,6 +32,43 @@
     }
   }
 
+  // Animation function
+  function animateDice(timestamp: number) {
+    if (!animationStartTime) animationStartTime = timestamp
+    const elapsed = timestamp - animationStartTime
+    const duration = 3000
+
+    if (elapsed < duration) {
+      const progress = easeOutCubic(elapsed / duration)
+      const extraRotation = 2
+      const arcEffect = Math.sin(progress * Math.PI) * extraRotation * 90
+      const rotationX =
+        startRotation.x + progress * (targetRotation.x - startRotation.x) + arcEffect
+      const rotationY =
+        startRotation.y + progress * (targetRotation.y - startRotation.y) + arcEffect
+
+      if (diceElement) {
+        diceElement.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`
+      }
+
+      animationId = requestAnimationFrame(animateDice)
+    } else {
+      // Animation complete
+      if (diceElement) {
+        diceElement.style.transform = `rotateX(${targetRotation.x}deg) rotateY(${targetRotation.y}deg)`
+      }
+      currentRotation = { ...targetRotation }
+      animationId = null
+      isRolling = false
+      animationStartTime = 0
+    }
+  }
+
+  // Simple easing function that provides basic deceleration
+  function easeOutCubic(x: number): number {
+    return 1 - Math.pow(1 - x, 3)
+  }
+
   onMount(() => {
     const randomIndex = Math.floor(Math.random() * faceRotations.length)
     currentRotation = faceRotations[randomIndex]
@@ -39,6 +83,11 @@
   onDestroy(() => {
     if (hoverInterval) {
       clearInterval(hoverInterval)
+    }
+
+    // Cancel any ongoing animation
+    if (animationId) {
+      cancelAnimationFrame(animationId)
     }
   })
 
@@ -67,16 +116,18 @@
     ) {
       newIndex = Math.floor(Math.random() * faceRotations.length)
     }
-    currentRotation = faceRotations[newIndex]
 
-    // Reset rolling state after animation
-    setTimeout(() => {
-      isRolling = false
-    }, 2000)
+    // Set up animation start and target
+    startRotation = { ...currentRotation }
+    targetRotation = { ...faceRotations[newIndex] }
+
+    // Start the animation
+    animationStartTime = 0
+    animationId = requestAnimationFrame(animateDice)
   }
 
   $: diceTransform = isRolling
-    ? undefined
+    ? undefined // Let the animation handle this when rolling
     : isHovering
       ? `rotateX(45deg) rotateY(45deg)`
       : `rotateX(${currentRotation.x}deg) rotateY(${currentRotation.y}deg)`
@@ -94,6 +145,7 @@
 >
   <div
     class="dice"
+    bind:this={diceElement}
     style:--final-x={currentRotation.x}
     style:--final-y={currentRotation.y}
     style:transform={diceTransform}
@@ -177,8 +229,7 @@
   }
 
   .rolling .dice {
-    transition: none; /* Disable transition during roll animation */
-    animation: roll 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transition: none; /* Disable transition during JavaScript animation */
   }
 
   .side {
@@ -218,17 +269,5 @@
   }
   .bottom {
     transform: rotateX(-90deg) translateZ(50px);
-  }
-
-  @keyframes roll {
-    0% {
-      transform: rotateX(0) rotateY(0);
-    }
-    80% {
-      transform: rotateX(720deg) rotateY(360deg);
-    }
-    100% {
-      transform: rotateX(var(--final-x)) rotateY(var(--final-y));
-    }
   }
 </style>
