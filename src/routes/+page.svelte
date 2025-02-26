@@ -15,12 +15,12 @@
   let sequence: number[] = $state([])
   let isRolling = $state(false)
 
-  function roll() {
-    isRolling = true
-    setTimeout(() => {
-      isRolling = false
-    }, 1000)
-  }
+  // On change to isRolling, set a new sequence
+  $effect(() => {
+    if (isRolling) {
+      sequence = generateRandomSequence()
+    }
+  })
 
   function initialiseSequence() {
     // On load, check if there's a sequence in the URL hash
@@ -58,14 +58,7 @@
 
   <div class="flex justify-center" title="Würfeln">
     <div class="m-5 flex items-center justify-center rounded-full bg-sky-800 p-3" title="Würfeln">
-      <Dice3D
-        onClick={() => {
-          if (!isRolling) {
-            roll()
-            sequence = generateRandomSequence()
-          }
-        }}
-      />
+      <Dice3D bind:isRolling />
     </div>
   </div>
 </header>
