@@ -1,10 +1,14 @@
 <script lang="ts">
   import { onMount, onDestroy } from "svelte"
-  export let onClick: () => void
 
-  let isRolling = false
-  let isHovering = false
-  let currentRotation = { x: 0, y: 0 }
+  let {
+    isRolling = $bindable()
+  }: {
+    isRolling?: boolean
+  } = $props()
+
+  let attractMode = $state(false)
+  let currentRotation = $state({ x: 0, y: 0 })
   let hoverInterval: ReturnType<typeof setInterval>
 
   // Animation variables
@@ -25,9 +29,9 @@
 
   function triggerHoverAnimation() {
     if (!isRolling) {
-      isHovering = true
+      attractMode = true
       setTimeout(() => {
-        isHovering = false
+        attractMode = false
       }, 2000) // Hover effect lasts 2 seconds
     }
   }
@@ -92,21 +96,18 @@
   })
 
   function handleMouseEnter() {
-    if (!isRolling) isHovering = true
+    if (!isRolling) attractMode = true
   }
 
   function handleMouseLeave() {
-    isHovering = false
+    attractMode = false
   }
 
   function handleClick() {
     if (isRolling) return // Prevent multiple clicks during animation
 
     isRolling = true
-    isHovering = false
-
-    // Trigger the onClick handler immediately
-    onClick()
+    attractMode = false
 
     // Get a different random face
     let newIndex = Math.floor(Math.random() * faceRotations.length)
@@ -126,20 +127,22 @@
     animationId = requestAnimationFrame(animateDice)
   }
 
-  $: diceTransform = isRolling
-    ? undefined // Let the animation handle this when rolling
-    : isHovering
-      ? `rotateX(45deg) rotateY(45deg)`
-      : `rotateX(${currentRotation.x}deg) rotateY(${currentRotation.y}deg)`
+  let diceTransform = $derived(
+    isRolling
+      ? undefined // Let the animation handle this when rolling
+      : attractMode
+        ? `rotateX(45deg) rotateY(45deg)`
+        : `rotateX(${currentRotation.x}deg) rotateY(${currentRotation.y}deg)`
+  )
 </script>
 
 <button
   class="dice-container"
   class:rolling={isRolling}
-  class:hovering={isHovering}
-  on:mouseenter={handleMouseEnter}
-  on:mouseleave={handleMouseLeave}
-  on:click={handleClick}
+  class:hovering={attractMode}
+  onmouseenter={handleMouseEnter}
+  onmouseleave={handleMouseLeave}
+  onclick={handleClick}
   disabled={isRolling}
   aria-label="Roll dice"
 >
