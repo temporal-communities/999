@@ -43,6 +43,14 @@
   onMount(() => {
     sequence = initialiseSequence()
   })
+
+  // Add function to scroll back to top
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }
 </script>
 
 <!-- Center column backdrop -->
@@ -79,3 +87,21 @@
     {/each}
   </div>
 </main>
+
+<!-- Back to top button -->
+<button
+  onclick={scrollToTop}
+  class="fixed right-6 bottom-6 flex h-18 w-18 cursor-pointer items-center justify-center rounded-full bg-sky-800 text-white shadow-lg transition-colors hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
+  aria-label="Back to top"
+  title="Back to top"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
