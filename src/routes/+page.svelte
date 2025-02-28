@@ -14,6 +14,12 @@
 
   let sequence: number[] = $state([])
   let isRolling = $state(false)
+  let language = $state("de") // Default to German
+
+  // Toggle language function
+  function toggleLanguage() {
+    language = language === "de" ? "en" : "de"
+  }
 
   // On change to isRolling, set a new sequence
   $effect(() => {
@@ -53,36 +59,52 @@
   }
 </script>
 
-<header class="mx-auto flex w-md flex-col items-center">
-  <div class="h-full w-full">
-    <div lang="de">
-      <h1>Ein Dramenautomat von 1829 digital aufbereitet</h1>
-      <p>
-        Der 1829 von Georg Nikolaus Bärmann veröffentlichte <em>Würfelalmanach</em> ist ein spielerisches
-        System zur Erzeugung von Einaktern per Würfelwurf. Diese kurzen Dramen waren auf der Bühne und
-        im privaten Kreis beliebt, und Bärmanns Buch ermöglichte die Erstellung von 4×10¹⁵⁵ Variationen
-        aus 1.200 Textfragmenten. Diese Webanwendung bringt den Almanach in digitaler Form zurück und
-        lädt dazu ein, eine frühe Form algorithmischen Erzählens interaktiv zu erkunden.
-      </p>
-    </div>
-    <div lang="en">
-      <h1>A literary automaton from 1829 reborn online</h1>
-      <p>
-        The <em>Würfelalmanach</em>, published by Georg Nikolaus Bärmann in 1829, is a playful
-        system for generating one-act plays by rolling dice. These short dramas were popular on
-        stage and in private gatherings, and Bärmann’s book offered a way to create 4×10¹⁵⁵ possible
-        variations from 1,200 text fragments. This web app recreates the experience, letting you
-        explore an early example of algorithmic storytelling in an interactive way.
-      </p>
-    </div>
+<header class="h-screen w-screen p-8">
+  <div
+    class="relative flex h-full w-full flex-col items-center justify-evenly bg-sky-800 px-[20%] text-center text-amber-50"
+  >
+    <!-- Language toggle button -->
+    <button
+      class="relative top-4 right-4 flex h-26 w-26 cursor-pointer items-center justify-center rounded-full bg-amber-50 text-4xl text-sky-800 hover:bg-amber-100 focus:outline-none"
+      onclick={toggleLanguage}
+      aria-label="Toggle language"
+    >
+      {language === "de" ? "EN" : "DE"}
+    </button>
+
+    {#if language === "de"}
+      <div lang="de">
+        <h1 class="text-6xl">Ein Dramenautomat von 1829 digital aufbereitet</h1>
+        <p class="pt-8 text-xl">
+          Der 1829 von Georg Nikolaus Bärmann veröffentlichte <em>Würfelalmanach</em> ist ein spielerisches
+          System zur Erzeugung von Einaktern per Würfelwurf. Diese kurzen Dramen waren auf der Bühne
+          und im privaten Kreis beliebt, und Bärmanns Buch ermöglichte die Erstellung von 4×10¹⁵⁵ Variationen
+          aus 1.200 Textfragmenten. Diese Webanwendung bringt den Almanach in digitaler Form zurück und
+          lädt dazu ein, eine frühe Form algorithmischen Erzählens interaktiv zu erkunden.
+        </p>
+      </div>
+    {:else}
+      <div lang="en">
+        <h1 class="text-6xl">A literary automaton from 1829 reborn online</h1>
+        <p class="pt-8 text-xl">
+          The <em>Würfelalmanach</em>, published by Georg Nikolaus Bärmann in 1829, is a playful
+          system for generating one-act plays by rolling dice. These short dramas were popular on
+          stage and in private gatherings, and Bärmann's book offered a way to create 4×10¹⁵⁵
+          possible variations from 1,200 text fragments. This web app recreates the experience,
+          letting you explore an early example of algorithmic storytelling in an interactive way.
+        </p>
+      </div>
+    {/if}
   </div>
 </header>
 
 <main class="p-4">
   <!-- Center column backdrop -->
   <div
-    class="absolute inset-0 top-4 bottom-4 left-1/2 z-[-1] w-md -translate-x-1/2 border-4 border-sky-800 bg-amber-50"
+    class="absolute inset-0 bottom-4 left-1/2 z-[-1] w-[430px] -translate-x-1/2 border-4 border-sky-800 bg-amber-50"
+    style="top: calc(100vh + 2em);"
   ></div>
+
   <h2 class="m-4 pt-10 text-center text-2xl font-bold">
     Neunhundert neun und neunzig <br /> <small>und noch etliche</small> <br /> Almanachs-Lustspiele
     <br /> <small>durch den Würfel</small>
