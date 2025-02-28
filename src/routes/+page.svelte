@@ -45,8 +45,28 @@
     history.pushState("", document.title, window.location.pathname + window.location.search)
     return hashSequence
   }
+
+  // Track scroll position
+  let showBackToTop = $state(false)
+
+  // Function to check scroll position
+  function handleScroll() {
+    showBackToTop = window.scrollY > window.innerHeight
+  }
+
   onMount(() => {
     sequence = initialiseSequence()
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll)
+
+    // Initial check in case page is loaded scrolled down
+    handleScroll()
+
+    // Clean up event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
   })
 
   // Add function to scroll back to top
@@ -149,23 +169,25 @@
   </div>
 </main>
 
-<!-- Back to top button -->
-<button
-  onclick={scrollToTop}
-  class="fixed right-6 bottom-6 flex h-18 w-18 cursor-pointer items-center justify-center rounded-full bg-sky-800 text-white shadow-lg transition-colors hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
-  aria-label="Back to top"
-  title="Back to top"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    class="h-6 w-6"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
+<!-- Back to top button with conditional visibility -->
+{#if showBackToTop}
+  <button
+    onclick={scrollToTop}
+    class="animate-fade-in fixed right-6 bottom-6 flex h-18 w-18 cursor-pointer items-center justify-center rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
+    aria-label="Back to top"
+    title="Back to top"
   >
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-  </svg>
-</button>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+{/if}
 
 <style>
   @keyframes pulse {
@@ -184,5 +206,20 @@
 
   .pulse-animation {
     animation: pulse 2s infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
   }
 </style>
