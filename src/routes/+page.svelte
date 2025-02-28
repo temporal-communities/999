@@ -116,7 +116,7 @@
   </div>
 </header>
 
-<main class="p-4" bind:this={mainElement}>
+<main class="overflow-x-hidden p-4" bind:this={mainElement}>
   <!-- Center column backdrop -->
   <div
     class="absolute inset-0 bottom-4 left-1/2 z-[-1] w-[430px] -translate-x-1/2 border-4 border-sky-800 bg-amber-50"
