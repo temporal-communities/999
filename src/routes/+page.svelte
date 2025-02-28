@@ -53,25 +53,46 @@
   }
 </script>
 
-<!-- Center column backdrop -->
-<div
-  class="absolute inset-0 top-4 bottom-4 left-1/2 z-[-1] w-md -translate-x-1/2 border-4 border-sky-800 bg-amber-50"
-></div>
-
 <header class="mx-auto flex w-md flex-col items-center">
-  <h1 class="m-4 pt-10 text-center text-2xl font-bold">
+  <div class="h-full w-full">
+    <div lang="de">
+      <h1>Ein Dramenautomat von 1829 digital aufbereitet</h1>
+      <p>
+        Der 1829 von Georg Nikolaus Bärmann veröffentlichte <em>Würfelalmanach</em> ist ein spielerisches
+        System zur Erzeugung von Einaktern per Würfelwurf. Diese kurzen Dramen waren auf der Bühne und
+        im privaten Kreis beliebt, und Bärmanns Buch ermöglichte die Erstellung von 4×10¹⁵⁵ Variationen
+        aus 1.200 Textfragmenten. Diese Webanwendung bringt den Almanach in digitaler Form zurück und
+        lädt dazu ein, eine frühe Form algorithmischen Erzählens interaktiv zu erkunden.
+      </p>
+    </div>
+    <div lang="en">
+      <h1>A literary automaton from 1829 reborn online</h1>
+      <p>
+        The <em>Würfelalmanach</em>, published by Georg Nikolaus Bärmann in 1829, is a playful
+        system for generating one-act plays by rolling dice. These short dramas were popular on
+        stage and in private gatherings, and Bärmann’s book offered a way to create 4×10¹⁵⁵ possible
+        variations from 1,200 text fragments. This web app recreates the experience, letting you
+        explore an early example of algorithmic storytelling in an interactive way.
+      </p>
+    </div>
+  </div>
+</header>
+
+<main class="p-4">
+  <!-- Center column backdrop -->
+  <div
+    class="absolute inset-0 top-4 bottom-4 left-1/2 z-[-1] w-md -translate-x-1/2 border-4 border-sky-800 bg-amber-50"
+  ></div>
+  <h2 class="m-4 pt-10 text-center text-2xl font-bold">
     Neunhundert neun und neunzig <br /> <small>und noch etliche</small> <br /> Almanachs-Lustspiele
     <br /> <small>durch den Würfel</small>
-  </h1>
+  </h2>
 
   <div class="flex justify-center" title="Würfeln">
     <div class="m-5 flex items-center justify-center rounded-full bg-sky-800 p-3" title="Würfeln">
       <Dice3D bind:isRolling />
     </div>
   </div>
-</header>
-
-<main class="p-4">
   <!-- Display all six versions side by side -->
   <div class="versions flex flex-col gap-10">
     {#each Array.from(new Array(200), (_x, i) => i + 1) as index}
