@@ -68,13 +68,13 @@
   }
 </script>
 
-<header class="h-screen w-screen p-16">
+<header class="h-screen w-screen p-4 md:p-16">
   <div
-    class="relative flex h-full w-full flex-col items-center justify-evenly bg-sky-800 px-[20%] text-center text-amber-50 ring-4 ring-sky-800 ring-offset-4 ring-offset-amber-50"
+    class="relative flex h-full w-full flex-col items-center justify-evenly bg-sky-800 px-8 text-center text-amber-50 ring-4 ring-sky-800 ring-offset-4 ring-offset-amber-50"
   >
     <!-- Language toggle button -->
     <button
-      class="relative top-4 right-4 flex h-26 w-26 cursor-pointer items-center justify-center rounded-full bg-amber-50 text-4xl text-sky-800 hover:bg-amber-100 focus:outline-none"
+      class="relative flex h-26 w-26 cursor-pointer items-center justify-center rounded-full bg-amber-50 text-4xl text-sky-800 hover:bg-amber-100 focus:outline-none"
       onclick={toggleLanguage}
       aria-label="Toggle language"
     >
@@ -82,9 +82,9 @@
     </button>
 
     {#if language === "de"}
-      <div lang="de">
-        <h1 class="text-6xl">Ein Dramenautomat von 1829 digital aufbereitet</h1>
-        <p class="pt-8 text-xl">
+      <div lang="de" class="max-w-[75ch]">
+        <h1 class="text-3xl md:text-6xl">Ein Dramenautomat von 1829 digital aufbereitet</h1>
+        <p class="pt-8 md:text-xl">
           Der 1829 von Georg Nikolaus Bärmann veröffentlichte <em>Würfelalmanach</em> ist ein spielerisches
           System zur Erzeugung von Einaktern per Würfelwurf. Diese kurzen Dramen waren auf der Bühne
           und im privaten Kreis beliebt, und Bärmanns Buch ermöglichte die Erstellung von 4×10¹⁵⁵ Variationen
@@ -93,9 +93,9 @@
         </p>
       </div>
     {:else}
-      <div lang="en">
-        <h1 class="text-6xl">A literary automaton from 1829 reborn online</h1>
-        <p class="pt-8 text-xl">
+      <div lang="en" class="max-w-[75ch]">
+        <h1 class="text-3xl md:text-6xl">A literary automaton from 1829 reborn online</h1>
+        <p class="pt-8 md:text-xl">
           The <em>Würfelalmanach</em>, published by Georg Nikolaus Bärmann in 1829, is a playful
           system for generating one-act plays by rolling dice. These short dramas were popular on
           stage and in private gatherings, and Bärmann's book offered a way to create 4×10¹⁵⁵
@@ -108,7 +108,7 @@
     <!-- Scroll to main button -->
     <button
       onclick={scrollToMain}
-      class="pulse-animation flex h-26 w-26 cursor-pointer items-center justify-center rounded-full bg-amber-50 text-2xl text-sky-800 shadow-lg transition-colors hover:bg-amber-100 focus:outline-none"
+      class="pulse-animation flex h-26 w-26 cursor-pointer items-center justify-center rounded-full bg-amber-50 text-2xl text-sky-800 transition-colors hover:bg-amber-100 focus:outline-none"
       aria-label="Scroll to content"
     >
       START
@@ -171,17 +171,14 @@
   @keyframes pulse {
     0% {
       transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.4);
     }
 
     70% {
-      transform: scale(1.05);
-      box-shadow: 0 0 0 10px rgba(2, 132, 199, 0);
+      transform: scale(1.11);
     }
 
     100% {
       transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(2, 132, 199, 0);
     }
   }
 
