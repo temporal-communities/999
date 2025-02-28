@@ -3,7 +3,6 @@
   import { generateRandomSequence } from "$lib/dice"
   import emblaCarouselSvelte from "embla-carousel-svelte"
   import Dice3D from "$lib/components/Dice3D.svelte"
-
   import Carousel from "$lib/components/Carousel.svelte"
   import { onMount } from "svelte"
 
@@ -57,11 +56,21 @@
       behavior: "smooth"
     })
   }
+
+  // Reference to the main element
+  let mainElement: HTMLElement
+
+  // Add function to scroll to main content
+  function scrollToMain() {
+    mainElement?.scrollIntoView({
+      behavior: "smooth"
+    })
+  }
 </script>
 
-<header class="h-screen w-screen p-8">
+<header class="h-screen w-screen p-16">
   <div
-    class="relative flex h-full w-full flex-col items-center justify-evenly bg-sky-800 px-[20%] text-center text-amber-50"
+    class="relative flex h-full w-full flex-col items-center justify-evenly bg-sky-800 px-[20%] text-center text-amber-50 ring-4 ring-sky-800 ring-offset-4 ring-offset-amber-50"
   >
     <!-- Language toggle button -->
     <button
@@ -95,10 +104,19 @@
         </p>
       </div>
     {/if}
+
+    <!-- Scroll to main button -->
+    <button
+      onclick={scrollToMain}
+      class="pulse-animation flex h-26 w-26 cursor-pointer items-center justify-center rounded-full bg-amber-50 text-2xl text-sky-800 shadow-lg transition-colors hover:bg-amber-100 focus:outline-none"
+      aria-label="Scroll to content"
+    >
+      START
+    </button>
   </div>
 </header>
 
-<main class="p-4">
+<main class="p-4" bind:this={mainElement}>
   <!-- Center column backdrop -->
   <div
     class="absolute inset-0 bottom-4 left-1/2 z-[-1] w-[430px] -translate-x-1/2 border-4 border-sky-800 bg-amber-50"
@@ -148,3 +166,26 @@
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
   </svg>
 </button>
+
+<style>
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.4);
+    }
+
+    70% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 10px rgba(2, 132, 199, 0);
+    }
+
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(2, 132, 199, 0);
+    }
+  }
+
+  .pulse-animation {
+    animation: pulse 2s infinite;
+  }
+</style>
