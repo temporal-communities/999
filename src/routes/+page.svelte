@@ -5,6 +5,7 @@
   import Dice3D from "$lib/components/Dice3D.svelte"
   import Carousel from "$lib/components/Carousel.svelte"
   import { onMount } from "svelte"
+  import { fade } from "svelte/transition"
 
   emblaCarouselSvelte.globalOptions = {
     loop: true,
@@ -173,7 +174,8 @@
 {#if showBackToTop}
   <button
     onclick={scrollToTop}
-    class="animate-fade-in fixed right-6 bottom-6 flex h-18 w-18 cursor-pointer items-center justify-center rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
+    transition:fade={{ duration: 300 }}
+    class="fixed right-6 bottom-6 flex h-18 w-18 cursor-pointer items-center justify-center rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
     aria-label="Back to top"
     title="Back to top"
   >
@@ -206,20 +208,5 @@
 
   .pulse-animation {
     animation: pulse 2s infinite;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.3s ease-out forwards;
   }
 </style>
