@@ -48,26 +48,12 @@
   }
 
   // Track scroll position
-  let showBackToTop = $state(false)
-
-  // Function to check scroll position
-  function handleScroll() {
-    showBackToTop = window.scrollY > window.innerHeight
-  }
+  let scrollY = $state(0)
+  let innerHeight = $state(0)
+  let showBackToTop = $derived(scrollY > innerHeight)
 
   onMount(() => {
     sequence = initialiseSequence()
-
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll)
-
-    // Initial check in case page is loaded scrolled down
-    handleScroll()
-
-    // Clean up event listener
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
   })
 
   // Add function to scroll back to top
@@ -88,6 +74,8 @@
     })
   }
 </script>
+
+<svelte:window bind:scrollY bind:innerHeight />
 
 <header class="h-screen w-full p-4 md:p-16">
   <div
