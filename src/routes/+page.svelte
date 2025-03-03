@@ -95,11 +95,11 @@
   >
     <!-- Language toggle button -->
     <button
-      class="relative flex h-26 w-26 cursor-pointer items-center justify-center rounded-full bg-amber-50 text-4xl text-sky-800 hover:bg-amber-100 focus:outline-none"
+      class="relative flex h-26 w-26 cursor-pointer items-center justify-center rounded-full bg-amber-50 text-4xl text-sky-800 uppercase hover:bg-amber-100 focus:outline-none"
       onclick={toggleLanguage}
       aria-label="Toggle language"
     >
-      {language === "de" ? "EN" : "DE"}
+      {language}
     </button>
 
     {#if language === "de"}
