@@ -1,11 +1,14 @@
 <script lang="ts">
-  import { onMount, onDestroy } from "svelte"
+  import { onDestroy, onMount } from "svelte"
+  import { locale } from "$lib/stores/locale"
 
   let {
     isRolling = $bindable()
   }: {
     isRolling?: boolean
   } = $props()
+
+  let buttonLabel = $derived($locale === "de" ? "Würfeln" : "Roll the dice")
 
   let attractMode = $state(false)
   let currentRotation = $state({ x: 0, y: 0 })
@@ -144,7 +147,8 @@
   onmouseleave={handleMouseLeave}
   onclick={handleClick}
   disabled={isRolling}
-  aria-label="Roll dice"
+  aria-label={buttonLabel}
+  title={buttonLabel}
 >
   <div
     class="dice"

@@ -1,9 +1,10 @@
 <script lang="ts">
   import { page } from "$app/state"
-  import { generateRandomSequence } from "$lib/dice"
-  import emblaCarouselSvelte from "embla-carousel-svelte"
-  import Dice3D from "$lib/components/Dice3D.svelte"
   import Carousel from "$lib/components/Carousel.svelte"
+  import Dice3D from "$lib/components/Dice3D.svelte"
+  import { generateRandomSequence } from "$lib/dice"
+  import { locale } from "$lib/stores/locale"
+  import emblaCarouselSvelte from "embla-carousel-svelte"
   import { onMount } from "svelte"
   import { fade } from "svelte/transition"
 
@@ -14,11 +15,9 @@
 
   let sequence: number[] = $state([])
   let isRolling = $state(false)
-  let language = $state("de") // Default to German
 
-  // Toggle language function
   function toggleLanguage() {
-    language = language === "de" ? "en" : "de"
+    $locale = $locale === "de" ? "en" : "de"
   }
 
   // On change to isRolling, set a new sequence
@@ -85,12 +84,12 @@
     <button
       class="relative flex h-26 w-26 cursor-pointer items-center justify-center rounded-full bg-amber-50 text-4xl text-sky-800 uppercase hover:bg-amber-100 focus:outline-none"
       onclick={toggleLanguage}
-      aria-label="Toggle language"
+      aria-label={$locale === "de" ? "Sprache umschalten" : "Toggle language"}
     >
-      {language}
+      {$locale}
     </button>
 
-    {#if language === "de"}
+    {#if $locale === "de"}
       <div lang="de" class="max-w-[75ch]">
         <h1 class="text-3xl md:text-6xl">Ein Dramenautomat von 1829 digital aufbereitet</h1>
         <p class="pt-8 md:text-xl">
@@ -148,13 +147,13 @@
     <br /> <small>durch den Würfel</small>
   </h2>
 
-  <div class="flex justify-center" title="Würfeln">
-    <div class="m-5 flex items-center justify-center rounded-full bg-sky-800 p-3" title="Würfeln">
+  <div class="flex justify-center">
+    <div class="m-5 flex items-center justify-center rounded-full bg-sky-800 p-3">
       <Dice3D bind:isRolling />
     </div>
   </div>
   <!-- Display all six versions side by side -->
-  <div class="versions flex flex-col gap-10">
+  <div class="versions flex flex-col gap-10" lang="de">
     {#each Array.from(new Array(200), (_x, i) => i + 1) as index}
       <div class="flex flex-col items-center">
         <h2 class="text-center text-xl font-bold" id={index.toString()}>{index}</h2>
@@ -175,8 +174,8 @@
     onclick={scrollToTop}
     transition:fade={{ duration: 300 }}
     class="fixed right-6 bottom-6 flex h-18 w-18 cursor-pointer items-center justify-center rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
-    aria-label="Back to top"
-    title="Back to top"
+    aria-label={$locale === "de" ? "Zurück nach oben" : "Back to top"}
+    title={$locale === "de" ? "Zurück nach oben" : "Back to top"}
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
