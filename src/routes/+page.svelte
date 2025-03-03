@@ -94,22 +94,33 @@
       <div lang="de" class="max-w-[75ch]">
         <h1 class="text-3xl md:text-6xl">Ein Dramenautomat von 1829 digital aufbereitet</h1>
         <p class="pt-8 md:text-xl">
-          Der 1829 von Georg Nikolaus Bärmann veröffentlichte <em>Würfelalmanach</em> ist ein spielerisches
-          System zur Erzeugung von Einaktern per Würfelwurf. Diese kurzen Dramen waren auf der Bühne
-          und im privaten Kreis beliebt, und Bärmanns Buch ermöglichte die Erstellung von 4×10¹⁵⁵ Variationen
-          aus 1.200 Textfragmenten. Diese Webanwendung bringt den Almanach in digitaler Form zurück und
-          lädt dazu ein, eine frühe Form algorithmischen Erzählens interaktiv zu erkunden.
+          Der 1829 von Georg Nikolaus Bärmann veröffentlichte <a
+            class="underline"
+            target="_blank"
+            href="https://de.wikisource.org/wiki/Neunhundert_neun_und_neunzig_und_noch_etliche_Almanachs-Lustspiele_durch_den_W%C3%BCrfel"
+            ><em>Würfelalmanach</em></a
+          >
+          ist ein spielerisches System zur Erzeugung von Einaktern per Würfelwurf. Diese kurzen Dramen
+          waren auf der Bühne und im privaten Kreis beliebt, und Bärmanns Buch ermöglichte die Erstellung
+          von 4×10<sup>155</sup> Variationen aus 1.200 Textfragmenten. Diese Webanwendung bringt den
+          Almanach in digitaler Form zurück und lädt dazu ein, eine frühe Form algorithmischen Erzählens
+          interaktiv zu erkunden.
         </p>
       </div>
     {:else}
       <div lang="en" class="max-w-[75ch]">
-        <h1 class="text-3xl md:text-6xl">A literary automaton from 1829 reborn online</h1>
+        <h1 class="text-3xl md:text-6xl">A literary automaton from 1829, reborn online</h1>
         <p class="pt-8 md:text-xl">
-          The <em>Würfelalmanach</em>, published by Georg Nikolaus Bärmann in 1829, is a playful
-          system for generating one-act plays by rolling dice. These short dramas were popular on
-          stage and in private gatherings, and Bärmann's book offered a way to create 4×10¹⁵⁵
-          possible variations from 1,200 text fragments. This web app recreates the experience,
-          letting you explore an early example of algorithmic storytelling in an interactive way.
+          The <a
+            class="underline"
+            target="_blank"
+            href="https://de.wikisource.org/wiki/Neunhundert_neun_und_neunzig_und_noch_etliche_Almanachs-Lustspiele_durch_den_W%C3%BCrfel"
+            ><em>Würfelalmanach</em></a
+          >, published by Georg Nikolaus Bärmann in 1829, is a playful system for generating one-act
+          plays by rolling dice. These short dramas were popular on stage and in private gatherings,
+          and Bärmann's book offered a way to create 4×10<sup>155</sup> possible variations from 1,200
+          text fragments. This web app recreates the experience, letting you explore an early example
+          of algorithmic storytelling in an interactive way.
         </p>
       </div>
     {/if}
