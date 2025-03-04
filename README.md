@@ -1,38 +1,37 @@
-# create-svelte
+# »999 und noch etliche [mehr]«: Web app for Georg Nikolaus Bärmann’s _Würfelalmanach_ from 1829
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+The Würfelalmanach, published by Georg Nikolaus Bärmann in 1829, is a playful system for generating one-act plays by rolling dice. These short dramas were popular on stage and in private gatherings, and Bärmann's book offered a way to create 4×10^155 possible variations from 1,200 text fragments.
+This web app recreates the experience, letting you explore an early example of algorithmic storytelling in an interactive way.
 
-## Creating a project
+## Usage
 
-If you're seeing this, you've probably already done this step. Congrats!
+Install the dependencies:
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+npm install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To start the development server:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
+To create a production build:
 
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+## Source text
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+The text and dice table was digitised and added to [Wikisource](https://de.wikisource.org/wiki/Neunhundert_neun_und_neunzig_und_noch_etliche_Almanachs-Lustspiele_durch_den_W%C3%BCrfel).
+A [TEI version](src/lib/assets/neunhundert-neun-und-neunzig-und-noch-etliche-almanachs-lustspiele.xml) of the text and a [JSON dice chart](https://github.com/temporal-communities/999/blob/main/src/lib/assets/dice_chart.json) were created for this project.
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---
+
+Funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany’s Excellence Strategy in the context of the Cluster of Excellence Temporal Communities: Doing Literature in a Global Perspective – EXC 2020 – Project ID 390608380.
