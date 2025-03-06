@@ -5,6 +5,9 @@ This web app recreates the experience, letting you explore an early example of a
 
 ## Usage
 
+This project requires [Node.js](https://nodejs.org/en) (LTS v20 at time of writing).
+Please follow the installation instructions for your platform.
+
 Install the dependencies:
 
 ```bash
