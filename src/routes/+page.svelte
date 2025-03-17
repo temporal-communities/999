@@ -9,7 +9,6 @@
   import emblaCarouselSvelte from "embla-carousel-svelte"
   import { onMount } from "svelte"
   import { fade } from "svelte/transition"
-  import { downloadTEIDoc } from "$lib/tei"
   import {
     getRandomShortestPlay,
     getRandomLongestPlay,
@@ -45,8 +44,6 @@
 
   const sequenceLength = 200
   const sequenceRegex = new RegExp(`^[1-6]{${sequenceLength}}$`)
-
-  const enableDownload = false
 
   // Mount gate
   let mounted = $state(false)
@@ -365,25 +362,6 @@
               {/each}
             </div>
           </div>
-
-          <!-- Additional Actions -->
-          {#if enableDownload}
-            <div>
-              <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
-                {$locale === "de" ? "Exportieren" : "Export"}
-              </h3>
-              <div class="space-y-2">
-                <button
-                  onclick={() => {
-                    downloadTEIDoc([...sequence])
-                  }}
-                  class="w-full cursor-pointer rounded-lg bg-amber-600 px-4 py-6 text-white transition-colors hover:bg-amber-500"
-                >
-                  {$locale === "de" ? "TEI-Dokument herunterladen" : "Download TEI document"}
-                </button>
-              </div>
-            </div>
-          {/if}
         </div>
       </div>
     </nav>
