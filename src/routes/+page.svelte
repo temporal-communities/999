@@ -90,6 +90,35 @@
       behavior: "smooth"
     })
   }
+  // Reference to the main element
+  let mainElement: HTMLElement
+
+  // Add function to scroll to main content
+  function scrollToMain() {
+    mainElement?.scrollIntoView({
+      behavior: "smooth"
+    })
+  }
+
+  // track if url has been copied to clipboard
+  let urlCopied: boolean = $state(false)
+
+  // function to copy url including sequence to clipboard
+  async function copyUrlToClipboard(event: MouseEvent) {
+    try {
+      const url = window.location.href + "#" + sequence.join("")
+      console.log("URL: ", url)
+      await navigator.clipboard.writeText(url)
+      urlCopied = true
+
+      setTimeout(() => {
+        urlCopied = false
+        ;(event.target as HTMLButtonElement).blur() // remove focus ring from the clicked button
+      }, 3000)
+    } catch (err) {
+      console.error("Failed to copy URL to clipboard:", err)
+    }
+  }
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -206,6 +235,64 @@
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
     </svg>
   </button>
+
+  <!-- Share Button that copies url with current sequence -->
+  <div class="fixed right-6 bottom-6 flex items-center space-x-2">
+    {#if urlCopied}
+      <div class="rounded-full bg-sky-800 px-3 py-2 text-white shadow-lg">
+        {$locale === "de" ? "Link zum Teilen kopiert!" : "Link copied for sharing!"}
+      </div>
+    {/if}
+
+    <!-- Share Button -->
+    <button
+      onclick={copyUrlToClipboard}
+      transition:fade={{ duration: 300 }}
+      class="flex h-18 w-18 cursor-pointer items-center justify-center rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
+      aria-label={$locale === "de" ? "Link kopieren" : "Copy link"}
+      title={$locale === "de" ? "Link kopieren" : "Copy link"}
+    >
+      <!-- Share Icon -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <!-- Left Dots and Right Dot -->
+        <circle
+          cx="3"
+          cy="4"
+          r="2"
+          fill="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <circle
+          cx="3"
+          cy="21"
+          r="2"
+          fill="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <circle
+          cx="21"
+          cy="12"
+          r="2"
+          fill="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+        <!-- Connecting Lines -->
+        <path d="M3 4L21 12" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M3 21L21 12" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+  </div>
 {/if}
 <div>
   {#if showShareButton}
