@@ -1,0 +1,39 @@
+<!-- Share Icon -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-5 w-5"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="white"
+      stroke-width="2"
+    >
+      <!-- Left Dots and Right Dot -->
+      <circle
+        cx="3"
+        cy="4"
+        r="2"
+        fill="white"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <circle
+        cx="3"
+        cy="21"
+        r="2"
+        fill="white"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <circle
+        cx="21"
+        cy="12"
+        r="2"
+        fill="white"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+
+      <!-- Connecting Lines -->
+      <path d="M3 4L21 12" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M3 21L21 12" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>

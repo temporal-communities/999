@@ -4,5 +4,8 @@ import { defineConfig } from "vite"
 
 export default defineConfig({
   plugins: [tailwindcss(), sveltekit()],
-  assetsInclude: "src/lib/assets/**/*.xsl"
+  assetsInclude: "src/lib/assets/**/*.xsl",
+  build: {
+    sourcemap: true // enable sourcemaps for debugging
+  }
 })
