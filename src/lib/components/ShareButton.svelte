@@ -7,7 +7,8 @@
   // track if url has been copied to clipboard
   let urlCopied: boolean = $state(false)
 
-  const getShareUrl = () => window.location.href + "?share=true" + "#" + sequence.join("")
+  const getShareUrl = () =>
+    window.location.origin + window.location.pathname + "?share=true" + "#" + sequence.join("")
   // function to copy url including sequence to clipboard
   async function copyUrlToClipboard(event: MouseEvent) {
     try {
