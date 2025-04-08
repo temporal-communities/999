@@ -11,7 +11,6 @@
   let sharingUrl = $derived(
     window.location.origin + window.location.pathname + "#" + sequence.join("")
   )
-
   // function to copy url including sequence to clipboard
   async function copyUrlToClipboard(event: MouseEvent) {
     try {
