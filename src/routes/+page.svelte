@@ -8,6 +8,7 @@
   import emblaCarouselSvelte from "embla-carousel-svelte"
   import { onMount } from "svelte"
   import { fade } from "svelte/transition"
+  import { downloadTEIDoc } from "$lib/tei"
 
   emblaCarouselSvelte.globalOptions = {
     loop: true,
@@ -204,6 +205,13 @@
   <!-- Share Button Component -->
   <ShareButton {sequence} />
 </div>
+<button
+  onclick={() => downloadTEIDoc(sequence)}
+  class="fixed right-6 bottom-45 flex h-18 w-18 cursor-pointer items-center justify-center
+    rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500
+    focus:ring-offset-2 focus:outline-none"
+  aria-label={"tei"}>TEI TEST</button
+>
 
 <style>
   @keyframes pulse {
