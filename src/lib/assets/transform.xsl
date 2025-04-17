@@ -89,4 +89,12 @@
       <xsl:apply-templates select="@* | node()"/>
     </div>
   </xsl:template>
+
+  <!-- <head> to <div type="scene"> -->
+  <xsl:template match="tei:head">
+    <div type="scene">
+      <xsl:call-template name="tei-class"/>
+      <xsl:apply-templates select="@* | node()"/>
+    </div>
+  </xsl:template>
 </xsl:stylesheet>
