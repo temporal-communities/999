@@ -25,6 +25,11 @@ body {
   .tei-sp {
     /*Hanging indent*/
     @apply ps-6 -indent-6;
+    
+    .tei-stage {
+      @apply inline;
+    }
+  }
   .tei-titlePart[type="main"] {
     /*Title*/
     @apply font-bold block text-xl text-center;
