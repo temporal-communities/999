@@ -19,6 +19,9 @@ body {
   .tei-stage {
     @apply italic block;
   }
+  .tei-set {
+    @apply mt-4;
+  }
   .tei-sp {
     /*Hanging indent*/
     @apply ps-6 -indent-6;
