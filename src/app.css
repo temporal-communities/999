@@ -30,6 +30,10 @@ body {
       @apply inline;
     }
   }
+  .tei-l {
+    /*Line break*/
+    @apply block ps-6 -indent-6;
+  }
   .tei-titlePart[type="main"] {
     /*Title*/
     @apply font-bold block text-xl text-center;
