@@ -42,5 +42,7 @@ body {
     /*Subtitle*/
     @apply block text-lg text-center;
   }
+  .tei-head {
+    @apply font-bold text-lg text-center mb-4;
   }
 }
