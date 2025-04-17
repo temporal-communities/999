@@ -17,7 +17,7 @@ body {
   }
   .tei-set,
   .tei-stage {
-    @apply italic block;
+    @apply block italic;
   }
   .tei-set {
     @apply mt-4;
@@ -25,7 +25,7 @@ body {
   .tei-sp {
     /*Hanging indent*/
     @apply ps-6 -indent-6;
-    
+
     .tei-stage {
       @apply inline;
     }
@@ -36,13 +36,13 @@ body {
   }
   .tei-titlePart[type="main"] {
     /*Title*/
-    @apply font-bold block text-xl text-center;
+    @apply block text-center text-xl font-bold;
   }
   .tei-titlePart[type="sub"] {
     /*Subtitle*/
-    @apply block text-lg text-center;
+    @apply block text-center text-lg;
   }
   .tei-head {
-    @apply font-bold text-lg text-center mb-4;
+    @apply mb-4 text-center text-lg font-bold;
   }
 }
