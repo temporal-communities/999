@@ -22,5 +22,13 @@ body {
   .tei-sp {
     /*Hanging indent*/
     @apply ps-6 -indent-6;
+  .tei-titlePart[type="main"] {
+    /*Title*/
+    @apply font-bold block text-xl text-center;
+  }
+  .tei-titlePart[type="sub"] {
+    /*Subtitle*/
+    @apply block text-lg text-center;
+  }
   }
 }
