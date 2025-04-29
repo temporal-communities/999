@@ -2,6 +2,7 @@
   import { page } from "$app/state"
   import Carousel from "$lib/components/Carousel.svelte"
   import Dice3D from "$lib/components/Dice3D.svelte"
+  import ShareButton from "$lib/components/ShareButton.svelte"
   import { generateRandomSequence } from "$lib/dice"
   import { locale } from "$lib/stores/locale"
   import emblaCarouselSvelte from "embla-carousel-svelte"
@@ -50,10 +51,7 @@
   let scrollY = $state(0)
   let innerHeight = $state(0)
   let showBackToTop = $derived(scrollY > innerHeight)
-
-  onMount(() => {
-    sequence = initialiseSequence()
-  })
+  let showShareButton = $derived(scrollY > innerHeight * 0.1)
 
   // Add function to scroll back to top
   function scrollToTop() {
@@ -72,6 +70,20 @@
       behavior: "smooth"
     })
   }
+
+  function getQueryParams() {
+    return new URLSearchParams(window.location.search)
+  }
+
+  onMount(() => {
+    sequence = initialiseSequence()
+    // if current url is share link, scroll to main section
+    if (getQueryParams().get("share")) {
+      setTimeout(() => {
+        scrollToMain()
+      }, 200) // small delay to ensure content is rendered
+    }
+  })
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -173,7 +185,7 @@
   <button
     onclick={scrollToTop}
     transition:fade={{ duration: 300 }}
-    class="fixed right-6 bottom-6 flex h-18 w-18 cursor-pointer items-center justify-center rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
+    class="fixed right-6 bottom-25 flex h-18 w-18 cursor-pointer items-center justify-center rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
     aria-label={$locale === "de" ? "Zurück nach oben" : "Back to top"}
     title={$locale === "de" ? "Zurück nach oben" : "Back to top"}
   >
@@ -188,6 +200,10 @@
     </svg>
   </button>
 {/if}
+<div style="display: {showShareButton ? 'block' : 'none'};">
+  <!-- Share Button Component -->
+  <ShareButton {sequence} />
+</div>
 
 <style>
   @keyframes pulse {
