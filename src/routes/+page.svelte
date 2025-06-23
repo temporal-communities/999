@@ -9,11 +9,15 @@
   import { onMount } from "svelte"
   import { fade } from "svelte/transition"
   import { downloadTEIDoc } from "$lib/tei"
+  import { getRandomShortestPlay, getRandomLongestPlay } from "$lib/analysis"
+  import { compileModule } from "svelte/compiler"
 
   emblaCarouselSvelte.globalOptions = {
     loop: true,
     skipSnaps: true // Allow the carousel to skip scroll snaps if it's dragged vigorously
   }
+
+  let playMode: "dice" | "shortest" | "longest" = $state("dice") // to switch between: generate random with dice or random shortest or longest play
 
   let sequence: number[] = $state([])
   let isRolling = $state(false)
@@ -23,9 +27,22 @@
   }
 
   // On change to isRolling, set a new sequence
+  // update sequence according to playMode
   $effect(() => {
     if (isRolling) {
-      sequence = generateRandomSequence()
+      if (playMode === "dice") {
+        sequence = generateRandomSequence()
+      } else if (playMode === "shortest") {
+        sequence = getRandomShortestPlay().sequence
+        setTimeout(() => {
+          isRolling = false
+        }, 1000)
+      } else if (playMode === "longest") {
+        sequence = getRandomLongestPlay().sequence
+        setTimeout(() => {
+          isRolling = false
+        }, 1000)
+      }
     }
   })
 
@@ -162,7 +179,7 @@
 
   <div class="flex justify-center">
     <div class="m-5 flex items-center justify-center rounded-full bg-sky-800 p-3">
-      <Dice3D bind:isRolling />
+      <Dice3D bind:isRolling bind:playMode />
     </div>
   </div>
   <!-- Display all six versions side by side -->
@@ -206,7 +223,21 @@
   <ShareButton {sequence} />
 </div>
 <button
-  onclick={() => downloadTEIDoc(sequence)}
+  onclick={() => ((playMode = "shortest"), (isRolling = true))}
+  class="fixed right-6 bottom-85 flex h-18 w-18 cursor-pointer items-center justify-center
+    rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500
+    focus:ring-offset-2 focus:outline-none"
+  aria-label={"tei"}>Shortest Play TEST</button
+>
+<button
+  onclick={() => ((playMode = "longest"), (isRolling = true))}
+  class="fixed right-6 bottom-65 flex h-18 w-18 cursor-pointer items-center justify-center
+    rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500
+    focus:ring-offset-2 focus:outline-none"
+  aria-label={"tei"}>Longest Play TEST</button
+>
+<button
+  onclick={() => downloadTEIDoc([...sequence])}
   class="fixed right-6 bottom-45 flex h-18 w-18 cursor-pointer items-center justify-center
     rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500
     focus:ring-offset-2 focus:outline-none"
