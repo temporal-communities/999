@@ -3,9 +3,11 @@
   import { locale } from "$lib/stores/locale"
 
   let {
-    isRolling = $bindable()
+    isRolling = $bindable(),
+    playMode = $bindable()
   }: {
     isRolling?: boolean
+    playMode: string // to switch between: generate random with dice or random shortest or longest play
   } = $props()
 
   let buttonLabel = $derived($locale === "de" ? "Würfeln" : "Roll the dice")
@@ -110,6 +112,7 @@
     if (isRolling) return // Prevent multiple clicks during animation
 
     isRolling = true
+    playMode = "dice"
     attractMode = false
 
     // Get a different random face
