@@ -2,6 +2,8 @@ import { page } from "$app/state"
 import xmlTemplate from "$lib/assets/play-template.xml?raw"
 import { Almanac } from "./almanac"
 
+const TEINS = "http://www.tei-c.org/ns/1.0"
+
 function removeEmptyNewlinesBeforeFirstScene(segments: DocumentFragment, n: number) {
   for (let i = 0; i < n; i++) {
     if (segments.firstChild) {

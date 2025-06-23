@@ -5,9 +5,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele durch
-          den Würfel</title>
-        <title type="sub">Ein Lustspiel für Kinder in einem Aufzuge</title>
+        <title type="main">
+        <!-- generated title -->
+        </title>
+        <title type="sub">
+        <!-- generated subtitle -->
+        </title>
         <author>
           <persName type="pseudo">Simplicius</persName>
           <persName>
@@ -18,9 +21,14 @@
           <idno type="wikidata">Q1505487</idno>
           <idno type="pnd">107968169</idno>
         </author>
+        <author> 
+          <persName type="pseudo">Du</persName>
+        </author>
         <respStmt>
-          <resp>Encoded by</resp>
+          <resp>Edited by</resp>
           <name ref="https://orcid.org/0000-0003-2419-6629" type="person">Frank Fischer</name>
+          <name ref="https://orcid.org/0000-0002-7334-781X" type="person">Viktor J. Illmer</name>
+          <name ref="https://orcid.org/0009-0005-9680-3995" type="person">Nele Heindorf</name>
         </respStmt>
       </titleStmt>
       <publicationStmt>
@@ -35,13 +43,18 @@
       </publicationStmt>
       <sourceDesc>
         <bibl type="digitalSource">
-          <name>Wikisource</name>
-          <idno type="URL"
-            >https://de.wikisource.org/wiki/Neunhundert_neun_und_neunzig_und_noch_etliche_Almanachs-Lustspiele_durch_den_Würfel</idno>
+          <!-- Name of the app -->
+          <name>
+            »999 und noch etliche [mehr]«: Web app for Georg Nikolaus Bärmann’s Würfelalmanach from 1829
+          </name>
+          <!-- URL to the app -->
+          <idno type="URL">
+          https://temporal-communities.github.io/999/
+          </idno>
           <availability status="free">
             <p>In the public domain.</p>
           </availability>
-          <bibl type="originalSource">Simplicius (= <author>Georg Nikolaus Bärmann</author>:
+          <bibl type="originalSource">Simplicius (= <author>Georg Nikolaus Bärmann</author>):
               <title>Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele durch den
               Würfel. Das ist: Almanach Dramatischer Spiele für die Jahre 1829 bis 1961. Ein Noth-
               und Hülfs-Büchlein für alle stehenden, gehenden und verwehenden Bühnen, so wie für
@@ -49,162 +62,40 @@
               <pubPlace>Zwickau</pubPlace>: <publisher>Gebrüder Schumann</publisher>
             <date>1829</date>.</bibl>
         </bibl>
+         <bibl type="edition">
+            <edition>
+            <!-- dice sequence goes here -->
+               <idno type="sequence"></idno>
+           </edition>
+        </bibl>
       </sourceDesc>
     </fileDesc>
-    <revisionDesc>
-      <listChange>
-        <change when="2024-02-22">initial conversion from source</change>
-        <change when="2024-06-26">minor corrections</change>
-        <change when="2025-02-05">minor corrections</change>
-      </listChange>
-    </revisionDesc>
   </teiHeader>
   <text>
-    <pb/>
     <front>
       <titlePage>
         <docTitle>
-          <titlePart type="main">Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele
-            durch den Würfel.</titlePart>
-          <titlePart type="sub">Das ist: Almanach Dramatischer Spiele für die Jahre 1829 bis 1961.
-            Ein Noth- und Hülfs-Büchlein für alle stehenden, gehenden und verwehenden Bühnen, so wie
-            für alle Liebhabertheater und Theaterliebhaber Deutschlands,</titlePart>
+          <titlePart type="main">
+          <!-- generated title -->
+          </titlePart>
+          <titlePart type="sub">
+          <!-- generated subtitle -->
+          </titlePart>
         </docTitle>
-        <docAuthor>von SIMPLICIUS der freien Künste Magister.</docAuthor>
-        <epigraph>
-          <quote>„Travaillez pour la gloire.“</quote>
-          <bibl>Boileau.</bibl>
-        </epigraph>
-        <docImprint>
-          <pubPlace>Zwickau</pubPlace>
-          <publisher>im Verlage der Gebrüder Schumann.</publisher>
-          <docDate>1829.</docDate>
-        </docImprint>
-      </titlePage>
-    </front>
-    <pb/>
-    <!-- <pb n="I"/> -->
-    <body>
-      <!-- <div type="poem">
-        <head>Schutzepistel an den weil. Dramaturgen und Aesthetiker Deutschlands: Gotthold Ephraim
-          Lessing.</head>
-        <pb n="II"/>
-        <pb n="III"/>
-        <l rend="indent">Schwer hab’ ich mich am Zeitgeschmack vergangen,</l>
-        <l>Indem ich <emph>tausendfach</emph> – <emph>in einer Nuß</emph></l>
-        <l>Das dargestellt, was sehnendes Verlangen</l>
-        <l>Vom Seinestrand sich einzeln holen muß.</l>
-        <l>Die allerliebsten, allgeliebten Bilder</l>
-        <l>Transrhen’schen Lustspiels, geistvoll übersetzt,</l>
-        <l>Macht mein vermess’ner, ungeschliff’ner, wilder,</l>
-        <l><emph>Wohlfeiler</emph> (!) Almanach zu Schanden jetzt.</l>
-        <l>Zwar wird man jener nimmer überdrüßig,</l>
-        <l>Nein, holt vielmehr stets Neues über’n Rhein;</l>
-        <l>Doch wird solch Holen ziemlich überflüßig</l>
-        <l>Durch meine „Tausend wen’ger Eines“ seyn.</l>
-        <l rend="indent"><emph>O Bedlam’s Nachbarschaft, o Kammerdiener,</emph></l>
-        <l><emph>O sieben Mädchen</emph> mit dem <emph>Kuß nach Sicht,</emph></l>
-        <pb n="IV"/>
-        <l><emph>O Schülerschwänke durch gestohlne Hühner,</emph></l>
-        <l>O Du <emph>Galeeren-Sclaven-Schau-Gericht;</emph></l>
-        <l><emph>Unschuld’ger</emph> Du, der <emph>Du so Vieles leiden,</emph></l>
-        <l><emph>Hofmeister</emph> Du, <emph>der Du Dich ängst’gen mußt,</emph></l>
-        <l><emph>Auch Erste Liebe</emph> Du mit Deinen Freuden,</l>
-        <l><emph>Freundschaft, die and’rer würdig sich bewußt;</emph></l>
-        <l>O edelster <emph>der Lissaboner Schneider</emph>,</l>
-        <l>Und <emph>Oberster im Unterrock auch Du</emph>;</l>
-        <l>Die ganze <emph>Ehrenrettung</emph>, leider!</l>
-        <l>Sogar der <emph>Ton des Tags</emph> dazu;</l>
-        <l><emph>Kunst und Natur</emph>, dies Doppelt-Ausgekochte,</l>
-        <l><emph>Ihr beiden Philiberts</emph> mit Sack und Pack,</l>
-        <l><emph>Intriguen Pommerns</emph>, die kein Pommer mogte</l>
-        <pb n="V"/>
-        <l>Und <emph>humorist’scher Studien</emph> Schabernack – –</l>
-        <l>Sie Alle rücken sicher auf mich Armen</l>
-        <l>Mit Redekraft und Heeresmacht herein,</l>
-        <l>Und ach! nicht Mitleid, Schonung noch Erbarmen</l>
-        <l>Wird mit mir Aermsten seyn!</l>
-        <l rend="indent">„Simplicius – ein Einfaltspinsel wagt es“ –</l>
-        <l>So rufen sie – „das ganz allein zu thun,</l>
-        <l>Was wir – des Volkstheaters Vorstand klagt es –</l>
-        <l>Nicht leisten können, ob wir nimmer ruh’n;</l>
-        <l>Ob gleichsam wettend wir zum Uebersetzen</l>
-        <l>Die Feder rastlos führen, daß es knarrt,</l>
-        <l>Indem das Volk mit Sehnsucht und Ergötzen</l>
-        <l>Vom Donaustrande bis zur Elbe harrt,</l>
-        <l>Daß wir ihm neue Translationen bringen,</l>
-        <l>Und neuen Lorbeer um die Schläf’ uns schlingen?“</l>
-        <pb n="VI"/>
-        <l rend="indent">Und auf mich ein seh’ ich sie furchtbar dringen,</l>
-        <l>Eh’ noch mein Almanach zu Kauf sich trägt.</l>
-        <l>Wie kann ich Einzelner ein Heer bezwingen?</l>
-        <l>Bin ich Alcid – der für Augias fegt?</l>
-        <l>Wie könnt’ ich’s seyn? Weh mir! Ich muß verderben!</l>
-        <l>Hinunter muß ich zu des Styxes Strand.</l>
-        <l>Was tröstet mich in solchem bittern Sterben?</l>
-        <l>Wer hilft aus Charons Nachen mir an’s Land?</l>
-        <l>O <emph>Lessing</emph>, Du! O stehe nah dem Strande,</l>
-        <l>Für mich bei’m Pluto, ach! verwende Dich;</l>
-        <l>Laß mich dem finstern Orkus nicht zum Pfande!</l>
-        <l>Denn dahin – ach! verwies die Erde mich.</l>
-        <l>Die Erde? Nein! die bunte Welt der Bretter</l>
-        <l>– Versteh mich recht! – sie ist’s, die mich verflucht;</l>
-        <l>Sie, die aus Frankreich her verbot’ne Götter</l>
-        <l>Im Lustspieltempel aufzurichten sucht.</l>
-        <pb n="VII"/>
-        <l>Noch sucht? Ach nein, die sie schon aufgerichtet,</l>
-        <l>Und die abgöttisch knechtisch sie verehrt;</l>
-        <l>So daß man das, was Du einst hast gedichtet,</l>
-        <l>Als längst Verscholl’nes kaum noch nennen hört.</l>
-        <l><emph>Der Tellheim</emph> Deiner <emph>Minna</emph> ist veraltet,</l>
-        <l>Für <emph>neue</emph> Schul’ ist <emph>Altes</emph> viel zu klein;</l>
-        <l>Für <emph>Nathans Weisheit</emph> ist die Welt erkaltet,</l>
-        <l>Denn lust’ger ist es sich als Narr mit Narren freu’n;</l>
-        <l>Daß drum auch Tollsinn auf der Bühne waltet,</l>
-        <l>So müssen’s Schwänke – <emph>Schüler</emph>schwänke seyn!</l>
-        <l>Wie käme da die rauhe Römertugend</l>
-        <l>Des <emph>Odoard</emph> bei uns noch in Betracht,</l>
-        <l>Wo demagogische Quintanerjugend</l>
-        <pb n="VIII"/>
-        <l>Den Autor und den Recensenten macht?</l>
-        <l>Wo das entweih’te Treiben auf den Brettern</l>
-        <l>Thaliens – tausend Gänsekiele treibt,</l>
-        <l>Daß Jürg wie Görg in belletrist’schen Blättern</l>
-        <l>Kritiken des Theaters schreibt?</l>
-        <l rend="indent">O schütze mich, der ich so schwer gesündigt,</l>
-        <l>Daß ich ein wenig Dich – ja <emph>Dich</emph> studirt,</l>
-        <l>Und frech und unverhohlen dann verkündigt,</l>
-        <l>Wie fingerfix man jetzt dramatisirt!</l>
-        <l>O schütze mich, wenn ich verjagt, verstoßen,</l>
-        <l>Hinunter zu dem Schattenreiche muß!</l>
-        <l>Die Mächtigen sind über mir, die Großen</l>
-        <l>Der heut’gen Bühnenwelt; Schutz dem</l>
-        <signed>
-          <emph>Simplicius!</emph>
-        </signed>
-      </div> -->
-      <!-- <pb n="IX"/> -->
-      <!-- <div type="preface">
-        <head type="main">Avis au lecteur!<note place="foot">Will etwa Herr <foreign>M.</foreign>
-            <emph>Simplicius</emph> gleich von vorn herein zu verstehen geben, daß er auch
-            französisch versteht? Du liebe Zeit! das kann heut zu Tage jede Stubenmagd. <emph>Anm.
-              d. Setzers.</emph></note></head>
-        <head type="sub">Das ist: Wer ein Buch oder Büchlein kauft, dem gehört auch die
-          Vorrede.</head>
-        <p>(Placeholder)</p>
-      </div>
-      <pb n="1"/> -->
-      <div type="main">
-        <!-- <head>Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele</head> -->
-        <!-- <epigraph>
+    <epigraph>
           <quote>
             <l>„– Dans l’art dangereux de rimer et d’écrire,</l>
             <l>Il n’est point de degrés du médiocre au pire.“</l>
           </quote>
           <bibl>Boileau.</bibl>
         </epigraph>
-        <pb n="2"/>
-        <pb n="3"/> -->
+      </titlePage>
+    </front>
+    <pb/>
+    <body>
+      <div type="main">
+        <head>Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele</head>
+        <!-- play segments will be inserted here -->
       </div>
     </body>
   </text>
