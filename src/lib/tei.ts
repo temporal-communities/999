@@ -19,28 +19,6 @@ function getSegment(almanacDoc: Document, roll: number, pips: number): Element |
   return segment
 }
 
-function replaceTags(templateDoc: Document, segments: DocumentFragment): void {
-  // replace <titlePart> with <head>
-  const titlePartMainTitle = segments.querySelector('titlePart[type="main"]')
-  const headMainTitle = templateDoc.createElementNS(TEINS, "head")
-  headMainTitle.setAttribute("type", "main")
-  headMainTitle.textContent = titlePartMainTitle!.textContent
-  titlePartMainTitle!.replaceWith(headMainTitle)
-  const titlePartSubTitle = segments.querySelector('titlePart[type="sub"]')
-  const headSubTitle = templateDoc.createElementNS(TEINS, "head")
-  headSubTitle.setAttribute("type", "sub")
-  headSubTitle.textContent = titlePartSubTitle!.textContent
-  titlePartSubTitle!.replaceWith(headSubTitle)
-  // replace <set> with <stage>
-  const set = segments.querySelector("set")
-  const stage = templateDoc.createElementNS(TEINS, "stage")
-  // move all children from <set> to <stage>
-  while (set!.firstChild) {
-    stage.appendChild(set!.firstChild)
-  }
-  set!.replaceWith(stage)
-}
-
 // in the almanacDoc, find divs corresponding to current segment id described by roll number and pips
 function collectSegments(sequence: number[], almanacDoc: Document): DocumentFragment {
   const segments = document.createDocumentFragment()
@@ -94,13 +72,29 @@ export async function createTEIDoc(sequence: number[]): Promise<string> {
   templateDoc.querySelector('front > titlePage > docTitle > titlePart[type="sub"]')!.textContent =
     subTitle
 
-  // set sequence as edition in source description
+  // add url to generated play
   templateDoc.querySelector(
     'teiHeader sourceDesc > bibl[type="edition"] > edition > idno'
   )!.textContent = sequence.join("").toString()
 
-  // remove syntax errors --> in segments replace titlePart with head and set with stage
-  replaceTags(templateDoc, segments)
+  // set sequence as edition in source description
+  templateDoc.querySelector(
+    'teiHeader sourceDesc > bibl[type="digitalSource"] > idno'
+  )!.textContent = "https://temporal-communities.github.io/999/" + sequence.join("").toString()
+
+  // add timestamp
+  const date = new Date()
+  const timestamp = date.toISOString() // keep full ISO 8601 string as enforced by oxygen
+  templateDoc
+    .querySelector("teiHeader revisionDesc > listChange > change")!
+    .setAttribute("when", timestamp)
+
+  // add titles, cast list and set description to front page and remove from segments
+  const front = templateDoc.querySelector("front")
+  for (let i = 0; i < 4 && segments.children[i]; i++) {
+    front?.appendChild(segments.children[i])
+    segments.removeChild(segments.children[i])
+  }
 
   // append segments wrapped in scene divs to template's main section
   const mainDiv = templateDoc.querySelector('body > div[type="main"]')
@@ -127,14 +121,9 @@ export async function downloadTEIDoc(sequence: number[]) {
   setTimeout(() => URL.revokeObjectURL(url), 10000)
 }
 
-// TODO:
+// NOTES
 // improve and complete download function
 // wann endet letzte szene? bevor der vorhang fällt oder danach? oder direkt vor Ende des Vorspiels?
-// web app --> option to show shortest and longest play (Worte zählen)
-// Wie ist das Spiel entstanden? Woraus besteht es? Bsp: Welche stücke kommen heraus, wenn ich nur 1en, 2en etc würfele?
-// corpus mit 100 plays generieren
-
-// NOTES
 
 //   1. Wurf: Titel + Untertitel
 //   2. Wurf: Personen
