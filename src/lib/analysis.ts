@@ -146,4 +146,10 @@ export function generateAllSamePipsSequence({ pips = 1 }: { pips?: number } = {}
 // Ohne List glückt’s keiner Liebe. --> 5 Wörter  ✔
 // shortest/longest play: Buchstaben zählen ✔
 // nur 1,2,3 etc. ✔
+<<<<<<< HEAD
 // 100 random Stücke für Dracor
+||||||| parent of b0aea79 (Update template, add same-pip-plays)
+// Ohne List glückt’s keiner Liebe. --> sind das 5 oder 6 Wörter?
+=======
+// 100 random Stücke für Dracor
+>>>>>>> b0aea79 (Update template, add same-pip-plays)
