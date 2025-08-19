@@ -47,9 +47,8 @@
           <name>
             »999 und noch etliche [mehr]«: Web app for Georg Nikolaus Bärmann’s Würfelalmanach from 1829
           </name>
-          <!-- URL to the app -->
+          <!-- insert URL to the generated play -->
           <idno type="URL">
-          https://temporal-communities.github.io/999/
           </idno>
           <availability status="free">
             <p>In the public domain.</p>
@@ -70,6 +69,11 @@
         </bibl>
       </sourceDesc>
     </fileDesc>
+    <revisionDesc>
+      <listChange> <!-- TODO: use iso8601, add atrribute when=<datetime> -->
+        <change>file generated</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
     <front>
@@ -90,13 +94,21 @@
           <bibl>Boileau.</bibl>
         </epigraph>
       </titlePage>
+      <!-- insert cast list and set here (roll 2) -->
     </front>
     <pb/>
     <body>
       <div type="main">
-        <head>Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele</head>
-        <!-- play segments will be inserted here -->
+        <!-- play segments will be inserted here (leave out roll 1 and 2) -->
       </div>
     </body>
   </text>
 </TEI>
+
+
+<!-- TODO
+ - fill url tag with url to generated play
+ - use timestamp as filename (iso8601)
+ - add atrribute when=<datetime>
+ - don't add title and cast/set (roll 1, 2) to segments section
+ - add cast/set below title page tag -->

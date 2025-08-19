@@ -9,7 +9,12 @@
   import { onMount } from "svelte"
   import { fade } from "svelte/transition"
   import { downloadTEIDoc } from "$lib/tei"
-  import { getRandomShortestPlay, getRandomLongestPlay } from "$lib/analysis"
+  import {
+    getRandomShortestPlay,
+    getRandomLongestPlay,
+    getRandomLongestAndShortestPlay,
+    generateAllSamePipsSequence
+  } from "$lib/analysis"
   import { compileModule } from "svelte/compiler"
 
   emblaCarouselSvelte.globalOptions = {
@@ -17,7 +22,18 @@
     skipSnaps: true // Allow the carousel to skip scroll snaps if it's dragged vigorously
   }
 
-  let playMode: "dice" | "shortest" | "longest" = $state("dice") // to switch between: generate random with dice or random shortest or longest play
+  let playMode:
+    | "dice"
+    | "shortestWords"
+    | "longestWords"
+    | "shortestLetters"
+    | "longestLetters"
+    | "allOne"
+    | "allTwo"
+    | "allThree"
+    | "allFour"
+    | "allFive"
+    | "allSix" = $state("dice") // to switch between: generate random with dice or random shortest or longest play
 
   let sequence: number[] = $state([])
   let isRolling = $state(false)
@@ -32,13 +48,53 @@
     if (isRolling) {
       if (playMode === "dice") {
         sequence = generateRandomSequence()
-      } else if (playMode === "shortest") {
+      } else if (playMode === "shortestWords") {
         sequence = getRandomShortestPlay().sequence
         setTimeout(() => {
           isRolling = false
         }, 1000)
-      } else if (playMode === "longest") {
+      } else if (playMode === "longestWords") {
         sequence = getRandomLongestPlay().sequence
+        setTimeout(() => {
+          isRolling = false
+        }, 1000)
+      } else if (playMode === "shortestLetters") {
+        sequence = getRandomShortestPlay({ countLetters: true }).sequence
+        setTimeout(() => {
+          isRolling = false
+        }, 1000)
+      } else if (playMode === "longestLetters") {
+        sequence = getRandomLongestPlay({ countLetters: true }).sequence
+        setTimeout(() => {
+          isRolling = false
+        }, 1000)
+      } else if (playMode === "allOne") {
+        sequence = generateAllSamePipsSequence({ pips: 1 }).sequence
+        setTimeout(() => {
+          isRolling = false
+        }, 1000)
+      } else if (playMode === "allTwo") {
+        sequence = generateAllSamePipsSequence({ pips: 2 }).sequence
+        setTimeout(() => {
+          isRolling = false
+        }, 1000)
+      } else if (playMode === "allThree") {
+        sequence = generateAllSamePipsSequence({ pips: 3 }).sequence
+        setTimeout(() => {
+          isRolling = false
+        }, 1000)
+      } else if (playMode === "allFour") {
+        sequence = generateAllSamePipsSequence({ pips: 4 }).sequence
+        setTimeout(() => {
+          isRolling = false
+        }, 1000)
+      } else if (playMode === "allFive") {
+        sequence = generateAllSamePipsSequence({ pips: 5 }).sequence
+        setTimeout(() => {
+          isRolling = false
+        }, 1000)
+      } else if (playMode === "allSix") {
+        sequence = generateAllSamePipsSequence({ pips: 6 }).sequence
         setTimeout(() => {
           isRolling = false
         }, 1000)
@@ -102,6 +158,10 @@
       }, 200) // small delay to ensure content is rendered
     }
   })
+
+  // for button group of play generating buttons
+  let showButtons = $state(false)
+  let showPipButtons = $state(false)
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -222,27 +282,112 @@
   <!-- Share Button Component -->
   <ShareButton {sequence} />
 </div>
-<button
-  onclick={() => ((playMode = "shortest"), (isRolling = true))}
-  class="fixed right-6 bottom-85 flex h-18 w-18 cursor-pointer items-center justify-center
-    rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500
-    focus:ring-offset-2 focus:outline-none"
-  aria-label={"tei"}>Shortest Play TEST</button
->
-<button
-  onclick={() => ((playMode = "longest"), (isRolling = true))}
-  class="fixed right-6 bottom-65 flex h-18 w-18 cursor-pointer items-center justify-center
-    rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500
-    focus:ring-offset-2 focus:outline-none"
-  aria-label={"tei"}>Longest Play TEST</button
->
+
+<!-- onclick={() => getRandomLongestAndShortestPlay()} -->
 <button
   onclick={() => downloadTEIDoc([...sequence])}
   class="fixed right-6 bottom-45 flex h-18 w-18 cursor-pointer items-center justify-center
-    rounded-full bg-sky-800 text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2 focus:ring-sky-500
-    focus:ring-offset-2 focus:outline-none"
-  aria-label={"tei"}>TEI TEST</button
+    rounded-full bg-sky-800 text-sm text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2
+    focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
+  aria-label={$locale === "de" ? "TEI-Dokument herunterladen" : "Download TEI document"}
+  >TEI Download</button
 >
+
+<!-- Toggle shortest/longest play options -->
+<button
+  onclick={() => (showButtons = !showButtons)}
+  class="fixed right-6 bottom-85 z-50 flex h-18 w-18 items-center justify-center
+    rounded-full bg-sky-800 text-xs text-white shadow-lg transition-all hover:bg-sky-700
+    focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
+>
+  {showButtons ? "X" : "Generate shortes/longest play"}
+</button>
+
+{#if showButtons}
+  <div class="fixed right-[88px] bottom-85 z-40 flex flex-row-reverse gap-4">
+    <button
+      onclick={() => ((playMode = "shortestLetters"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Shortest (letters)
+    </button>
+
+    <button
+      onclick={() => ((playMode = "longestLetters"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Longest (letters)
+    </button>
+
+    <button
+      onclick={() => ((playMode = "shortestWords"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Shortest (words)
+    </button>
+
+    <button
+      onclick={() => ((playMode = "longestWords"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Longest (words)
+    </button>
+  </div>
+{/if}
+
+<!-- Toggle same-pip-play options -->
+<button
+  onclick={() => (showPipButtons = !showPipButtons)}
+  class="fixed right-6 bottom-65 z-50 flex h-18 w-18 items-center justify-center
+    rounded-full bg-sky-800 text-xs text-white shadow-lg transition-all hover:bg-sky-700
+    focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
+>
+  {showPipButtons ? "X" : "Generate Same-pip-play"}
+</button>
+
+{#if showPipButtons}
+  <div class="fixed right-[88px] bottom-65 z-40 flex flex-row-reverse gap-4">
+    <button
+      onclick={() => ((playMode = "allSix"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Pips 6
+    </button>
+
+    <button
+      onclick={() => ((playMode = "allFive"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Pips 5
+    </button>
+
+    <button
+      onclick={() => ((playMode = "allFour"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Pips 4
+    </button>
+
+    <button
+      onclick={() => ((playMode = "allThree"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Pips 3
+    </button>
+    <button
+      onclick={() => ((playMode = "allTwo"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Pips 2
+    </button>
+    <button
+      onclick={() => ((playMode = "allOne"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Pips 1
+    </button>
+  </div>
+{/if}
 
 <style>
   @keyframes pulse {
