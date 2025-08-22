@@ -8,7 +8,7 @@
   let urlCopied: boolean = $state(false)
 
   const getShareUrl = () =>
-    window.location.origin + window.location.pathname + "?share=true" + "#" + sequence.join("")
+    window.location.origin + window.location.pathname + "#" + sequence.join("")
   // function to copy url including sequence to clipboard
   async function copyUrlToClipboard(event: MouseEvent) {
     try {
