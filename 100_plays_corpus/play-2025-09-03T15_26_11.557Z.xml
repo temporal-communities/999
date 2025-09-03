@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei.css"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="ger">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Er muß Ja sagen.</title>
+        <title type="sub">Ein Lustspiel in einem Act.</title>
+        <author>
+          <persName type="pseudo">Simplicius</persName>
+          <persName>
+            <forename>Georg</forename>
+            <forename>Nikolaus</forename>
+            <surname>Bärmann</surname>
+          </persName>
+          <idno type="wikidata">Q1505487</idno>
+          <idno type="pnd">107968169</idno>
+        </author>
+        <author> 
+          <persName type="pseudo">Du</persName>
+        </author>
+        <respStmt>
+          <resp>Edited by</resp>
+          <name ref="https://orcid.org/0000-0003-2419-6629" type="person">Frank Fischer</name>
+          <name ref="https://orcid.org/0000-0002-7334-781X" type="person">Viktor J. Illmer</name>
+          <name ref="https://orcid.org/0009-0005-9680-3995" type="person">Nele Heindorf</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>RA5 of EXC2020 »Temporal Communities« at Freie Universität Berlin</publisher>
+        <idno type="URL">https://www.temporal-communities.de/research/digital-communities/</idno>
+        <availability>
+          <licence>
+            <ab>CC0 1.0</ab>
+            <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Licence</ref>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl type="digitalSource">
+          <!-- Name of the app -->
+          <name>
+            »999 und noch etliche [mehr]«: Web app for Georg Nikolaus Bärmann’s Würfelalmanach from 1829
+          </name>
+          <!-- insert URL to the generated play -->
+          <idno type="URL">https://temporal-communities.github.io/999/51465345442121315666622512525343366121141563442325624615451643664466525245152143312432613112333515624545121562632211441141323524111533115656265123132443315634224121143633353214342342152444235446243644</idno>
+          <availability status="free">
+            <p>In the public domain.</p>
+          </availability>
+          <bibl type="originalSource">Simplicius (= <author>Georg Nikolaus Bärmann</author>):
+              <title>Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele durch den
+              Würfel. Das ist: Almanach Dramatischer Spiele für die Jahre 1829 bis 1961. Ein Noth-
+              und Hülfs-Büchlein für alle stehenden, gehenden und verwehenden Bühnen, so wie für
+              alle Liebhabertheater und Theaterliebhaber Deutschlands</title>.
+              <pubPlace>Zwickau</pubPlace>: <publisher>Gebrüder Schumann</publisher>
+            <date>1829</date>.</bibl>
+        </bibl>
+         <bibl type="edition">
+            <edition>
+            <!-- dice sequence goes here -->
+               <idno type="sequence">51465345442121315666622512525343366121141563442325624615451643664466525245152143312432613112333515624545121562632211441141323524111533115656265123132443315634224121143633353214342342152444235446243644</idno>
+           </edition>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <listChange> <!-- TODO: use iso8601, add atrribute when=<datetime> -->
+        <change when="2025-09-03T15:26:11.557Z">file generated</change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <titlePage>
+        <docTitle>
+          <titlePart type="main">Er muß Ja sagen.</titlePart>
+          <titlePart type="sub">Ein Lustspiel in einem Act.</titlePart>
+        </docTitle>
+    <epigraph>
+          <quote>
+            <l>„– Dans l’art dangereux de rimer et d’écrire,</l>
+            <l>Il n’est point de degrés du médiocre au pire.“</l>
+          </quote>
+          <bibl>Boileau.</bibl>
+        </epigraph>
+      </titlePage>
+      <!-- insert cast list and set here (roll 2) -->
+    <titlePart type="main">Er muß Ja sagen.</titlePart><set>
+            <p>(Die Scene ist ein Zimmer.)</p>
+          </set><div type="scene" n="3">
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <stage>(sie umfassend)</stage>
+            <p>Mein theures Mädchen!</p>
+          </sp>
+        
+          <sp who="#liebhaberin">
+            <speaker>Die Nichte.</speaker>
+            <p>Mein Erwählter!</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Glühende Liebe, die <pb n="188"/> seit gestern Nachmittag, wo sie sich zuletzt
+              sprachen, bis heute so hoch sich steigerte! <stage>(für sich)</stage></p>
+          </sp>
+        
+          <spGrp>
+            <sp who="#liebhaberin">
+              <speaker>Die Nichte.</speaker>
+              <p>Vergessen ist jetzt aller Gram!</p>
+            </sp>
+            <sp who="#liebhaber">
+              <speaker>Der Liebh.</speaker>
+              <p>Bei Dir bin ich glücklich!</p>
+            </sp>
+            <stage>(zugleich)</stage>
+          </spGrp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <stage>(bei Seite)</stage>
+            <p>Das halte eine Andere aus. Ich gehe, meinem Schatz einen Morgengruß zu bringen.
+                <stage>(Ab.)</stage></p>
+          </sp>
+        </div><div type="scene" n="6">
+          <head>Sechster Auftritt.</head>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <stage>(allein, hastig herein.)</stage>
+            <p>Die Zeit ist da! Der Bräutigam kommt. Es soll nicht länger Anstand haben. Meine
+              Mündel muß sich endlich fügen. Soll ich meinem alten Freunde umsonst mein Wort gegeben
+              haben? Nein, mein ehrlicher Feldkümmel! Unsereins hält was es verspricht. Dein Junge
+              soll guter Art seyn, passabel hübsch seyn und das Seinige gelernt haben. Also topp! –
+              He! Mamsell Nichte! <stage>(klingelt; zur Zofe die eintritt)</stage> Rufe Sie Ihr
+              Fräulein! <stage>(das Mädchen ab)</stage> – Sie wird sich sperrn; allein es hilft ihr
+              nichts, gar nichts! – Nun Fräulein Nichte?</p>
+          </sp>
+        </div></front>
+    <pb/>
+    <body>
+      <div type="main">
+        <!-- play segments will be inserted here (leave out roll 1 and 2) -->
+      
+          
+          
+        
+          <castList>
+            <head>Personen.</head>
+            <castItem>Der Onkel.</castItem>
+            <castItem>Die Nichte.</castItem>
+            <castItem>Deren Kammermädchen.</castItem>
+            <castItem>Der Liebhaber der Nichte.</castItem>
+            <castItem>Dessen Diener.</castItem>
+          </castList>
+          
+        <div type="scene" n="2">
+          <head>Zweiter Auftritt.</head>
+          <stage>Die Nichte. Das Kammermädchen.</stage>
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Allerdings, und ich komme gerade zu rechter Zeit.</p>
+          </sp>
+        
+          <sp who="#liebhaberin">
+            <speaker>Die Nichte.</speaker>
+            <p>Rede! Naht er sich?</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Er naht auf den Flügeln der Liebe.</p>
+          </sp>
+        
+          <sp who="#liebhaberin">
+            <speaker>Die Nichte.</speaker>
+            <p>Treue Seele! Wird sein Kommen mir Versichrung, daß ich ihn einst ganz besitzen
+              werde?</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Das Glück will Zeit haben. –</p>
+          </sp>
+        
+          <sp who="#liebhaberin">
+            <speaker>Die Nichte.</speaker>
+            <p>Du weißt, daß mein Vormund – –</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Ja, von der Seite her hat Ihr Liebesschifflein schlechten Wind; noch schlechteren
+              wird es haben, wenn der Brief, den der Herr Onkel gestern Abend spät – –</p>
+          </sp>
+        
+          <sp who="#liebhaberin">
+            <speaker>Die Nichte.</speaker>
+            <p>Wie? Einen Brief – –</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Lassen wir das jetzt. Ihr Angebeteter kommt.</p>
+          </sp>
+        </div><div type="scene" n="5">
+          <head>Fünfter Auftritt.</head>
+          <stage>Die Vorigen. Das Kammermädchen.</stage>
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Soll der Herr Onkel Sie überraschen? Links um, junger Herr! Kommen Sie, mein
+              Fräulein!</p>
+          </sp>
+        </div><div type="scene" n="8">
+          <head>Achter Auftritt.</head>
+          <sp who="#zofe">
+            <speaker>Das Kammermädchen</speaker>
+            <stage>(leise herein.)</stage>
+          </sp>
+        
+          <sp who="#zofe">
+            <stage>(hinausredend)</stage>
+            <p>Nur einen Augenblick. Er ist fort. Gleich rufe ich, wenn nemlich die Luft ganz rein
+              ist. <stage>(am Kabinet)</stage> Ja, der Alte ist hinaufgegangen. Es ist seine Stunde,
+              in welcher er die Zeitung zu lesen pflegt. – Flink! Nur näher! Ist dein Herr bei
+              Dir?</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener</speaker>
+            <stage>(in der Thür)</stage>
+            <p>Freilich!</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Schnell! Bitt’ ihn herein zu kommen. <stage>(Der Diener wieder ab) (allein)</stage>
+              Der <pb n="97"/> Hausbär hat sich in den Winkel gezogen; der Schauplatz ist leer und
+              nur dieser pfiffige Bedienter kann ihn wieder füllen. Er muß helfen. Mein Fräulein muß
+              gerettet werden.</p>
+          </sp>
+        </div><div type="scene" n="9">
+          <head>Neunter Auftritt.</head>
+          <stage>Das Kammermädchen. Der Liebhaber. Der Diener.</stage>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Da sind wir.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Also wirklich gefangen die Königinn meines Herzens?</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Ja doch, sie ist eingesperrt in ihrem Zimmer. Wir haben kein Burgverließ, sonst säße
+              sie drin.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Türke von einem Vormund!</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Ruhig! Was muß helfen in der Comödie, wenn mit Gewalt nichts auszurichten ist? Die
+                <emph>List</emph>!</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>List? – Pomade für mich!</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Hilf, aber denk nicht dabei an Belohnung. Die Großmuth Deines Herrn will nicht
+              gestachelt seyn.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Ganz gewiß nicht. Der Arbeiter ist seines Lohnes werth. Hundert Luisd’or, wenn Du mir
+              beistehst.</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Das heißt wie ein ächter Liebhaber gesprochen.</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Ich habe den Alten belauert. Da hört’ ich denn, daß der Bräutigam vielleicht heute
+              noch, morgen jedoch ganz gewiß kommen soll.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Verhaßter Kuppler!</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Wie befreien wir meine Gebieterin? Wie verjagen wir die Schicksalsunke?</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Wie? Wolle mich nur nicht zu jenen abgeschmackten Komödienbedienten erniedrigen, die
+              durch verbrauchte List – – –</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Nun, so kann man ja wohl durch andere Mittel – –</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Das ist mein Plan. Ihn ausführen, da meine Belohnung schon abgezählt ist, ist eine
+              Kleinigkeit.</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Wohlan, so theile uns mit – –</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Hurtig, heraus damit! – Aber man behorcht uns doch nicht?</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Wer sollte lauschen? Das wäre ja indiscret, wenn Jemand lauschte, wo ich mich
+              befinde. Lassen Sie den Spitzbuben nur reden.</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Hm! „Seyn oder nicht Seyn, das ist hier die Frage!“ hat einmal ein alter Italiener
+              oder Schotte gesagt. Ob ich meinen Plan verrathe? Schwächt das nicht die Catastrophe?
+              Immerhin! mein Beifall ist dennoch golden.</p>
+          </sp>
+        
+          <spGrp>
+            <sp who="#liebhaber">
+              <speaker>Der Liebh.</speaker>
+              <p>Narr!</p>
+            </sp>
+            <sp who="#zofe">
+              <speaker>Das Kammerm.</speaker>
+              <p>Gaudieb!</p>
+            </sp>
+            <stage>(zugleich)</stage>
+          </spGrp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Wohlan denn! Der Bräutigam <pb n="50"/> Ihrer Geliebten wird nicht mehr erwartet – er
+              ist schon hier!</p>
+          </sp>
+        
+          <spGrp>
+            <sp who="#zofe">
+              <speaker>Das Kammerm.</speaker>
+              <p>Wär’s möglich?</p>
+            </sp>
+            <sp who="#liebhaber">
+              <speaker>Der Liebh.</speaker>
+              <p>Himmel!</p>
+            </sp>
+            <stage>(zugleich)</stage>
+          </spGrp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Lerne ihn sogleich in meiner Person kennen.</p>
+          </sp>
+        
+          <spGrp>
+            <sp who="#zofe">
+              <speaker>Das Kammerm.</speaker>
+              <p>Du?</p>
+            </sp>
+            <sp who="#liebhaber">
+              <speaker>Der Liebh.</speaker>
+              <p>Hahaha!</p>
+            </sp>
+            <stage>(zugleich)</stage>
+          </spGrp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Freilich bin ich’s. Ich bin jener Jammernswerthe, dem die Braut entrissen werden
+              soll, aus der er sich vielleicht nichts macht. <stage>(z. Kammerm.)</stage> Also
+              „weine nicht, weine nicht, meine Cordelia.“ – Sage mir lieber, wie heißt er?</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Ja, wer darauf antworten könnte!</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Thut nichts. Ich errathe seinen Namen schon. Thaddäus Bocklümmel oder Bastian
+              Feldkümmel oder Theophilus Lämmerzahn oder Plumper schlecht weg – ja so
+                <emph>muß</emph> er heißen. –„Es muß blitzen!“ sagt Johanna von Montfaucon, die
+              bekanntlich nur klassische Worte im Munde führt.</p>
+          </sp>
+        
+          <spGrp>
+            <sp who="#zofe">
+              <speaker>Das Kammerm.</speaker>
+              <p>Weiter! Weiter!</p>
+            </sp>
+            <sp who="#liebhaber">
+              <speaker>Der Liebh.</speaker>
+              <p>Vernünftig! Vernünftig!</p>
+            </sp>
+            <stage>(zugleich)</stage>
+          </spGrp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Da ist mein Herr und hier bin ich.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Halt! Mir fällt etwas ein: der Brief, den der Onkel gestern erhielt, könnte Licht
+              geben; förderlich seyn.</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Vortrefflich! den Brief stehle ich, wenn es mir irgend möglich ist.</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Meinetwegen. Streck die Finger aus und greif richtig und schnell. Beim Treibhause im
+              Garten erwart’ ich Dich.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Halt, Kleine! Nimm erst diese Kleinigkeit zum Voraus.</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <stage>(nimmt, dankt und entschlüpft.)</stage>
+          </sp>
+        </div><div type="scene" n="10">
+          <head>Zehnter Auftritt.</head>
+          <stage>Der Liebhaber. Der Diener.</stage>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Nur hurtig! Ich werfe mich in’s Zeug. Der Alte kennt mich nicht, und wenn er mich
+              auch kennt, so darf er mich doch nicht kennen. Das ist mir genug; drum soll er mich
+              auch nicht kennen.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Aber willst Du mir nicht vorher sagen – –</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Wie heißt die Redensart in vielen Comödien? „Folgen Sie mir, daß ich Ihnen unterwegs
+              meinen Plan mittheile.“ Da fügt sich’s denn, daß der Herr dem Diener nachgeht.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Du! Du! Nicht übermüthig!</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Nur gnädig, mein Gebieter. In der Regel muß der Liebhaber in der Comödie dem
+              verschmitzten Diener, der ihm aus der Klemme helfen soll, Etwas zu Gute halten.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>So gehen wir denn – –</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Beliebt’s Ihnen? Ja!</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Nun, voran mit Dir, daß <pb n="102"/> ich dir als meinem Leitstern den schuldigen
+              Respect – –</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Freilich geziemt <emph>mir</emph> das <pb n="165"/> Prädicat Herr hier; jedoch ich
+              werde bescheiden seyn.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Wie verstehst Du das?</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Das Parterr – vorausgesetzt, ich stände vor einem solchen – sieht freilich in mir das
+              Genie, durch welches das ganze Lustspiel gelenkt wird; aber deshalb darf ich doch
+              nicht aufhören, Ihr Diener zu seyn. Wenn ich also auch <foreign>ex. gr.</foreign> als
+              Leithammel vor Ihnen hergehe, so muß ich doch vorher eine Handlung begehen, wodurch
+              ich Sie als den Herrn, mich als den Knecht bezeichne.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Solche Handlung wäre –?</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Bitten Sie, so viel Sie wollen. Unnütze Dinge zu treiben, ist heutiger Jugend
+              Lieblingsbeschäftigung.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Narr! und doch eben keiner von den schlimmen. Geh voran nur!</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener</speaker>
+            <stage>(ab.)</stage>
+          </sp>
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <stage>(hinter ihm her.)</stage>
+          </sp>
+        </div><div type="scene" n="11">
+          <head>Eilfter Auftritt.</head>
+          <stage>Das Kammermädchen.</stage>
+        
+          <sp who="#zofe">
+            <stage>(Allein, aus dem Kabinet kommend)</stage>
+            <p>Hier ist der Brief. Ich habe ihn richtig wegstipitzt – – Nun wo ist denn mein
+              Schlaufuchs? Ah! er ging schon – Sein Herr mit ihm. Geschwind, ihnen nach – – Halt!
+              Horch! Der Alte! Er spricht mit Jemandem. Fort, schnell über die Hintertreppe zu
+              meinem Verkleideten. <stage>(Ab.)</stage></p>
+          </sp>
+        </div><div type="scene" n="12">
+          <head>Zwölfter Auftritt.</head>
+          <stage>Der Oheim. Der Liebhaber.</stage>
+          <stage>(Beide zugleich herein.)</stage>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Wie, mein Herr? Sie haben <pb n="133"/> die Frechheit hieher zu kommen? sogar nach
+              mir zu verlangen?</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Allerdings, mein Herr. Schon zum zweiten Male bin ich heute hier. Sie waren vorhin
+              noch nicht zu sprechen.</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Herr, ich bin <emph>noch</emph> nicht sichtbar, das heißt für <emph>Sie</emph> nicht.
+              Wollen Sie doch nur mir alte, widerliche Lieder vorsingen; Variationen, deren Thema
+              meine Nichte und ihr Geldsack ist.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Erlauben Sie mir, Ihnen zu sagen, daß Sie sich zur Hälfte irren. Ich strebe nicht
+              nach dem Vermögen Ihrer Mündel, sondern nur nach dem Besitze meiner Geliebten, und
+              bitte daher – –</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Und bäten Sie bis Sie graue Haare bekämen: ich bleibe bei meinem Nein!</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Was haben Sie an mir auszusetzen?</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Das will ich für mich behalten.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Sie sind sehr kurz angebunden.</p>
+          </sp>
+          <pb n="135"/>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Bin nun einmal so, und um diesem Gespräch ein Ende zu machen, erfahren Sie, daß Ihre
+              Dulcinea eingesperrt bleibt, bis – –</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Ich hörte von dieser Ihrer abermaligen Grausamkeit gegen das beklagenswürdige
+              Mädchen. Sie sind ein Tyrann!</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Herr, ich begreife Sie nicht. Gehe ich nicht ganz ein in das Wesen heutiger Moden-
+              Romanen- und Comödien-Welt? Thue <pb n="137"/> ich nicht Alles, was ein Onkel und
+              Vormund thun muß, um interessant zu seyn?</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Achten Sie auf mich. Ich mache Ihnen ja die vernünftigsten Vorstellungen. Zwar bin
+              ich nicht reich, aber doch im Stande eine Frau in jeder Hinsicht glücklich zu
+              machen.</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Geht mich nichts an. Gesagt <pb n="233"/> – gethan! Das Mädchen bekommen Sie
+              nicht.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Sie werden gezwungen seyn, Ihre Nichte wieder in Freiheit zu setzen.</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Allerdings; ich werde sogar <pb n="104"/> mich selbst dazu zwingen, allein keine
+              Minute eher, als es Zeit dazu ist.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Nun dann, sobald sie frei seyn wird, gehe ich mit ihr durch.</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Wird sich nicht thun lassen. Ein Anderer Halt-sie-vest ist bestellt, und der wird
+              kommen; ja, ja, mein Herr, kommen!</p>
+          </sp>
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Wie?</p>
+          </sp>
+        </div><div type="scene" n="13">
+          <head>Dreizehnter Auftritt.</head>
+          <stage>Die Vorigen. Das Kammermädchen.</stage>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Er ist schon gekommen.</p>
+          </sp>
+          <pb n="171"/>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>wirklich? Was sagst Du?</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Ei gewiß ist’s Ihr Verschriebener!</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Hörten Sie die Botschaft aus diesem schnippischen Munde? Was nun, junger Herr?</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <stage>(zum Liebh., heimlich)</stage>
+            <p>Was machen Sie denn hier?</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Aus Vorsicht, daß der Alte nichts merken sollte, der mich mit meinem Bedienten auf
+              der Treppe ertappte.</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Wohlan! Wo ist denn der Neuangekommene?</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Vom Gasthof zum grünen Esel eilt er herüber zu uns, eben der Landkutsche entstiegen,
+              die noch vor dem Wirthshause hält.</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Da hören Sie’s! Hier ist Nichts für Sie zu thun.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Ich trete ab –</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Recht so!</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Aber, wenn ich zurückkehre –</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Was wollen Sie? Was meynen Sie? Was denken Sie? Was vermuthen Sie? Was ahnden Sie?
+              Was hoffen Sie? Was erwarten Sie? Was wünschen Sie? Was begehren Sie? Was verlangen
+              Sie? Was entdecken Sie? Was bezwecken Sie? Sie haben mich hieher verschrieben – ich
+              bin da, nach Ihrem <pb n="108"/> Willen; drum gilt jetzt auch mein Wille. Auf Ihren
+              Antrieb werden <emph>Sie jetzt von mir</emph> angetrieben, aufgetrieben,
+              fortgetrieben, ausgetrieben, in die Enge getrieben –</p>
+          </sp>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Alle Wetter! drei Schritt vom Leibe geblieben!</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <stage>(Ab.)</stage>
+          </sp>
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Da ist der junge Herr!</p>
+          </sp>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Herein, herein mit ihm!</p>
+          </sp>
+        </div><div type="scene" n="14">
+          <stage>Der Oheim. Das Kammermädchen. Der Diener.</stage>
+          <stage>(Der Letztere ist auffallend als Stutzer gekleidet. Er spricht <pb n="235"/> im
+            Berlinischen, sächsischen, pommerschen oder im Mecklenburger-Bauern-Dialekt; wie es dem
+            berühmten Schauspieler, der diese Rolle zu seinem unabläßigen Studium macht, am
+            bequemsten oder eigentlich am maulgerechtesten ist. Auch kann er alle beliebigen
+            Dialecte durch einander sprechen; wenn’s nur Effect macht; denn vom Effect allein hängt
+            der Werth eines Lustspiels ab.)</stage>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <stage>(ihm entgegen)</stage>
+            <p>Tausendmal willkommen!</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Ihr Glück, Ihr dauerndes, zieht mit mir in Ihr Haus. – Wie erscheine ich Ihnen?</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Ich betrachte Sie mit freudigem Entzücken und mit Verwunderung.</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Hoho! Es muß noch ganz anders kommen. Erst wenn Sie meine Anlagen, meine Fähigkeiten,
+              meine Talente, meine Vorzüge, meine Fürtrefflichkeiten, meine Eigenthümlichkeiten,
+              meine Ansichten, Einsichten, Aussichten, Absichten, Uebersichten, Rücksichten mit
+              allen meinen Geschichten und Gedichten, meine Compositionen, Modulationen,
+              Connexionen, Oppositionen, Improvisationen und Approbationen, meine Partituren und
+              Colloraturen, meine Technik, Polytechnik und Mechanik, Praktik und Taktik, Aesthetik
+              und Poetik, Logik und Demagogik, Ornitologie, Periphrasie und Allegorie, meine
+              Rotomondaten und Jeremiaden, meine Plastik und Gymnastik kennen –</p>
+          </sp>
+          <pb n="236"/>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Hören Sie auf! Lassen Sie andere Leute auch zu Worte!</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Nur Geduld, mein Herr! Hier redet jetzt Niemand außer mir. Wissen Sie’s, mein Herr,
+              daß ich die Welt habe kennen gelernt, wie meine Zahnstocherbüchse? Die berühmtesten
+              Staatsmänner, z. B. der Herausgeber der alten oder neuen Feuerbrände, die berühmtesten
+              Schriftsteller, z. B. der Herausgeber der Berliner Schnellpost, sind mit mir auf Du
+              und Du. Als jene berühmten Doctoren und Männer vom Verdienstorden – <foreign>pour le
+                mérite</foreign> – nach Brasilien reiseten, schrieb ich ihnen Beiträge über die
+              Länder- und Völkerkunde jenes uralten Kaiserreichs. Und wo saß ich als ich diese
+              Beiträge schrieb? Herr, auf meines Vaters Landgute Zippelsdorf in Hinterpommern im
+              Kuhstall, weil ich zu der Zeit gerade eine Milchkur gebrauchen mußte –</p>
+          </sp>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Herr, zuviel ist zuviel! Ich wollte Sie säßen noch da.</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Was soll das? Wollen Sie mich ignoriren, verkennen, verlachen, verhöhnen, <pb n="172"/> verspotten, verachten, hintansetzen, geringschätzen –?</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Sterben will ich, wenn ich darauf zu antworten weiß.</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Traurig genug! Hätten Sie, wie ich, klares Auffassungsvermögen und sichere
+              Darstellungsgabe, so würden Sie anders mit mir verfahren. Vor Allen würden Sie mich
+              längst gefragt haben: Mein Herr wer sind Sie? Wie ist Ihr werther Name?</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Nun, zum Geier! Wie heißen Sie?</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Daß ich ein Narr wäre, und auf solche Frage antwortete.</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Das ist zum Rasendwerden! Warum wollten Sie denn, daß ich Ihnen diese, eben diese
+              Frage vorlegte?</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Das mußt’ ich fordern; um Ihrer selbst willen. Ich will Sie sobald wie möglich mit
+              mir auf einer und derselben geistigen Stufe wissen. Ich verabscheue allen Kastengeist.
+              Ich liebe meine Mitmenschen über die Maßen, und trage den großen Gedanken mit mir
+              herum, sie alle zu reformiren, wo und worin es nöthig ist. Bei Ihnen mach’ ich den
+              Anfang, indem ich Ihnen zeige, wie närrisch es ist, nach Dingen zu fragen, die man
+              schon weiß.</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Herr, wie kann ich – –</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Wie können Sie zweifeln, daß Ihnen mein Name bekannt seyn müsse? Erhielten Sie nicht
+              einen Brief von meinem Vater, gestern, vorgestern, oder doch heute?</p>
+          </sp>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Nun ja; aber – –</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Kann es jenem wichtigen Schreiben an der Nennung meines Namens fehlen. <pb n="29"/>
+              Demnach, um Unterschleif, Verwechselung und Betrug zu verhüten, muß <emph>ich
+                Sie</emph> fragen, wie mein Name ist, also: Wie heiß’ ich, mein Herr – – –</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <stage>(böse.)</stage>
+            <p>Nun, zum Wetter! Sie sind ja der junge Herr von **.</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Kommt es endlich heraus, daß Sie ohne Noth gefragt haben? Oder richtiger: daß Sie
+              doch fragten, weil Sie eigentlich haben fragen müssen?</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Der Kerl ist toll, rein toll. Warum denn nicht Sie, sondern ich; warum denn ich und
+              nicht sie?</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Als ob nicht ein Anderer mich vorstellen könnte, um Sie zu betrügen, mich zu
+              hintergehen, uns Beide zu täuschen –?</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Das wär’ der Kukuk!</p>
+          </sp>
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <stage>(bei Seite)</stage>
+            <p>Himmel! wenn er zu weit ginge, wenn der Herr Onkel Etwas merkte. <stage>(Sie giebt
+                dem Diener heimliche Winke.)</stage></p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <stage>(einlenkend)</stage>
+            <p>Doch für diesmal <pb n="213"/> genug zu Ihrer Belehrung. Lassen Sie Ihre Fräulein
+              Nichte rufen und stellen Sie mich ihr vor.</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <stage>(für sich)</stage>
+            <p>Er soll doch nicht erfahren, daß ich sie einsperrte. <stage>(laut)</stage> Sogleich,
+              mein Herr. <stage>(Steckt verstohlen dem Kammermädchen einen Schlüssel zu, und giebt
+                ihr einen Wink.)</stage></p>
+          </sp>
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Zu Befehl, gnädiger Herr. <stage>(Ab.)</stage></p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Es findet doch von Seiten <pb n="89"/> Ihrer Nichte keine Unzufriedenheit mit dieser
+              Heirath Statt?</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <stage>(stutzig)</stage>
+            <p>Warum meynen Sie das?</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Eigensinn bei Frauenzimmern ist mir verhaßt; jedoch Zwang der Vormünder ist mir noch
+              verhaßter. „Der Mensch ist frei geboren, ist frei; kann heirathen, wen ihm beliebt!“
+              sagt ein berühmter Dichter, den ich verbessert heraus zu geben gedenke, in Gotha <pb n="191"/> oder Stuttgardt, wo verbesserte Uebersetzungen berühmter ausländischer
+              Klassiker erscheinen. – Ah, gewiß Ihre Demoiselle Nichte!</p>
+          </sp>
+        </div><div type="scene" n="15">
+          <head>Funfzehnter Auftritt.</head>
+          <stage>Der Oheim. Der Diener. Die Nichte. Das Kammermädchen.</stage>
+          <pb n="176"/>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <stage>(vorstellend)</stage>
+            <p>Hier die Braut – hier der Bräutigam –</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Ihr verschriebener, aus allen Theilen der Welt verschriebener Bräutigam; denn ich bin
+              in allen Theilen der Welt gewesen, und kann die Zeit nicht erwarten, der Ihrige zu
+              werden. Schlagen Sie also ein, und – –</p>
+          </sp>
+        
+          <sp who="#liebhaberin">
+            <speaker>Die Nichte.</speaker>
+            <p>Machen Sie sich keine Hoffnung. Noch am Altare werd’ ich Nein sagen.</p>
+          </sp>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Hören Sie nicht auf das Geschwätz der albernen Romanen-Närrinn!</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Weh mir Unseligen! Was muß ich hören? Sie verschmähen mich? Ich <pb n="194"/> kniee
+              gleichsam vor Ihnen wie Graf Lester vor der Königin Elisabeth; ich stehe gleichsam
+              demüthig und doch hochnasig vor Ihnen, wie Essex vor eben derselben; ich bin besser
+              gegen Sie gesonnen als Hamlet gegen die Ophelia, denn ich sage nicht zu Ihnen: „Geh’
+              in ein Nonnenkloster.“ Wären wir hier bei Nacht und in einem Garten, ich würde wie
+              Romeo gegen Julia zärtlich gegen Sie seyn, aber bei hellem Tage und im Beiseyn Ihres
+              Herrn Onkels wäre das gegen den Respect: dennoch, dennoch verschmähen Sie mich,
+              Grausame?</p>
+          </sp>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Nur gelassen, nur ohne Pathos. Meine Nichte wird, sobald sie Worte findet, Ihnen
+              sagen – –</p>
+          </sp>
+        
+          <sp who="#liebhaberin">
+            <speaker>Die Nichte.</speaker>
+            <p>Zum Nein sagen braucht es keine sonderliche Bedenkzeit; und ich habe Nein gesagt,
+              werde Nein sagen – ewig!</p>
+          </sp>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Thörinn, die Du bist!</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Da hören Sie’s! Sie will mich nicht. So will ich sie auch nicht. Ich stoße meines
+              Vaters Willen um, ich stoße Ihren Willen um, ich setze meinen bisherigen Willen hinten
+              an und nehme einen neuen Willen an, der da spricht: Ich will die Mamsell nicht!</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Durchaus nicht! Wenn ich hören will, hab’ ich genug an, bei, von, mit und aus mir
+              selber zu hören.</p>
+          </sp>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Verstehen Sie doch: Meine Nichte hat ja in dieser Sache gar keinen Willen. Nur mein
+              Wille gilt hier; nur dieser ist es, den der Notar in gebührend abgefaßtem Contracte
+              beibringen und Ihnen zur Unterschrift vorlegen wird.</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Zum Teufel mit Contract und Notar!</p>
+          </sp>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Nicht zum Teufel; denn ich bin nicht der leidige Gott sey bei uns! Und hieher zu mir
+              soll der Notar den Contract bringen und ich werde ihn unterschreiben und meine Nichte
+              soll ihn unterschreiben und Sie müssen ihn unterschreiben.</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Was sagen Sie? Müssen? Mein Herr, wer muß? Niemand muß! Das Wort hat irgend ein
+              Despot ersonnen, ein Tyrann, ein Zelot! und Einfalt hat es nachgeplärrt, und einen
+              Glaubensartikel daraus gemacht. Halten Sie mich für einfältig? Wie? Sie sagen, ich
+                <emph>muß</emph> Ihre Nichte heirathen. Nein, ich muß sie nicht heirathen; aber nun
+                <emph>will</emph> ich sie heirathen.</p>
+          </sp>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Aha! Fügen wir uns?</p>
+          </sp>
+          <pb n="201"/>
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Wie? Ist er nicht wohl gescheidt? <stage>(bei Seite)</stage></p>
+          </sp>
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Aber warum will ich sie heirathen? Um hier im Hause zu bleiben, hier, bei Ihnen, wo
+              ich tausend Gelegenheit finden werde Sie so zu ärgern und zu quälen – –</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Sind Sie von Sinnen, Herr?</p>
+          </sp>
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Nein; aber ich will Sie von Sinnen bringen. Ich gebe Sie an als einen Carbonaro, zu
+              deutsch Kohlenbrenner, als <pb n="112"/> einen Häuptling irgend einer entsetzlichen
+              Verschwörung, die Sie erst anzetteln wollen, und geht’s gut, so habe ich Sie nach
+              kurzer Frist in die Bleikammern von Venedig gebracht. Mögen Sie’s dann machen, wie
+              Casanova – wahrheitsliebenden Andenkens – ich will Sie nicht daran hindern, aber
+              unters Blei sollen und müssen Sie –.</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Mit dem Menschen ist kein Auskommen.</p>
+          </sp>
+          <sp who="#liebhaberin">
+            <speaker>Die Nichte.</speaker>
+            <p>Doch wollen Sie mich mit ihm verheirathen?</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Oho, mein Herr! Ich kenne Ihre Lieblingsneigungen, u. A. Ihre Muscheln- und
+              Schmetterling-Sammlung. Gut! An meinem Hochzeitstage stampf’ ich Ihre Muscheln zu
+              Pulver und gebe Sie Ihnen in Madeira-Wein zu trinken; Ihre Schmetterlinge lass’ ich
+              ausfliegen, daß die Gassenbuben zu sammeln haben.</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Rasender!</p>
+          </sp>
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Ihre Gemäldesammlung pinsele ich dermaßen über, daß Rembrandt und Le Sueur aussehen
+              sollen, als hätte der Schornsteinfegerjunge sich Nase und Ohren daran abgewischt.</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Unsinniger!</p>
+          </sp>
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Oder nein! Ich will nicht, daß es von mir heiße wie im Trauerspiel: Dein Geruch ist
+              Mord! Aber todt ärgern will ich Sie, ehe Sie noch Ihren Geburtstag wieder feiern.</p>
+          </sp>
+        </div><div type="scene" n="16">
+          <head>Sechszehnter Auftritt.</head>
+          <stage>Der Liebhaber. Die Vorigen.</stage>
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Ist’s möglich, daß in diesem friedlichen Hause ein solcher Mordspectakel Statt finden
+              könne? Wer ist hier in Lebensgefahr? Sind Sie es, <stage>(zu der Nichte)</stage> meine
+              Angebetete? – Wer ist denn dieser Herr?</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Billig sollt’ <emph>ich</emph> darnach fragen. Sicher sind Sie der Liebhaber, der
+              begünstigte, dieser Dame. Der Quidam, der in Comödien am Schlusse noch einmal vorkommt
+              um seine Herzallerliebste heimzuführen, nachdem andere Leute ihn aus der Klemme
+              halfen.</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Aber aus Barmherzigkeit! So hören Sie doch!</p>
+          </sp>
+          <pb n="37"/>
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Ich will nichts hören, aber von mir sollen Sie hören, soll dieser Herr hören, sollen
+              Alle hören.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Und diesem Rasenden wollen Sie Ihre Mündel opfern? Herr, bedenken Sie doch Ihr
+              Gewissen, Ihre Ruhe, Ihr Lebensglück! <pb n="211"/>
+              <stage>(leise)</stage> Die spanischen Schafe, 200 an der Zahl, auf meinem Gütchen: sie
+              gefielen Ihnen stets; geben Sie mir Ihre Nichte, und die Schafe sind die Ihrigen.</p>
+          </sp>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Zweihundert Schafe für ein einziges Schäfchen – ein guter Handel.</p>
+          </sp>
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Nun so schlagen Sie zu –</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Ist’s Ernst?</p>
+          </sp>
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Positiv!</p>
+          </sp>
+        
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Zuverläßig! Meine Nichte ist die Ihrige. – Und Sie, abgeschmackter Reisender,
+              Philosoph und Ornitolog oder was Sie sonst noch Alles seyn wollen – verlassen Sie
+              ungesäumt mein Haus. <stage>(zum Liebhaber.)</stage> Sie reisen ja wohl auch bald mit
+              Ihrer Braut?</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Noch heute. Verlassen Sie sich darauf.</p>
+          </sp>
+          <sp who="#onkel">
+            <speaker>Der Oheim.</speaker>
+            <p>Und auf Ihr Versprechen. Adieu, wir sehen uns noch. <stage>(Ab.)</stage></p>
+          </sp>
+        </div><div type="scene" n="17">
+          <head>Letzter Auftritt.</head>
+          <stage>Der Liebhaber. Die Nichte. Der Diener. Das Kammermädchen.</stage>
+          <sp who="#liebhaberin">
+            <speaker>Die Nichte.</speaker>
+            <p>Sagt mir doch. Was brachte diese schnelle Veränderung hervor?</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <stage>(indem er die falsche Haartour abnimmt)</stage>
+            <p>Ein Pfiff von meiner Erfindung.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Wundere Dich nicht mehr, Geliebte. Durch den Pfiff dieses Schalks ist es gelungen,
+              alle Hindernisse zu beseitigen, die unserer Verbindung im Wege waren.</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Sie vergessen den rechten Bräutigam. Wenn der nun kommt? Bedenken Sie, wir spielen
+              hier keine Comödie; wir sind in der wirklichen Welt.</p>
+          </sp>
+        
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Dann haben meine Geliebte und ich längst unsern Wohnort vertauscht.</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener</speaker>
+            <stage>(z. Kammerm.)</stage>
+            <p>Auch wir, Schätzchen?</p>
+          </sp>
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Freilich. Ich denke in der Hauptstadt eine Pensionsanstalt für Töchter anzulegen.</p>
+          </sp>
+        
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Bravo! Mag der Herr Bräutigam vom Lande und aus Paris und London dann sehen, wie er
+              zurecht kommt. Wir bringen unsere Schäfchen in’s Trockne, so daß unser Lustspiel sein
+              Ende findet; denn daß aus meinem Schwank, wenn er ruchbar wird, irgend einer der
+              zahllosen berühmten Theaterdichter Deutschlands ein Lustspiel macht, ist – –</p>
+          </sp>
+        
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Ganz recht. Als Lustspiel; doch wie sein Titel?</p>
+          </sp>
+          <sp who="#liebhaberin">
+            <speaker>Die Nichte.</speaker>
+            <p>Nun wie anders als: <emph>Die Liebe siegt</emph>.</p>
+          </sp>
+          <sp who="#liebhaber">
+            <speaker>Der Liebh.</speaker>
+            <p>Richtig! Doch mit dem Zusatze: <emph>durch die Liebe</emph>.</p>
+          </sp>
+          <sp who="#zofe">
+            <speaker>Das Kammerm.</speaker>
+            <p>Oder bezeichnender noch: <emph>Liebe und Bedientenlist</emph>.</p>
+          </sp>
+          <sp who="#diener">
+            <speaker>Der Diener.</speaker>
+            <p>Nur nicht am Schluß alle Ehre auf mich allein gewälzt. Ich könnte heraus gerufen
+              werden, und damit wissen unsere Schauspieler so wenig Bescheid, daß die meisten von
+              ihnen schon vorher eine Dankadresse auswendig lernen.</p>
+          </sp>
+        
+          <stage>(Der Vorhang fällt.)</stage>
+        
+          <trailer>Ende des Vorspiels.</trailer>
+        </div></div>
+    </body>
+  </text>
+</TEI>
+<!-- TODO
+ - fill url tag with url to generated play
+ - use timestamp as filename (iso8601)
+ - add atrribute when=<datetime>
+ - don't add title and cast/set (roll 1, 2) to segments section
+ - add cast/set below title page tag -->
