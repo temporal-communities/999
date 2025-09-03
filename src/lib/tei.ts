@@ -1,3 +1,4 @@
+import { generateRandomSequence } from "$lib/dice"
 import { Almanac } from "./almanac"
 
 const TEINS = "http://www.tei-c.org/ns/1.0"
@@ -121,6 +122,20 @@ export async function downloadTEIDoc(sequence: number[]) {
   a.click()
   // window.open(url, "_blank") // open file in new window
   setTimeout(() => URL.revokeObjectURL(url), 10000)
+}
+
+export function generateRandomPlays(n: number) {
+  function generate(i: number) {
+    if (i >= n) return
+
+    const sequence = generateRandomSequence()
+    downloadTEIDoc(sequence)
+
+    // schedule next run in 2 seconds
+    setTimeout(() => generate(i + 1), 2000)
+  }
+
+  generate(0)
 }
 
 // NOTES
