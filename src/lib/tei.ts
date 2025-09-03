@@ -56,7 +56,9 @@ function collectSegments(sequence: number[], almanacDoc: Document): DocumentFrag
   return segments
 }
 
-export async function createTEIDoc(sequence: number[]): Promise<string> {
+export async function createTEIDoc(
+  sequence: number[]
+): Promise<{ doc: string; timestamp: string }> {
   const almanacDoc = Almanac.getDom() // parse almanac text XML into dom document
   const templateDoc = await fetchTemplate() // get xml file template as dom document
 
@@ -103,15 +105,15 @@ export async function createTEIDoc(sequence: number[]): Promise<string> {
   // convert DOM to XML string
   const serializer = new XMLSerializer()
 
-  return serializer.serializeToString(templateDoc)
+  return { doc: serializer.serializeToString(templateDoc), timestamp: timestamp }
 }
 
 export async function downloadTEIDoc(sequence: number[]) {
-  let xmlString = await createTEIDoc(sequence)
-  // const id = generateIdFromSequence(sequence)
-  const id = "<filename>"
+  const result = await createTEIDoc(sequence)
+  const xmlString = result.doc
+  const timestamp = result.timestamp
   // create a downloadable file and temporary URL pointing to the file
-  const file = new File([xmlString], `play-${id}.xml`, { type: "application/xml" })
+  const file = new File([xmlString], `play-${timestamp}.xml`, { type: "application/xml" })
   const url = URL.createObjectURL(file)
   const a = document.createElement("a")
   a.href = url
