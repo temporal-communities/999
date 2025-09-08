@@ -206,9 +206,11 @@
     </svg>
   </button>
 {/if}
-<div style="display: {showShareButton ? 'block' : 'none'};">
-  <!-- Share Button Component -->
-  <ShareButton {sequence} />
+<div>
+  {#if showShareButton}
+    <!-- Share Button Component -->
+    <ShareButton {sequence} />
+  {/if}
 </div>
 
 <style>

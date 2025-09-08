@@ -7,13 +7,14 @@
   // track if url has been copied to clipboard
   let urlCopied: boolean = $state(false)
 
-  const getShareUrl = () =>
+  let sharingUrl = $derived(
     window.location.origin + window.location.pathname + "#" + sequence.join("")
+  )
+
   // function to copy url including sequence to clipboard
   async function copyUrlToClipboard(event: MouseEvent) {
     try {
-      const url = getShareUrl()
-      console.log("URL: ", url)
+      const url = sharingUrl
       await navigator.clipboard.writeText(url)
       urlCopied = true
 
@@ -59,7 +60,7 @@
       <div
         class="mt-2 flex flex-col items-center space-y-2 space-x-2 sm:flex-row sm:space-y-0 sm:space-x-2"
       >
-        <input type="text" class="rounded border bg-gray-100 p-1" value={getShareUrl()} readonly />
+        <input type="text" class="rounded border bg-gray-100 p-1" value={sharingUrl} readonly />
         <button
           class="w-32 rounded bg-sky-800 p-1 text-white transition hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
           onclick={copyUrlToClipboard}
