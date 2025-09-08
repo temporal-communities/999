@@ -8,11 +8,13 @@
   let {
     index,
     focusPips,
-    isRolling = false
+    isRolling = false,
+    sequence = $bindable()
   }: {
     index: number
     focusPips: number | null
     isRolling?: boolean
+    sequence: number[]
   } = $props()
 
   let emblaApi: EmblaCarouselType
@@ -26,8 +28,19 @@
 
     // Attach event listener for slide change
     // settle: Runs when the carousel has settled after scroll has been triggered.
+    // use event listener to update sequence if focusPips change in Carousel
     emblaApi.on("settle", () => {
-      focusPips = emblaApi.selectedScrollSnap() + 1
+      // focusPips = emblaApi.selectedScrollSnap() + 1
+      const newFocusPips = emblaApi.selectedScrollSnap() + 1
+      // only update if pips actually changed
+      if (focusPips !== newFocusPips) {
+        focusPips = newFocusPips
+
+        if (sequence) {
+          sequence[index - 1] = newFocusPips
+          sequence = [...sequence]
+        }
+      }
     })
   }
 

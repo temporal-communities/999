@@ -178,6 +178,7 @@
         <!-- Only apply the rolling effect to the first ten carousels -->
         <Carousel
           {index}
+          bind:sequence
           focusPips={sequence ? sequence[index - 1] : null}
           isRolling={index <= 10 ? isRolling : false}
         />
