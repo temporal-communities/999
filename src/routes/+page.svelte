@@ -156,7 +156,7 @@
   let scrollY = $state(0)
   let innerHeight = $state(0)
   let showBackToTop = $derived(scrollY > innerHeight)
-  // let showShareButton = $derived(scrollY > innerHeight * 0.1)
+  let showShareButton = $derived(scrollY > innerHeight * 0.1)
 
   // Add function to scroll back to top
   function scrollToTop() {
@@ -166,6 +166,9 @@
     })
   }
 
+  // for button group of play generating buttons
+  let showButtons = $state(false)
+  let showPipButtons = $state(false)
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -282,7 +285,6 @@
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
     </svg>
   </button>
-<<<<<<< HEAD
 {/if}
 <div>
   {#if showShareButton}
@@ -291,110 +293,109 @@
   {/if}
 </div>
 
-  <button
-    onclick={() => downloadTEIDoc([...sequence])}
-    class="fixed right-6 bottom-45 flex h-18 w-18 cursor-pointer items-center justify-center
+<button
+  onclick={() => downloadTEIDoc([...sequence])}
+  class="fixed right-6 bottom-45 flex h-18 w-18 cursor-pointer items-center justify-center
     rounded-full bg-sky-800 text-sm text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2
     focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
-    aria-label={$locale === "de" ? "TEI-Dokument herunterladen" : "Download TEI document"}
-    >TEI Download</button
-  >
+  aria-label={$locale === "de" ? "TEI-Dokument herunterladen" : "Download TEI document"}
+  >TEI Download</button
+>
 
-  <!-- Toggle shortest/longest play options -->
-  <button
-    onclick={() => (showButtons = !showButtons)}
-    class="fixed right-6 bottom-85 z-50 flex h-18 w-18 items-center justify-center
+<!-- Toggle shortest/longest play options -->
+<button
+  onclick={() => (showButtons = !showButtons)}
+  class="fixed right-6 bottom-85 z-50 flex h-18 w-18 items-center justify-center
     rounded-full bg-sky-800 text-xs text-white shadow-lg transition-all hover:bg-sky-700
     focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
-  >
-    {showButtons ? "X" : "Generate shortes/longest play"}
-  </button>
+>
+  {showButtons ? "X" : "Generate shortes/longest play"}
+</button>
 
-  {#if showButtons}
-    <div class="fixed right-[88px] bottom-85 z-40 flex flex-row-reverse gap-4">
-      <button
-        onclick={() => ((playMode = "shortestLetters"), (isRolling = true))}
-        class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-      >
-        Shortest (letters)
-      </button>
+{#if showButtons}
+  <div class="fixed right-[88px] bottom-85 z-40 flex flex-row-reverse gap-4">
+    <button
+      onclick={() => ((playMode = "shortestLetters"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Shortest (letters)
+    </button>
 
-      <button
-        onclick={() => ((playMode = "longestLetters"), (isRolling = true))}
-        class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-      >
-        Longest (letters)
-      </button>
+    <button
+      onclick={() => ((playMode = "longestLetters"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Longest (letters)
+    </button>
 
-      <button
-        onclick={() => ((playMode = "shortestWords"), (isRolling = true))}
-        class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-      >
-        Shortest (words)
-      </button>
+    <button
+      onclick={() => ((playMode = "shortestWords"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Shortest (words)
+    </button>
 
-      <button
-        onclick={() => ((playMode = "longestWords"), (isRolling = true))}
-        class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-      >
-        Longest (words)
-      </button>
-    </div>
-  {/if}
+    <button
+      onclick={() => ((playMode = "longestWords"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Longest (words)
+    </button>
+  </div>
+{/if}
 
-  <!-- Toggle same-pip-play options -->
-  <button
-    onclick={() => (showPipButtons = !showPipButtons)}
-    class="fixed right-6 bottom-65 z-50 flex h-18 w-18 items-center justify-center
+<!-- Toggle same-pip-play options -->
+<button
+  onclick={() => (showPipButtons = !showPipButtons)}
+  class="fixed right-6 bottom-65 z-50 flex h-18 w-18 cursor-pointer items-center justify-center
     rounded-full bg-sky-800 text-xs text-white shadow-lg transition-all hover:bg-sky-700
     focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
-  >
-    {showPipButtons ? "X" : "Generate Same-pip-play"}
-  </button>
+>
+  {showPipButtons ? "X" : "Generate Same-pip-play"}
+</button>
 
-  {#if showPipButtons}
-    <div class="fixed right-[88px] bottom-65 z-40 flex flex-row-reverse gap-4">
-      <button
-        onclick={() => ((playMode = "allSix"), (isRolling = true))}
-        class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-      >
-        Pips 6
-      </button>
+{#if showPipButtons}
+  <div class="fixed right-[88px] bottom-65 z-40 flex flex-row-reverse gap-4">
+    <button
+      onclick={() => ((playMode = "allSix"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Pips 6
+    </button>
 
-      <button
-        onclick={() => ((playMode = "allFive"), (isRolling = true))}
-        class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-      >
-        Pips 5
-      </button>
+    <button
+      onclick={() => ((playMode = "allFive"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Pips 5
+    </button>
 
-      <button
-        onclick={() => ((playMode = "allFour"), (isRolling = true))}
-        class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-      >
-        Pips 4
-      </button>
+    <button
+      onclick={() => ((playMode = "allFour"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Pips 4
+    </button>
 
-      <button
-        onclick={() => ((playMode = "allThree"), (isRolling = true))}
-        class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-      >
-        Pips 3
-      </button>
-      <button
-        onclick={() => ((playMode = "allTwo"), (isRolling = true))}
-        class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-      >
-        Pips 2
-      </button>
-      <button
-        onclick={() => ((playMode = "allOne"), (isRolling = true))}
-        class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-      >
-        Pips 1
-      </button>
-    </div>
-  {/if}
+    <button
+      onclick={() => ((playMode = "allThree"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Pips 3
+    </button>
+    <button
+      onclick={() => ((playMode = "allTwo"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Pips 2
+    </button>
+    <button
+      onclick={() => ((playMode = "allOne"), (isRolling = true))}
+      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
+    >
+      Pips 1
+    </button>
+  </div>
 {/if}
 
 <style>
