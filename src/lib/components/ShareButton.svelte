@@ -1,4 +1,5 @@
 <script lang="ts">
+  import shareIcon from "$lib/assets/share-icon.svg"
   import { locale } from "$lib/stores/locale"
   import { fade } from "svelte/transition"
 
@@ -81,6 +82,6 @@
     title={$locale === "de" ? "Dialog zum Teilen öffnen" : "Open share dialogue"}
   >
     <!-- Share Icon -->
-    <img src="/src/lib/assets/share-icon.svg" alt="Share" class="h-5 w-5" />
+    <img src={shareIcon} alt="Share" class="h-5 w-5" />
   </button>
 </div>
