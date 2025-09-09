@@ -19,10 +19,10 @@ export default ts.config(
       globals: {
         ...globals.browser,
         ...globals.node
-      },
-      rules: {
-        "@typescript-eslint/no-unused-vars": "off"
       }
+    },
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off"
     }
   },
   {
