@@ -36,11 +36,6 @@
 
 <!-- Share Button that opens dialogue for copying url with current sequence -->
 <div class="fixed right-6 bottom-6 flex items-center space-x-2">
-  <!-- {#if urlCopied}
-    <div class="rounded-full bg-sky-800 px-3 py-2 text-white shadow-lg">
-      {$locale === "de" ? "Link zum Teilen kopiert!" : "Link copied for sharing!"}
-    </div>
-  {/if} -->
   {#if showDialogue}
     <div
       transition:fade={{ duration: 200 }}
