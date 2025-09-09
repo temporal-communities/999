@@ -18,6 +18,9 @@ const config = {
       strict: true,
       path: {
         base: process.argv.includes("dev") ? "" : process.env.BASE_PATH
+      },
+      resolve: {
+        alias: {}
       }
     })
   }
