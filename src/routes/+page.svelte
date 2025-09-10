@@ -169,14 +169,252 @@
   // for button group of play generating buttons
   let showButtons = $state(false)
   let showPipButtons = $state(false)
+
+  // hamburger menu state
+  let isMenuOpen = $state(false)
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen
+  }
+
+  function closeMenu() {
+    isMenuOpen = false
+  }
+
+  function handleCloseButtonClick() {
+    closeMenu()
+  }
+
+  // Simple escape key handler
+  function handleEscape(event: KeyboardEvent) {
+    if (event.key === 'Escape' && isMenuOpen) {
+      closeMenu()
+    }
+  }
+
+  // Handle clicks outside the menu
+  function handleDocumentClick(event: MouseEvent) {
+    if (!isMenuOpen) return
+    
+    const target = event.target as Element
+    const menuElement = document.querySelector('nav[data-menu="true"]')
+    const hamburgerButton = document.querySelector('button[data-hamburger="true"]')
+    
+    // Check if click is outside menu and hamburger button
+    if (menuElement && hamburgerButton) {
+      if (!menuElement.contains(target) && !hamburgerButton.contains(target)) {
+        closeMenu()
+      }
+    }
+  }
+
+  // Add document click listener when component mounts
+  $effect(() => {
+    if (mounted) {
+      document.addEventListener('click', handleDocumentClick)
+      return () => {
+        document.removeEventListener('click', handleDocumentClick)
+      }
+    }
+  })
 </script>
 
-<svelte:window bind:scrollY bind:innerHeight />
+<svelte:window bind:scrollY bind:innerHeight onkeydown={handleEscape} />
 
 <header class="h-screen w-full p-4 md:p-16">
   <div
     class="relative flex h-full w-full flex-col items-center justify-evenly bg-sky-800 px-8 text-center text-amber-50 ring-4 ring-sky-800 ring-offset-4 ring-offset-amber-50"
   >
+    <!-- Hamburger Menu Button -->
+    <button
+      class="absolute top-6 left-6 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-lg text-sky-800 transition-all focus:outline-none focus:ring-2 focus:ring-amber-300"
+      onclick={toggleMenu}
+      data-hamburger="true"
+      aria-label={$locale === "de" ? "Menü öffnen" : "Open menu"}
+    >
+      <div class="hamburger-icon">
+        <span class="hamburger-line" class:open={isMenuOpen}></span>
+        <span class="hamburger-line" class:open={isMenuOpen}></span>
+        <span class="hamburger-line" class:open={isMenuOpen}></span>
+      </div>
+    </button>
+
+    <!-- Slide-out Menu -->
+    <nav
+      class="fixed top-0 left-0 z-50 h-full w-80 bg-sky-900 text-amber-50 shadow-lg transition-transform duration-300 ease-in-out"
+      style="transform: translateX({isMenuOpen ? '0px' : '-320px'})"
+      data-menu="true"
+    >
+      <div class="p-6">
+        <div class="mb-8 flex items-center justify-between">
+          <h2 class="text-xl font-bold">
+            {$locale === "de" ? "Menü" : "Menu"}
+          </h2>
+          <button
+            onclick={handleCloseButtonClick}
+            class="flex h-8 w-8 items-center justify-center rounded-full text-amber-50 focus:outline-none focus:ring-2 focus:ring-amber-300 cursor-pointer relative z-10 text-4xl font-bold"
+            aria-label={$locale === "de" ? "Menü schließen" : "Close menu"}
+            type="button"
+          >
+            ×
+          </button>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Language Toggle -->
+          <div class="border-b border-sky-700 pb-4">
+            <h3 class="mb-2 text-sm font-semibold uppercase text-amber-50">
+              {$locale === "de" ? "Sprache umschalten" : "Toggle Language"}
+            </h3>
+            <button
+              onclick={() => { toggleLanguage(); closeMenu(); }}
+              class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
+            >
+              {$locale === "de" ? "English" : "Deutsch"}
+            </button>
+          </div>
+
+          <!-- Play Generation Options -->
+          <div class="border-b border-sky-700 pb-4">
+            <h3 class="mb-2 text-sm font-semibold uppercase text-amber-50">
+              {$locale === "de" ? "Stück generieren" : "Generate Play"}
+            </h3>
+            <div class="space-y-2">
+              <button
+                onclick={() => { playMode = "shortestWords"; isRolling = true; closeMenu(); }}
+                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
+              >
+                {$locale === "de" ? "Kürzestes (Wörter)" : "Shortest (words)"}
+              </button>
+              <button
+                onclick={() => { playMode = "longestWords"; isRolling = true; closeMenu(); }}
+                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
+              >
+                {$locale === "de" ? "Längstes (Wörter)" : "Longest (words)"}
+              </button>
+              <button
+                onclick={() => { playMode = "shortestLetters"; isRolling = true; closeMenu(); }}
+                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
+              >
+                {$locale === "de" ? "Kürzestes (Buchstaben)" : "Shortest (letters)"}
+              </button>
+              <button
+                onclick={() => { playMode = "longestLetters"; isRolling = true; closeMenu(); }}
+                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
+              >
+                {$locale === "de" ? "Längstes (Buchstaben)" : "Longest (letters)"}
+              </button>
+            </div>
+          </div>
+
+          <!-- Same Pip Options -->
+          <div class="border-b border-sky-700 pb-4">
+            <h3 class="mb-2 text-sm font-semibold uppercase text-amber-50">
+              {$locale === "de" ? "Gleiche Augenzahl" : "Same Pips"}
+            </h3>
+            <div class="grid grid-cols-3 gap-2">
+              <button
+                onclick={() => { playMode = "allOne"; isRolling = true; closeMenu(); }}
+                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
+                aria-label="1"
+              >
+                <div class="bg-white rounded-lg">
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="10" fill="#075985" />
+                  </svg>
+                </div>
+              </button>
+              <button
+                onclick={() => { playMode = "allTwo"; isRolling = true; closeMenu(); }}
+                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
+                aria-label="2"
+              >
+                <div class="bg-white rounded-lg">
+                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="10" fill="#075985" />
+                    <circle cx="70" cy="70" r="10" fill="#075985" />
+                  </svg>
+                </div>
+              </button>
+              <button
+                onclick={() => { playMode = "allThree"; isRolling = true; closeMenu(); }}
+                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
+                aria-label="3"
+              >
+                <div class="bg-white rounded-lg">
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="10" fill="#075985" />
+                    <circle cx="50" cy="50" r="10" fill="#075985" />
+                    <circle cx="70" cy="70" r="10" fill="#075985" />
+                  </svg>
+                </div>
+              </button>
+              <button
+                onclick={() => { playMode = "allFour"; isRolling = true; closeMenu(); }}
+                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
+                aria-label="4"
+              >
+                <div class="bg-white rounded-lg">
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="10" fill="#075985" />
+                    <circle cx="30" cy="70" r="10" fill="#075985" />
+                    <circle cx="70" cy="30" r="10" fill="#075985" />
+                    <circle cx="70" cy="70" r="10" fill="#075985" />
+                  </svg>
+                </div>
+              </button>
+              <button
+                onclick={() => { playMode = "allFive"; isRolling = true; closeMenu(); }}
+                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
+                aria-label="5"
+              >
+                <div class="bg-white rounded-lg">
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="10" fill="#075985" />
+                    <circle cx="30" cy="70" r="10" fill="#075985" />
+                    <circle cx="50" cy="50" r="10" fill="#075985" />
+                    <circle cx="70" cy="30" r="10" fill="#075985" />
+                    <circle cx="70" cy="70" r="10" fill="#075985" />
+                  </svg>
+                </div>
+              </button>
+              <button
+                onclick={() => { playMode = "allSix"; isRolling = true; closeMenu(); }}
+                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
+                aria-label="6"
+              >
+                <div class="bg-white rounded-lg">
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="20" r="10" fill="#075985" />
+                    <circle cx="30" cy="50" r="10" fill="#075985" />
+                    <circle cx="30" cy="80" r="10" fill="#075985" />
+                    <circle cx="70" cy="20" r="10" fill="#075985" />
+                    <circle cx="70" cy="50" r="10" fill="#075985" />
+                    <circle cx="70" cy="80" r="10" fill="#075985" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Additional Actions -->
+          <div>
+            <h3 class="mb-2 text-sm font-semibold uppercase text-amber-50">
+              {$locale === "de" ? "Exportieren" : "Export"}
+            </h3>
+            <div class="space-y-2">
+              <button
+                onclick={() => { downloadTEIDoc([...sequence]); closeMenu(); }}
+                class="w-full cursor-pointer rounded-lg bg-amber-600 px-4 py-10 text-white transition-colors hover:bg-amber-500"
+              >
+                {$locale === "de" ? "TEI-Dokument herunterladen" : "Download TEI document"}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <!-- Language toggle button -->
     <button
       class="relative flex h-26 w-26 cursor-pointer items-center justify-center rounded-full bg-amber-50 text-4xl text-sky-800 uppercase hover:bg-amber-100 focus:outline-none"
@@ -293,111 +531,6 @@
   {/if}
 </div>
 
-<button
-  onclick={() => downloadTEIDoc([...sequence])}
-  class="fixed right-6 bottom-45 flex h-18 w-18 cursor-pointer items-center justify-center
-    rounded-full bg-sky-800 text-sm text-white shadow-lg transition-all hover:bg-sky-700 focus:ring-2
-    focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
-  aria-label={$locale === "de" ? "TEI-Dokument herunterladen" : "Download TEI document"}
-  >TEI Download</button
->
-
-<!-- Toggle shortest/longest play options -->
-<button
-  onclick={() => (showButtons = !showButtons)}
-  class="fixed right-6 bottom-85 z-50 flex h-18 w-18 items-center justify-center
-    rounded-full bg-sky-800 text-xs text-white shadow-lg transition-all hover:bg-sky-700
-    focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
->
-  {showButtons ? "X" : "Generate shortes/longest play"}
-</button>
-
-{#if showButtons}
-  <div class="fixed right-[88px] bottom-85 z-40 flex flex-row-reverse gap-4">
-    <button
-      onclick={() => ((playMode = "shortestLetters"), (isRolling = true))}
-      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-    >
-      Shortest (letters)
-    </button>
-
-    <button
-      onclick={() => ((playMode = "longestLetters"), (isRolling = true))}
-      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-    >
-      Longest (letters)
-    </button>
-
-    <button
-      onclick={() => ((playMode = "shortestWords"), (isRolling = true))}
-      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-    >
-      Shortest (words)
-    </button>
-
-    <button
-      onclick={() => ((playMode = "longestWords"), (isRolling = true))}
-      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-    >
-      Longest (words)
-    </button>
-  </div>
-{/if}
-
-<!-- Toggle same-pip-play options -->
-<button
-  onclick={() => (showPipButtons = !showPipButtons)}
-  class="fixed right-6 bottom-65 z-50 flex h-18 w-18 cursor-pointer items-center justify-center
-    rounded-full bg-sky-800 text-xs text-white shadow-lg transition-all hover:bg-sky-700
-    focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:outline-none"
->
-  {showPipButtons ? "X" : "Generate Same-pip-play"}
-</button>
-
-{#if showPipButtons}
-  <div class="fixed right-[88px] bottom-65 z-40 flex flex-row-reverse gap-4">
-    <button
-      onclick={() => ((playMode = "allSix"), (isRolling = true))}
-      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-    >
-      Pips 6
-    </button>
-
-    <button
-      onclick={() => ((playMode = "allFive"), (isRolling = true))}
-      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-    >
-      Pips 5
-    </button>
-
-    <button
-      onclick={() => ((playMode = "allFour"), (isRolling = true))}
-      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-    >
-      Pips 4
-    </button>
-
-    <button
-      onclick={() => ((playMode = "allThree"), (isRolling = true))}
-      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-    >
-      Pips 3
-    </button>
-    <button
-      onclick={() => ((playMode = "allTwo"), (isRolling = true))}
-      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-    >
-      Pips 2
-    </button>
-    <button
-      onclick={() => ((playMode = "allOne"), (isRolling = true))}
-      class="h-15 w-40 rounded bg-sky-800 px-1 py-1 text-sm text-white shadow-lg hover:bg-sky-700"
-    >
-      Pips 1
-    </button>
-  </div>
-{/if}
-
 <style>
   @keyframes pulse {
     0% {
@@ -415,5 +548,36 @@
 
   .pulse-animation {
     animation: pulse 2s infinite;
+  }
+
+  /* Hamburger menu styles */
+  .hamburger-icon {
+    position: relative;
+    width: 42px;
+    height: 33px;
+    padding-inline: .5em;
+  }
+
+  .hamburger-line {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-amber-50);
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger-line:nth-child(1) {
+    top: 0;
+  }
+
+  .hamburger-line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hamburger-line:nth-child(3) {
+    bottom: 0;
   }
 </style>
