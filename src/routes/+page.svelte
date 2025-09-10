@@ -500,16 +500,6 @@
     padding-inline: 0.5em;
   }
 
-  .hamburger-line {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background-color: var(--color-amber-50);
-    border-radius: 1px;
-    transition: all 0.3s ease-in-out;
-  }
-
   .hamburger-line:nth-child(1) {
     top: 0;
   }
