@@ -267,7 +267,7 @@
               {$locale === "de" ? "Sprache umschalten" : "Toggle Language"}
             </h3>
             <button
-              onclick={() => { toggleLanguage(); closeMenu(); }}
+              onclick={() => { toggleLanguage();}}
               class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
             >
               {$locale === "de" ? "English" : "Deutsch"}
@@ -281,25 +281,25 @@
             </h3>
             <div class="space-y-2">
               <button
-                onclick={() => { playMode = "shortestWords"; isRolling = true; closeMenu(); }}
+                onclick={() => { playMode = "shortestWords"; isRolling = true;}}
                 class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
               >
                 {$locale === "de" ? "Kürzestes (Wörter)" : "Shortest (words)"}
               </button>
               <button
-                onclick={() => { playMode = "longestWords"; isRolling = true; closeMenu(); }}
+                onclick={() => { playMode = "longestWords"; isRolling = true;}}
                 class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
               >
                 {$locale === "de" ? "Längstes (Wörter)" : "Longest (words)"}
               </button>
               <button
-                onclick={() => { playMode = "shortestLetters"; isRolling = true; closeMenu(); }}
+                onclick={() => { playMode = "shortestLetters"; isRolling = true;}}
                 class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
               >
                 {$locale === "de" ? "Kürzestes (Buchstaben)" : "Shortest (letters)"}
               </button>
               <button
-                onclick={() => { playMode = "longestLetters"; isRolling = true; closeMenu(); }}
+                onclick={() => { playMode = "longestLetters"; isRolling = true;}}
                 class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
               >
                 {$locale === "de" ? "Längstes (Buchstaben)" : "Longest (letters)"}
@@ -314,7 +314,7 @@
             </h3>
             <div class="grid grid-cols-3 gap-2">
               <button
-                onclick={() => { playMode = "allOne"; isRolling = true; closeMenu(); }}
+                onclick={() => { playMode = "allOne"; isRolling = true;}}
                 class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
                 aria-label="1"
               >
@@ -325,7 +325,7 @@
                 </div>
               </button>
               <button
-                onclick={() => { playMode = "allTwo"; isRolling = true; closeMenu(); }}
+                onclick={() => { playMode = "allTwo"; isRolling = true;}}
                 class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
                 aria-label="2"
               >
@@ -337,7 +337,7 @@
                 </div>
               </button>
               <button
-                onclick={() => { playMode = "allThree"; isRolling = true; closeMenu(); }}
+                onclick={() => { playMode = "allThree"; isRolling = true;}}
                 class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
                 aria-label="3"
               >
@@ -350,7 +350,7 @@
                 </div>
               </button>
               <button
-                onclick={() => { playMode = "allFour"; isRolling = true; closeMenu(); }}
+                onclick={() => { playMode = "allFour"; isRolling = true;}}
                 class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
                 aria-label="4"
               >
@@ -364,7 +364,7 @@
                 </div>
               </button>
               <button
-                onclick={() => { playMode = "allFive"; isRolling = true; closeMenu(); }}
+                onclick={() => { playMode = "allFive"; isRolling = true;}}
                 class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
                 aria-label="5"
               >
@@ -379,7 +379,7 @@
                 </div>
               </button>
               <button
-                onclick={() => { playMode = "allSix"; isRolling = true; closeMenu(); }}
+                onclick={() => { playMode = "allSix"; isRolling = true;}}
                 class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
                 aria-label="6"
               >
@@ -404,8 +404,8 @@
             </h3>
             <div class="space-y-2">
               <button
-                onclick={() => { downloadTEIDoc([...sequence]); closeMenu(); }}
-                class="w-full cursor-pointer rounded-lg bg-amber-600 px-4 py-10 text-white transition-colors hover:bg-amber-500"
+                onclick={() => { downloadTEIDoc([...sequence]);}}
+                class="w-full cursor-pointer rounded-lg bg-amber-600 px-4 py-6 text-white transition-colors hover:bg-amber-500"
               >
                 {$locale === "de" ? "TEI-Dokument herunterladen" : "Download TEI document"}
               </button>
