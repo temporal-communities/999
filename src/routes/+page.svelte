@@ -415,15 +415,6 @@
       </div>
     </nav>
 
-    <!-- Language toggle button -->
-    <button
-      class="relative flex h-26 w-26 cursor-pointer items-center justify-center rounded-full bg-amber-50 text-4xl text-sky-800 uppercase hover:bg-amber-100 focus:outline-none"
-      onclick={toggleLanguage}
-      aria-label={$locale === "de" ? "Sprache umschalten" : "Toggle language"}
-    >
-      {$locale}
-    </button>
-
     {#if $locale === "de"}
       <div lang="de" class="max-w-[75ch]">
         <h1 class="text-3xl md:text-6xl">Ein Dramenautomat von 1829 digital aufbereitet</h1>
