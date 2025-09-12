@@ -2,6 +2,8 @@ import { page } from "$app/state"
 import xmlTemplate from "$lib/assets/play-template.xml?raw"
 import { Almanac } from "./almanac"
 
+type Locale = "de" | "en"
+
 const TEINS = "http://www.tei-c.org/ns/1.0"
 
 function removeEmptyNewlinesBeforeFirstScene(segments: DocumentFragment, n: number) {
@@ -79,9 +81,10 @@ function collectSegments(sequence: number[], almanacDoc: Document): DocumentFrag
 }
 
 export async function createTEIDoc(
-  sequence: number[]
+  sequence: number[],
+  locale: Locale = "de"
 ): Promise<{ doc: string; timestamp: string }> {
-  const almanacDoc = Almanac.getDom()
+  const almanacDoc = Almanac.getDom(locale)
   const templateDoc = new window.DOMParser().parseFromString(xmlTemplate, "text/xml")
 
   const segments = collectSegments(sequence, almanacDoc)
@@ -149,8 +152,8 @@ export async function createTEIDoc(
   return { doc: serializer.serializeToString(templateDoc), timestamp: timestamp }
 }
 
-export async function downloadTEIDoc(sequence: number[]) {
-  const result = await createTEIDoc(sequence)
+export async function downloadTEIDoc(sequence: number[], locale: Locale = "de") {
+  const result = await createTEIDoc(sequence, locale)
   const xmlString = result.doc
   const timestamp = result.timestamp
   // create a downloadable file and temporary URL pointing to the file

@@ -5,7 +5,7 @@
   import Dice3D from "$lib/components/Dice3D.svelte"
   import ShareButton from "$lib/components/ShareButton.svelte"
   import { generateRandomSequence } from "$lib/dice"
-  import { locale } from "$lib/stores/locale"
+  import { locale, sourceLocale } from "$lib/stores/locale"
   import emblaCarouselSvelte from "embla-carousel-svelte"
   import { onMount } from "svelte"
   import { fade } from "svelte/transition"
@@ -40,6 +40,10 @@
 
   function toggleLanguage() {
     $locale = $locale === "de" ? "en" : "de"
+  }
+
+  function toggleSourceLanguage() {
+    $sourceLocale = $sourceLocale === "de" ? "en" : "de"
   }
 
   const sequenceLength = 200
@@ -282,18 +286,27 @@
               {$locale === "de" ? "Sprache umschalten" : "Toggle Language"}
             </h3>
             <button
-<<<<<<< HEAD
               onclick={() => {
                 toggleLanguage()
               }}
-||||||| parent of d58a908 (Refactor button click handlers to remove menu closure)
-              onclick={() => { toggleLanguage(); closeMenu(); }}
-=======
-              onclick={() => { toggleLanguage();}}
->>>>>>> d58a908 (Refactor button click handlers to remove menu closure)
               class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
             >
               {$locale === "de" ? "English" : "Deutsch"}
+            </button>
+          </div>
+
+          <!-- Source Language Toggle -->
+          <div class="border-b border-sky-700 pb-4">
+            <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
+              {$locale === "de" ? "Quelltext umschalten" : "Toggle Source Text"}
+            </h3>
+            <button
+              onclick={() => {
+                toggleSourceLanguage()
+              }}
+              class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
+            >
+              {$sourceLocale === "de" ? "English" : "Deutsch"}
             </button>
           </div>
 
@@ -303,7 +316,6 @@
               {$locale === "de" ? "Stück generieren" : "Generate Play"}
             </h3>
             <div class="space-y-2">
-<<<<<<< HEAD
               {#each playGenerationOptions as option}
                 <button
                   onclick={() => {
@@ -315,57 +327,6 @@
                   {$locale === "de" ? option.labelDe : option.labelEn}
                 </button>
               {/each}
-||||||| parent of d58a908 (Refactor button click handlers to remove menu closure)
-              <button
-                onclick={() => { playMode = "shortestWords"; isRolling = true; closeMenu(); }}
-                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-              >
-                {$locale === "de" ? "Kürzestes (Wörter)" : "Shortest (words)"}
-              </button>
-              <button
-                onclick={() => { playMode = "longestWords"; isRolling = true; closeMenu(); }}
-                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-              >
-                {$locale === "de" ? "Längstes (Wörter)" : "Longest (words)"}
-              </button>
-              <button
-                onclick={() => { playMode = "shortestLetters"; isRolling = true; closeMenu(); }}
-                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-              >
-                {$locale === "de" ? "Kürzestes (Buchstaben)" : "Shortest (letters)"}
-              </button>
-              <button
-                onclick={() => { playMode = "longestLetters"; isRolling = true; closeMenu(); }}
-                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-              >
-                {$locale === "de" ? "Längstes (Buchstaben)" : "Longest (letters)"}
-              </button>
-=======
-              <button
-                onclick={() => { playMode = "shortestWords"; isRolling = true;}}
-                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-              >
-                {$locale === "de" ? "Kürzestes (Wörter)" : "Shortest (words)"}
-              </button>
-              <button
-                onclick={() => { playMode = "longestWords"; isRolling = true;}}
-                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-              >
-                {$locale === "de" ? "Längstes (Wörter)" : "Longest (words)"}
-              </button>
-              <button
-                onclick={() => { playMode = "shortestLetters"; isRolling = true;}}
-                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-              >
-                {$locale === "de" ? "Kürzestes (Buchstaben)" : "Shortest (letters)"}
-              </button>
-              <button
-                onclick={() => { playMode = "longestLetters"; isRolling = true;}}
-                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-              >
-                {$locale === "de" ? "Längstes (Buchstaben)" : "Longest (letters)"}
-              </button>
->>>>>>> d58a908 (Refactor button click handlers to remove menu closure)
             </div>
           </div>
 
@@ -375,7 +336,6 @@
               {$locale === "de" ? "Gleiche Augenzahl" : "Same Pips"}
             </h3>
             <div class="grid grid-cols-3 gap-2">
-<<<<<<< HEAD
               {#each pipOptions as option}
                 <button
                   onclick={() => {
@@ -419,201 +379,6 @@
                   </div>
                 </button>
               {/each}
-||||||| parent of d58a908 (Refactor button click handlers to remove menu closure)
-              <button
-                onclick={() => { playMode = "allOne"; isRolling = true; closeMenu(); }}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="1"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allTwo"; isRolling = true; closeMenu(); }}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="2"
-              >
-                <div class="bg-white rounded-lg">
-                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="10" fill="#075985" />
-                    <circle cx="70" cy="70" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allThree"; isRolling = true; closeMenu(); }}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="3"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="10" fill="#075985" />
-                    <circle cx="50" cy="50" r="10" fill="#075985" />
-                    <circle cx="70" cy="70" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allFour"; isRolling = true; closeMenu(); }}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="4"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="10" fill="#075985" />
-                    <circle cx="30" cy="70" r="10" fill="#075985" />
-                    <circle cx="70" cy="30" r="10" fill="#075985" />
-                    <circle cx="70" cy="70" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allFive"; isRolling = true; closeMenu(); }}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="5"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="10" fill="#075985" />
-                    <circle cx="30" cy="70" r="10" fill="#075985" />
-                    <circle cx="50" cy="50" r="10" fill="#075985" />
-                    <circle cx="70" cy="30" r="10" fill="#075985" />
-                    <circle cx="70" cy="70" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allSix"; isRolling = true; closeMenu(); }}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="6"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="20" r="10" fill="#075985" />
-                    <circle cx="30" cy="50" r="10" fill="#075985" />
-                    <circle cx="30" cy="80" r="10" fill="#075985" />
-                    <circle cx="70" cy="20" r="10" fill="#075985" />
-                    <circle cx="70" cy="50" r="10" fill="#075985" />
-                    <circle cx="70" cy="80" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-            </div>
-          </div>
-
-          <!-- Additional Actions -->
-          <div>
-            <h3 class="mb-2 text-sm font-semibold uppercase text-amber-50">
-              {$locale === "de" ? "Exportieren" : "Export"}
-            </h3>
-            <div class="space-y-2">
-              <button
-                onclick={() => { downloadTEIDoc([...sequence]); closeMenu(); }}
-                class="w-full cursor-pointer rounded-lg bg-amber-600 px-4 py-10 text-white transition-colors hover:bg-amber-500"
-              >
-                {$locale === "de" ? "TEI-Dokument herunterladen" : "Download TEI document"}
-              </button>
-=======
-              <button
-                onclick={() => { playMode = "allOne"; isRolling = true;}}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="1"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allTwo"; isRolling = true;}}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="2"
-              >
-                <div class="bg-white rounded-lg">
-                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="10" fill="#075985" />
-                    <circle cx="70" cy="70" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allThree"; isRolling = true;}}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="3"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="10" fill="#075985" />
-                    <circle cx="50" cy="50" r="10" fill="#075985" />
-                    <circle cx="70" cy="70" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allFour"; isRolling = true;}}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="4"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="10" fill="#075985" />
-                    <circle cx="30" cy="70" r="10" fill="#075985" />
-                    <circle cx="70" cy="30" r="10" fill="#075985" />
-                    <circle cx="70" cy="70" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allFive"; isRolling = true;}}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="5"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="10" fill="#075985" />
-                    <circle cx="30" cy="70" r="10" fill="#075985" />
-                    <circle cx="50" cy="50" r="10" fill="#075985" />
-                    <circle cx="70" cy="30" r="10" fill="#075985" />
-                    <circle cx="70" cy="70" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allSix"; isRolling = true;}}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="6"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="20" r="10" fill="#075985" />
-                    <circle cx="30" cy="50" r="10" fill="#075985" />
-                    <circle cx="30" cy="80" r="10" fill="#075985" />
-                    <circle cx="70" cy="20" r="10" fill="#075985" />
-                    <circle cx="70" cy="50" r="10" fill="#075985" />
-                    <circle cx="70" cy="80" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-            </div>
-          </div>
-
-          <!-- Additional Actions -->
-          <div>
-            <h3 class="mb-2 text-sm font-semibold uppercase text-amber-50">
-              {$locale === "de" ? "Exportieren" : "Export"}
-            </h3>
-            <div class="space-y-2">
-              <button
-                onclick={() => { downloadTEIDoc([...sequence]);}}
-                class="w-full cursor-pointer rounded-lg bg-amber-600 px-4 py-6 text-white transition-colors hover:bg-amber-500"
-              >
-                {$locale === "de" ? "TEI-Dokument herunterladen" : "Download TEI document"}
-              </button>
->>>>>>> d58a908 (Refactor button click handlers to remove menu closure)
             </div>
           </div>
         </div>
@@ -684,7 +449,7 @@
     </div>
   </div>
   <!-- Display all six versions side by side -->
-  <div class="versions flex flex-col gap-10" lang="de">
+  <div class="versions flex flex-col gap-10" lang={$sourceLocale}>
     {#each Array.from(new Array(200), (_x, i) => i + 1) as index}
       <div class="flex flex-col items-center">
         <h2 class="text-center text-xl font-bold" id={index.toString()}>{index}</h2>
@@ -752,6 +517,16 @@
     width: 42px;
     height: 33px;
     padding-inline: 0.5em;
+  }
+
+  .hamburger-line {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-amber-50);
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
   }
 
   .hamburger-line:nth-child(1) {
