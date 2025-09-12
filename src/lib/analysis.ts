@@ -8,7 +8,7 @@ export function getRandomShortestPlay({ countLetters = false }: { countLetters?:
   const almanacDoc = Almanac.getDom()
   const segmentDivs = Array.from(almanacDoc.querySelectorAll('div[type="segment"]'))
 
-  let shortestPlaySequence: number[] = []
+  const shortestPlaySequence: number[] = []
   let shortestPlayLength = 0
   const regEx = countLetters ? /\p{L}/gu : /\p{L}+(?:['’]\p{L}+)*/gu
   // Regex explanation:
@@ -57,7 +57,7 @@ export function getRandomLongestPlay({ countLetters = false }: { countLetters?: 
   const almanacDoc = Almanac.getDom()
   const segmentDivs = Array.from(almanacDoc.querySelectorAll('div[type="segment"]'))
 
-  let longestPlaySequence: number[] = []
+  const longestPlaySequence: number[] = []
   let longestPlayLength = 0
   const regEx = countLetters ? /\p{L}/gu : /\p{L}+(?:['’]\p{L}+)*/gu
   // Regex explanation:
