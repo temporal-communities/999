@@ -1,20 +1,20 @@
 <script lang="ts">
   import { replaceState } from "$app/navigation"
   import { page } from "$app/state"
-  import {
-    generateAllSamePipsSequence,
-    getRandomLongestPlay,
-    getRandomShortestPlay
-  } from "$lib/analysis"
   import Carousel from "$lib/components/Carousel.svelte"
   import Dice3D from "$lib/components/Dice3D.svelte"
   import ShareButton from "$lib/components/ShareButton.svelte"
   import { generateRandomSequence } from "$lib/dice"
   import { locale } from "$lib/stores/locale"
-  import { downloadTEIDoc } from "$lib/tei"
   import emblaCarouselSvelte from "embla-carousel-svelte"
   import { onMount } from "svelte"
   import { fade } from "svelte/transition"
+  import { downloadTEIDoc } from "$lib/tei"
+  import {
+    getRandomShortestPlay,
+    getRandomLongestPlay,
+    generateAllSamePipsSequence
+  } from "$lib/analysis"
 
   emblaCarouselSvelte.globalOptions = {
     loop: true,
@@ -541,4 +541,3 @@
     bottom: 0;
   }
 </style>
-
