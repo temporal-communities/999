@@ -1,29 +1,27 @@
 <script lang="ts">
   import { replaceState } from "$app/navigation"
   import { page } from "$app/state"
+  import {
+    generateAllSamePipsSequence,
+    getRandomLongestPlay,
+    getRandomShortestPlay
+  } from "$lib/analysis"
   import Carousel from "$lib/components/Carousel.svelte"
   import Dice3D from "$lib/components/Dice3D.svelte"
   import ShareButton from "$lib/components/ShareButton.svelte"
   import { generateRandomSequence } from "$lib/dice"
   import { locale } from "$lib/stores/locale"
+  import { downloadTEIDoc } from "$lib/tei"
   import emblaCarouselSvelte from "embla-carousel-svelte"
   import { onMount } from "svelte"
   import { fade } from "svelte/transition"
-  import { downloadTEIDoc, generateRandomPlays } from "$lib/tei"
-  import {
-    getRandomShortestPlay,
-    getRandomLongestPlay,
-    getRandomLongestAndShortestPlay,
-    generateAllSamePipsSequence
-  } from "$lib/analysis"
-  import { compileModule } from "svelte/compiler"
 
   emblaCarouselSvelte.globalOptions = {
     loop: true,
     skipSnaps: true // Allow the carousel to skip scroll snaps if it's dragged vigorously
   }
 
-  let playMode:
+  type PlayMode =
     | "dice"
     | "shortestWords"
     | "longestWords"
@@ -34,7 +32,9 @@
     | "allThree"
     | "allFour"
     | "allFive"
-    | "allSix" = $state("dice") // to switch between: generate random with dice or random shortest or longest play
+    | "allSix"
+
+  let playMode: PlayMode = $state("dice") // to switch between: generate random with dice or random shortest or longest play
 
   let sequence: number[] = $state([])
   let isRolling = $state(false)
@@ -96,55 +96,43 @@
   // update sequence according to playMode
   $effect(() => {
     if (isRolling) {
-      if (playMode === "dice") {
-        sequence = generateRandomSequence()
-      } else if (playMode === "shortestWords") {
-        sequence = getRandomShortestPlay().sequence
-        setTimeout(() => {
-          isRolling = false
-        }, 1000)
-      } else if (playMode === "longestWords") {
-        sequence = getRandomLongestPlay().sequence
-        setTimeout(() => {
-          isRolling = false
-        }, 1000)
-      } else if (playMode === "shortestLetters") {
-        sequence = getRandomShortestPlay({ countLetters: true }).sequence
-        setTimeout(() => {
-          isRolling = false
-        }, 1000)
-      } else if (playMode === "longestLetters") {
-        sequence = getRandomLongestPlay({ countLetters: true }).sequence
-        setTimeout(() => {
-          isRolling = false
-        }, 1000)
-      } else if (playMode === "allOne") {
-        sequence = generateAllSamePipsSequence({ pips: 1 }).sequence
-        setTimeout(() => {
-          isRolling = false
-        }, 1000)
-      } else if (playMode === "allTwo") {
-        sequence = generateAllSamePipsSequence({ pips: 2 }).sequence
-        setTimeout(() => {
-          isRolling = false
-        }, 1000)
-      } else if (playMode === "allThree") {
-        sequence = generateAllSamePipsSequence({ pips: 3 }).sequence
-        setTimeout(() => {
-          isRolling = false
-        }, 1000)
-      } else if (playMode === "allFour") {
-        sequence = generateAllSamePipsSequence({ pips: 4 }).sequence
-        setTimeout(() => {
-          isRolling = false
-        }, 1000)
-      } else if (playMode === "allFive") {
-        sequence = generateAllSamePipsSequence({ pips: 5 }).sequence
-        setTimeout(() => {
-          isRolling = false
-        }, 1000)
-      } else if (playMode === "allSix") {
-        sequence = generateAllSamePipsSequence({ pips: 6 }).sequence
+      switch (playMode) {
+        case "dice":
+          sequence = generateRandomSequence()
+          break
+        case "shortestWords":
+          sequence = getRandomShortestPlay().sequence
+          break
+        case "longestWords":
+          sequence = getRandomLongestPlay().sequence
+          break
+        case "shortestLetters":
+          sequence = getRandomShortestPlay({ countLetters: true }).sequence
+          break
+        case "longestLetters":
+          sequence = getRandomLongestPlay({ countLetters: true }).sequence
+          break
+        case "allOne":
+          sequence = generateAllSamePipsSequence({ pips: 1 }).sequence
+          break
+        case "allTwo":
+          sequence = generateAllSamePipsSequence({ pips: 2 }).sequence
+          break
+        case "allThree":
+          sequence = generateAllSamePipsSequence({ pips: 3 }).sequence
+          break
+        case "allFour":
+          sequence = generateAllSamePipsSequence({ pips: 4 }).sequence
+          break
+        case "allFive":
+          sequence = generateAllSamePipsSequence({ pips: 5 }).sequence
+          break
+        case "allSix":
+          sequence = generateAllSamePipsSequence({ pips: 6 }).sequence
+          break
+      }
+
+      if (playMode !== "dice") {
         setTimeout(() => {
           isRolling = false
         }, 1000)
@@ -166,9 +154,37 @@
     })
   }
 
-  // for button group of play generating buttons
-  let showButtons = $state(false)
-  let showPipButtons = $state(false)
+  const playGenerationOptions: { mode: PlayMode; labelDe: string; labelEn: string }[] = [
+    {
+      mode: "shortestWords",
+      labelDe: "Kürzestes (Wörter)",
+      labelEn: "Shortest (words)"
+    },
+    {
+      mode: "longestWords",
+      labelDe: "Längstes (Wörter)",
+      labelEn: "Longest (words)"
+    },
+    {
+      mode: "shortestLetters",
+      labelDe: "Kürzestes (Buchstaben)",
+      labelEn: "Shortest (letters)"
+    },
+    {
+      mode: "longestLetters",
+      labelDe: "Längstes (Buchstaben)",
+      labelEn: "Longest (letters)"
+    }
+  ]
+
+  const pipOptions: { mode: PlayMode; label: string }[] = [
+    { mode: "allOne", label: "1" },
+    { mode: "allTwo", label: "2" },
+    { mode: "allThree", label: "3" },
+    { mode: "allFour", label: "4" },
+    { mode: "allFive", label: "5" },
+    { mode: "allSix", label: "6" }
+  ]
 
   // hamburger menu state
   let isMenuOpen = $state(false)
@@ -187,7 +203,7 @@
 
   // Simple escape key handler
   function handleEscape(event: KeyboardEvent) {
-    if (event.key === 'Escape' && isMenuOpen) {
+    if (event.key === "Escape" && isMenuOpen) {
       closeMenu()
     }
   }
@@ -195,11 +211,11 @@
   // Handle clicks outside the menu
   function handleDocumentClick(event: MouseEvent) {
     if (!isMenuOpen) return
-    
+
     const target = event.target as Element
     const menuElement = document.querySelector('nav[data-menu="true"]')
     const hamburgerButton = document.querySelector('button[data-hamburger="true"]')
-    
+
     // Check if click is outside menu and hamburger button
     if (menuElement && hamburgerButton) {
       if (!menuElement.contains(target) && !hamburgerButton.contains(target)) {
@@ -211,9 +227,9 @@
   // Add document click listener when component mounts
   $effect(() => {
     if (mounted) {
-      document.addEventListener('click', handleDocumentClick)
+      document.addEventListener("click", handleDocumentClick)
       return () => {
-        document.removeEventListener('click', handleDocumentClick)
+        document.removeEventListener("click", handleDocumentClick)
       }
     }
   })
@@ -227,7 +243,7 @@
   >
     <!-- Hamburger Menu Button -->
     <button
-      class="absolute top-6 left-6 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-lg text-sky-800 transition-all focus:outline-none focus:ring-2 focus:ring-amber-300"
+      class="absolute top-6 left-6 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-lg text-sky-800 transition-all focus:ring-2 focus:ring-amber-300 focus:outline-none"
       onclick={toggleMenu}
       data-hamburger="true"
       aria-label={$locale === "de" ? "Menü öffnen" : "Open menu"}
@@ -252,7 +268,7 @@
           </h2>
           <button
             onclick={handleCloseButtonClick}
-            class="flex h-8 w-8 items-center justify-center rounded-full text-amber-50 focus:outline-none focus:ring-2 focus:ring-amber-300 cursor-pointer relative z-10 text-4xl font-bold"
+            class="relative z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-4xl font-bold text-amber-50 focus:ring-2 focus:ring-amber-300 focus:outline-none"
             aria-label={$locale === "de" ? "Menü schließen" : "Close menu"}
             type="button"
           >
@@ -263,11 +279,13 @@
         <div class="space-y-6">
           <!-- Language Toggle -->
           <div class="border-b border-sky-700 pb-4">
-            <h3 class="mb-2 text-sm font-semibold uppercase text-amber-50">
+            <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
               {$locale === "de" ? "Sprache umschalten" : "Toggle Language"}
             </h3>
             <button
-              onclick={() => { toggleLanguage();}}
+              onclick={() => {
+                toggleLanguage()
+              }}
               class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
             >
               {$locale === "de" ? "English" : "Deutsch"}
@@ -276,135 +294,86 @@
 
           <!-- Play Generation Options -->
           <div class="border-b border-sky-700 pb-4">
-            <h3 class="mb-2 text-sm font-semibold uppercase text-amber-50">
+            <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
               {$locale === "de" ? "Stück generieren" : "Generate Play"}
             </h3>
             <div class="space-y-2">
-              <button
-                onclick={() => { playMode = "shortestWords"; isRolling = true;}}
-                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-              >
-                {$locale === "de" ? "Kürzestes (Wörter)" : "Shortest (words)"}
-              </button>
-              <button
-                onclick={() => { playMode = "longestWords"; isRolling = true;}}
-                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-              >
-                {$locale === "de" ? "Längstes (Wörter)" : "Longest (words)"}
-              </button>
-              <button
-                onclick={() => { playMode = "shortestLetters"; isRolling = true;}}
-                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-              >
-                {$locale === "de" ? "Kürzestes (Buchstaben)" : "Shortest (letters)"}
-              </button>
-              <button
-                onclick={() => { playMode = "longestLetters"; isRolling = true;}}
-                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-              >
-                {$locale === "de" ? "Längstes (Buchstaben)" : "Longest (letters)"}
-              </button>
+              {#each playGenerationOptions as option}
+                <button
+                  onclick={() => {
+                    playMode = option.mode
+                    isRolling = true
+                  }}
+                  class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
+                >
+                  {$locale === "de" ? option.labelDe : option.labelEn}
+                </button>
+              {/each}
             </div>
           </div>
 
           <!-- Same Pip Options -->
           <div class="border-b border-sky-700 pb-4">
-            <h3 class="mb-2 text-sm font-semibold uppercase text-amber-50">
+            <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
               {$locale === "de" ? "Gleiche Augenzahl" : "Same Pips"}
             </h3>
             <div class="grid grid-cols-3 gap-2">
-              <button
-                onclick={() => { playMode = "allOne"; isRolling = true;}}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="1"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allTwo"; isRolling = true;}}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="2"
-              >
-                <div class="bg-white rounded-lg">
-                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="10" fill="#075985" />
-                    <circle cx="70" cy="70" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allThree"; isRolling = true;}}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="3"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="10" fill="#075985" />
-                    <circle cx="50" cy="50" r="10" fill="#075985" />
-                    <circle cx="70" cy="70" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allFour"; isRolling = true;}}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="4"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="10" fill="#075985" />
-                    <circle cx="30" cy="70" r="10" fill="#075985" />
-                    <circle cx="70" cy="30" r="10" fill="#075985" />
-                    <circle cx="70" cy="70" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allFive"; isRolling = true;}}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="5"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="10" fill="#075985" />
-                    <circle cx="30" cy="70" r="10" fill="#075985" />
-                    <circle cx="50" cy="50" r="10" fill="#075985" />
-                    <circle cx="70" cy="30" r="10" fill="#075985" />
-                    <circle cx="70" cy="70" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
-              <button
-                onclick={() => { playMode = "allSix"; isRolling = true;}}
-                class="rounded-lg cursor-pointer bg-white p-1 transition-colors hover:bg-amber-100"
-                aria-label="6"
-              >
-                <div class="bg-white rounded-lg">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="20" r="10" fill="#075985" />
-                    <circle cx="30" cy="50" r="10" fill="#075985" />
-                    <circle cx="30" cy="80" r="10" fill="#075985" />
-                    <circle cx="70" cy="20" r="10" fill="#075985" />
-                    <circle cx="70" cy="50" r="10" fill="#075985" />
-                    <circle cx="70" cy="80" r="10" fill="#075985" />
-                  </svg>
-                </div>
-              </button>
+              {#each pipOptions as option}
+                <button
+                  onclick={() => {
+                    playMode = option.mode
+                    isRolling = true
+                  }}
+                  class="cursor-pointer rounded-lg bg-white p-1 transition-colors hover:bg-amber-100"
+                  aria-label={option.label}
+                >
+                  <div class="rounded-lg bg-white">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      {#if option.label === "1"}
+                        <circle cx="50" cy="50" r="10" fill="#075985" />
+                      {:else if option.label === "2"}
+                        <circle cx="30" cy="30" r="10" fill="#075985" />
+                        <circle cx="70" cy="70" r="10" fill="#075985" />
+                      {:else if option.label === "3"}
+                        <circle cx="30" cy="30" r="10" fill="#075985" />
+                        <circle cx="50" cy="50" r="10" fill="#075985" />
+                        <circle cx="70" cy="70" r="10" fill="#075985" />
+                      {:else if option.label === "4"}
+                        <circle cx="30" cy="30" r="10" fill="#075985" />
+                        <circle cx="30" cy="70" r="10" fill="#075985" />
+                        <circle cx="70" cy="30" r="10" fill="#075985" />
+                        <circle cx="70" cy="70" r="10" fill="#075985" />
+                      {:else if option.label === "5"}
+                        <circle cx="30" cy="30" r="10" fill="#075985" />
+                        <circle cx="30" cy="70" r="10" fill="#075985" />
+                        <circle cx="50" cy="50" r="10" fill="#075985" />
+                        <circle cx="70" cy="30" r="10" fill="#075985" />
+                        <circle cx="70" cy="70" r="10" fill="#075985" />
+                      {:else if option.label === "6"}
+                        <circle cx="30" cy="20" r="10" fill="#075985" />
+                        <circle cx="30" cy="50" r="10" fill="#075985" />
+                        <circle cx="30" cy="80" r="10" fill="#075985" />
+                        <circle cx="70" cy="20" r="10" fill="#075985" />
+                        <circle cx="70" cy="50" r="10" fill="#075985" />
+                        <circle cx="70" cy="80" r="10" fill="#075985" />
+                      {/if}
+                    </svg>
+                  </div>
+                </button>
+              {/each}
             </div>
           </div>
 
           <!-- Additional Actions -->
           <div>
-            <h3 class="mb-2 text-sm font-semibold uppercase text-amber-50">
+            <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
               {$locale === "de" ? "Exportieren" : "Export"}
             </h3>
             <div class="space-y-2">
               <button
-                onclick={() => { downloadTEIDoc([...sequence]);}}
+                onclick={() => {
+                  downloadTEIDoc([...sequence])
+                }}
                 class="w-full cursor-pointer rounded-lg bg-amber-600 px-4 py-6 text-white transition-colors hover:bg-amber-500"
               >
                 {$locale === "de" ? "TEI-Dokument herunterladen" : "Download TEI document"}
@@ -546,7 +515,7 @@
     position: relative;
     width: 42px;
     height: 33px;
-    padding-inline: .5em;
+    padding-inline: 0.5em;
   }
 
   .hamburger-line {
@@ -572,3 +541,4 @@
     bottom: 0;
   }
 </style>
+
