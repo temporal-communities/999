@@ -1,8 +1,7 @@
 import { page } from "$app/state"
 import xmlTemplate from "$lib/assets/play-template.xml?raw"
 import { Almanac } from "./almanac"
-
-type Locale = "de" | "en"
+import type { Locale } from "./stores/locale"
 
 const TEINS = "http://www.tei-c.org/ns/1.0"
 
