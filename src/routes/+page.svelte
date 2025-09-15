@@ -291,7 +291,7 @@
               }}
               class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
             >
-              {$locale === "de" ? "English" : "Deutsch"}
+              {$locale === "de" ? "Deutsch" : "English"}
             </button>
           </div>
 
@@ -306,7 +306,7 @@
               }}
               class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
             >
-              {$sourceLocale === "de" ? "English" : "Deutsch"}
+              {$sourceLocale === "de" ? "Deutsch" : "English"}
             </button>
           </div>
 
