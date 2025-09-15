@@ -1654,96 +1654,96 @@
         <div n="211" type="segment">
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
-            <p>Freilich, sie ist in Banden.</p>
+            <p>Indeed, she is in bonds.</p>
           </sp>
         </div>
         <div n="212" type="segment">
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
-            <p>Seyn Sie ruhig. Hier giebt’s nur Ein Mittel, und das muß angewendet werden: es heißt
-                <emph>List</emph>!</p>
+            <p>Be calm, Sir. There is but <emph>one</emph> remedy here, and it must be employed: it
+              is called <emph>stratagem</emph>!</p>
           </sp>
         </div>
         <div n="213" type="segment">
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <p>Hurtig, heraus damit! – Aber man behorcht uns doch nicht?</p>
+            <p>Quick, out with it! – But wait, are we being eavesdropped upon?</p>
           </sp>
         </div>
         <div n="214" type="segment">
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
-            <p>Ich habe gehorcht. Der vertrackte Bräutigam ist angemeldet, auf morgen, auf heute
-              –</p>
+            <p>I have done the listening. The confounded bridegroom is announced, for tomorrow, for
+              today –</p>
           </sp>
         </div>
         <div n="215" subtype="manicule-right" type="segment">
           <sp who="#liebhaberin">
             <speaker>The Niece.</speaker>
-            <p>Grausame Väter sind schrecklich; Tyrannische Oheime das Schrecklichste für der Jugend
-              Liebe. Mit Recht bringt man sie in ihrer ganzen Ungestalt auf die Bühne, da das Leben,
-              das wirkliche, wenigstens Ein Exemplar solcher Oheime zählt, und das Exemplar sind
-              Sie!</p>
+            <p>Cruel fathers are dreadful; tyrannical uncles the most dreadful thing of all for
+              youthful love. Rightly are they brought upon the stage in all their deformity, since
+              life, real life, counts at least <emph>one</emph> specimen of such uncles, and that
+              specimen is you!</p>
           </sp>
         </div>
         <div n="216" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Hm! „Seyn oder nicht Seyn, das ist hier die Frage!“ hat einmal ein alter Italiener
-              oder Schotte gesagt. Ob ich meinen Plan verrathe? Schwächt das nicht die Catastrophe?
-              Immerhin! mein Beifall ist dennoch golden.</p>
+            <p>Hm! »To be or not to be, that is the question!« – so once said some old Italian or
+              Scotsman. Should I betray my plan? Would that not weaken the catastrophe? No matter!
+              My applause is golden nonetheless.</p>
           </sp>
         </div>
         <div n="217" type="segment">
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
-            <p>Wohlan, so sucht man auf unbetretener Bahn das Ziel.</p>
+            <p>Well then, one seeks the goal upon untrodden paths.</p>
           </sp>
         </div>
         <div n="218" type="segment">
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
-            <p>Ich brenne vor Begier, Deinen Plan zu durchschauen.</p>
+            <p>I burn with desire to see through your plan.</p>
           </sp>
         </div>
         <div n="219" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Richtig. Wenn ich auch hinterher den Plan ganz allein durchführe, so ist doch vorher
-              ein Verständniß unter den Partheien nöthig. Das Lustspiel wird dadurch mindestens um
-              Eine Scene verlängert und solche Flickscenen sind die Juwelen in dem Goldreife
-              vortrefflicher Lustspiele. – Also, obwohl ich die Sache <emph>allein</emph>
-              durchführen werde, will ich sie Euch dennoch vorher vertrauen.</p>
+            <p>Exactly. Even if I carry out the plan entirely alone, there must first be
+              understanding between the parties. The comedy is thereby extended by at least
+                <emph>one</emph> scene, and such patch-scenes are the jewels in the golden circlet
+              of excellent comedies. – So then, though I shall execute the affair
+              <emph>alone</emph>, I will nonetheless confide it to you beforehand.</p>
           </sp>
         </div>
         <div n="220" subtype="manicule-left" type="segment">
           <sp who="#onkel">
             <speaker>The Uncle.</speaker>
-            <p>Soll das Witz oder Trotz seyn? oder wohl gar Beides? Fräulein! Fräulein!</p>
+            <p>Is that meant to be wit, or defiance, or perhaps even both? Miss! Miss!</p>
           </sp>
         </div>
         <div n="221" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Wohlan denn! Der Bräutigam Ihrer Geliebten wird nicht mehr erwartet – er ist schon
-              hier!</p>
+            <p>So then! The bridegroom of your beloved is no longer expected – he is already
+              here!</p>
           </sp>
         </div>
         <div n="222" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Betrachte mich, so weißt Du, wie er aussieht.</p>
+            <p>Behold me, and you shall know what he looks like.</p>
           </sp>
         </div>
         <div n="223" type="segment">
           <spGrp>
             <sp who="#zofe">
               <speaker>The Chamberm.</speaker>
-              <p>Weiter! Weiter!</p>
+              <p>More! More!</p>
             </sp>
             <sp who="#liebhaber">
               <speaker>The Lover.</speaker>
-              <p>Vernünftig! Vernünftig!</p>
+              <p>Sensible! Sensible!</p>
             </sp>
             <stage>(simultaneously)</stage>
           </spGrp>
@@ -1751,34 +1751,34 @@
         <div n="224" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Ich muß zum Schauspieler geboren seyn, denn ich soll einen Menschen darstellen, den
-              ich gar nicht kenne, den ich nie sah, dessen Namen ich nicht weiß, der also eigentlich
-              für mich gar kein Mensch ist und seyn kann.</p>
+            <p>I must have been born for the stage, for I am to portray a man whom I know not at
+              all, have never seen, whose name I do not even know, who, thus, in truth, is no man at
+              all for me and cannot be.</p>
           </sp>
         </div>
         <div n="225" subtype="manicule-right" type="segment">
           <sp who="#liebhaberin">
             <speaker>The Niece.</speaker>
-            <p>Sie machen mich vor der Zeit zur Leiche.</p>
+            <p>You are turning me into a corpse before my time.</p>
           </sp>
         </div>
         <div n="226" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Pst! Das hieße das Kind mit dem Bade verschütten. Wer soll hier den Triumph der List
-              davon tragen? Antwort: ich! Sie bekommen nur die Braut und damit müssen Sie sich
-              begnügen.</p>
+            <p>Pst! That would be throwing out the child with the bathwater. Who here is to carry
+              off the triumph of the stratagem? Answer: I! You shall have only the bride and with
+              that you must be content.</p>
           </sp>
         </div>
         <div n="227" type="segment">
           <spGrp>
             <sp who="#zofe">
               <speaker>The Chamberm.</speaker>
-              <p>Faselst Du?</p>
+              <p>Are you rambling?</p>
             </sp>
             <sp who="#liebhaber">
               <speaker>The Lover.</speaker>
-              <p>Vortrefflich!</p>
+              <p>Excellent!</p>
             </sp>
             <stage>(simultaneously)</stage>
           </spGrp>
@@ -1786,92 +1786,91 @@
         <div n="228" type="segment">
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <p>Halt! Mir fällt etwas ein: der Brief, den der Onkel gestern erhielt, könnte Licht
-              geben; förderlich seyn.</p>
+            <p>Wait! Something comes to mind: the letter the uncle received yesterday, it might shed
+              some light; be of aid.</p>
           </sp>
         </div>
         <div n="229" type="segment">
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
-            <stage>(mit Verbeugung ab.)</stage>
+            <stage>(exits with a curtsey.)</stage>
           </sp>
         </div>
         <div n="230" subtype="manicule-left" type="segment">
           <sp who="#onkel">
             <speaker>The Uncle.</speaker>
-            <p>Hoho! wenn von einem rückgängig gewordenen Ball die Rede wäre. Heirathen wollen alle
-              Mädchen gern <stage>(trällert)</stage> „Das ist der Lauf der Welt“ –</p>
+            <p>Hoho! were we speaking of a cancelled ball. Girls all want to marry
+                <stage>(sings)</stage> »Such is the course of the world« –</p>
           </sp>
         </div>
         <div n="231" type="segment">
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <p>So laß mich wenigstens wissen – –</p>
+            <p>Then at least let me know – –</p>
           </sp>
         </div>
         <div n="232" type="segment">
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <p>Laufe noch nicht weg. Nimm erst dies Handgeld zu treuem Dienste unter Amors
-              Fahne.</p>
+            <p>Do not run off just yet. First take this earnest-money for faithful service beneath
+              Cupid’s banner.</p>
           </sp>
         </div>
         <div n="233" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>So eile. Ich costumire mich unterdessen. Der Alte soll mich nicht kennen, obschon er
-              mich kennt, und dennoch seine Freude oder seinen Aerger an mir haben.</p>
+            <p>Then be swift. I shall costume myself in the meantime. The old man must not recognise
+              me, though he knows me, and yet he shall have his joy or his anger because of me.</p>
           </sp>
         </div>
         <div n="234" type="segment">
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
-            <stage>(knixt und geht ab.)</stage>
+            <stage>(curtsies and exits.)</stage>
           </sp>
         </div>
         <div n="235" subtype="manicule-right" type="segment">
           <sp who="#liebhaberin">
             <speaker>The Niece.</speaker>
-            <p>So gelte ich Ihnen für Nichts, als für – –</p>
+            <p>Then I am to count for nothing in your eyes, nothing but – –</p>
           </sp>
         </div>
         <div n="236" type="segment">
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <p>Bist doch eine gute Seele! Man kann Dir nicht böse seyn. – Also voran nur!</p>
+            <p>You are, after all, a good soul! One cannot be angry with you. – So onward then!</p>
           </sp>
         </div>
         <div n="237" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Erlauben Sie, gnädiger Herr! <stage>(Er zieht eine Bürste aus der Tasche, nimmt ihm
-                den Hut aus der Hand, bürstet denselben und giebt ihn mit höflicher Verbeugung
-                zurück.)</stage></p>
+            <p>Permit me, gracious Sir! <stage>(He draws a brush from his pocket, takes the hat from
+                his hand, brushes it, and returns it with a courteous bow.)</stage></p>
           </sp>
         </div>
         <div n="238" type="segment">
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <p>Wie heißt solche Handlung?</p>
+            <p>What is such an act called?</p>
           </sp>
         </div>
         <div n="239" type="segment">
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <p>Was willst du damit sagen?</p>
+            <p>What would you mean by that?</p>
           </sp>
         </div>
         <div n="240" subtype="manicule-left" type="segment">
           <sp who="#onkel">
             <speaker>The Uncle.</speaker>
-            <p>Ein treffliches Modell zu einer Heldinn für eine Almanachs-Erzählung.</p>
+            <p>A fine model for a heroine of an almanac tale.</p>
           </sp>
         </div>
         <div n="241" type="segment">
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <p>So geh, damit ich wisse, wohin ich zu gehen habe. So folgt denn der Herr dem
-              Diener.</p>
+            <p>Then go, so that I may know where I am to go. Thus let the master follow the
+              servant.</p>
           </sp>
         </div>
         <div n="242" type="segment">
@@ -1881,113 +1880,110 @@
         <div n="243" type="segment">
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <p>Gewiß, mein Herr. Ich wollte schon vor einer Stunde mit Ihnen reden; aber Sie waren
-              noch nicht sichtbar.</p>
+            <p>Certainly, sir. I wanted to speak with you an hour ago already; but you were not yet
+              to be seen.</p>
           </sp>
         </div>
         <div n="244" type="segment">
           <sp who="#onkel">
             <speaker>The Uncle.</speaker>
-            <p>Herr, ich bin <emph>noch</emph> nicht sichtbar, das heißt für <emph>Sie</emph> nicht.
-              Wollen Sie doch nur mir alte, widerliche Lieder vorsingen; Variationen, deren Thema
-              meine Nichte und ihr Geldsack ist.</p>
+            <p>Sir, I have not <emph>yet</emph> shown myself, that is, not to <emph>you</emph>. You
+              wish only to sing to me old, repugnant songs; variations whose theme is my niece and
+              her money-bag.</p>
           </sp>
         </div>
         <div n="245" subtype="manicule-right" type="segment">
           <sp who="#liebhaberin">
             <speaker>The Niece.</speaker>
-            <p>Nein. Ein zur klagendsten Romanze Stoff gebendes – –</p>
+            <p>No. A subject fit to supply the saddest of romances – –</p>
           </sp>
         </div>
         <div n="246" type="segment">
           <sp who="#onkel">
             <speaker>The Uncle.</speaker>
-            <p>Sparen Sie alle Mühe. Ich gehöre zu den Unerbittlichen. Ist Ihnen das nicht aus
-              Comödien bekannt? Also wundern Sie sich nicht, wenn ich bei meinem <emph>Nein</emph>
-              bleibe.</p>
+            <p>Spare all your efforts. I belong to the unrelenting. Is that not known to you from
+              comedies? Then do not wonder if I hold to my <emph>No</emph>.</p>
           </sp>
         </div>
         <div n="247" type="segment">
           <sp who="#diener">
-            <speaker>Der Diener</speaker>
-            <stage>(ab.)</stage>
+            <speaker>The Servant</speaker>
+            <stage>(exits.)</stage>
           </sp>
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <stage>(hinter ihm her.)</stage>
+            <stage>(after him.)</stage>
           </sp>
         </div>
         <div n="248" type="segment">
           <sp who="#onkel">
             <speaker>The Uncle.</speaker>
-            <p>Gleichviel! Sie bekommen das Mädchen nicht.</p>
+            <p>No matter! You shall not have the girl.</p>
           </sp>
         </div>
         <div n="249" type="segment">
           <sp who="#onkel">
             <speaker>The Uncle.</speaker>
-            <p>Allerdings werd’ ich das.</p>
+            <p>Indeed I shall.</p>
           </sp>
         </div>
         <div n="250" subtype="manicule-right" type="segment">
           <sp who="#onkel">
             <speaker>The Uncle.</speaker>
-            <p>Nein, ein widerwärtiges, das mich ärgern will.</p>
+            <p>No, a disagreeable one, who wishes to annoy me.</p>
           </sp>
         </div>
         <div n="251" type="segment">
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <p>Immerhin! So wie sie frei seyn wird, ist sie verschwunden, und ich bin es mit
-              ihr.</p>
+            <p>Nevertheless! The moment she is free, she shall be gone, and I shall be gone with
+              her.</p>
           </sp>
         </div>
         <div n="252" type="segment">
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <p>Wirklich? So ist dennoch die Stunde ihrer Freiheit die Stunde meiner Vermählung mit
-              ihr.</p>
+            <p>Indeed? Then the hour she is free shall also be the moment of my wedding her.</p>
           </sp>
         </div>
         <div n="253" type="segment">
           <sp who="#onkel">
             <speaker>The Uncle.</speaker>
-            <p>Wirklich? War ich das? Bin ich das? Es fehlt der jugendlichen Thorheit doch nie an
-              Prädicaten, die sie dem Alter beilegt, wenn dieses sich klüger zeigt, als es der
-              Jugend lieb ist!</p>
+            <p>Indeed? Was I so? Am I so? Youthful folly never lacks for epithets to bestow upon old
+              age, when age dares prove itself wiser than youth would like!</p>
           </sp>
         </div>
         <div n="254" type="segment">
           <sp who="#onkel">
             <speaker>The Uncle.</speaker>
-            <p>Sie sehen ein, mein Herr, daß Sie hier überflüssig sind.</p>
+            <p>You see clearly, Sir, that your presence here is superfluous.</p>
           </sp>
         </div>
         <div n="255" subtype="manicule-left" type="segment">
           <sp who="#liebhaberin">
             <speaker>The Niece.</speaker>
-            <p>Das wider ihren eignen Willen gezwungen werden soll – –</p>
+            <p>Who is to be forced against her own will – –</p>
           </sp>
         </div>
         <div n="256" type="segment">
           <sp who="#onkel">
             <speaker>The Uncle</speaker>
-            <stage>(an dem Liebhaber vorüber, ihn auf die Seite schiebend.)</stage>
-            <p>Aus dem Wege, mein Herr.</p>
+            <stage>(passing by the Lover, pushing him aside.)</stage>
+            <p>Out of the way, Sir.</p>
           </sp>
         </div>
         <div n="257" type="segment">
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <stage>(heimlich zu ihr)</stage>
-            <p>Vorbeugen, einleiten, damit der Alte nicht Argwohn schöpfen mögte.</p>
+            <stage>(secretly to her)</stage>
+            <p>Anticipate, prepare, so the old man may not grow suspicious.</p>
           </sp>
         </div>
         <div n="258" type="segment">
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
-            <p>Ich sah es selbst wie er vor dem Gasthof zur Maikatze abstieg, mit dem Wirth ein Paar
-              Worte wechselte, und dann sporenstreichs hieher eilte.</p>
+            <p>I myself saw how he dismounted before the inn »Zur Maikatze«, exchanged a few words
+              with the host, and then hurried here at full spur.</p>
           </sp>
         </div>
         <div n="259" type="segment">
@@ -1997,49 +1993,48 @@
         <div n="260" subtype="manicule-right" type="segment">
           <sp who="#onkel">
             <speaker>The Uncle.</speaker>
-            <p>In eines Mannes Arm zu fallen, und drin liegen zu bleiben, bis ihr letztes Stündlein
-              schlägt.</p>
+            <p>To fall into a man’s arms, and remain therein until her final hour strikes.</p>
           </sp>
         </div>
         <div n="261" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Wie? Mein Herr, wofür halten Sie mich? für einen Ignoranten, Moquanten,
-              Persifflanten, Obscuranten, Pedanten, Maleficanten –</p>
+            <p>What? Sir, what do you take me for? an ignoramus, a mocker, a persifleur, an
+              obscurant, a pedant, a maleficant –</p>
           </sp>
         </div>
         <div n="262" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Mein Herr, mit mir naht Ihr Glück. Wie finden Sie mich?</p>
+            <p>Sir, with me draws near your fortune. How do I strike you?</p>
           </sp>
         </div>
         <div n="263" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Da bin ich, mein Herr, den Sie verschrieben haben. Wie gefall’ ich Ihnen?</p>
+            <p>Here I am, sir, the one you signed for. How do I please you?</p>
           </sp>
         </div>
         <div n="264" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Lumperei gegen das, was Sie noch an mir gewahr werden können, wenn ich loslege, wenn
-              ich mich Ihnen anstelle, darstelle, aufstelle, hinstelle, vorstelle; wenn ich mich
-              Ihnen verdeutliche, erkläre, erläutre, erschließe, ergieße, analysire, exprimire,
-              communicire, participire, declinire und conjugire; wenn Sie mich erst ganz kennen und
-              nennen und von mir entbrennen; wenn Sie mich erst völlig in rechtem Lichte mit ihrem
-              innern Gesichte sehen, verstehen – dann erst werden Sie mich erhöhen zu den Sternen,
-              in lichten Fernen: denn Sie werden von mir lernen!</p>
+            <p>A trifle, compared to what you may yet behold in me, once I let loose, once I
+              position myself before you, depict myself, compose myself, expose myself, propose
+              myself; once I make myself plain, declare, elucidate, unfold, pour forth, analyze,
+              express, communicate, participate, decline and conjugate myself; when you shall truly
+              know and name me, and be enflamed by me; when you shall behold me in proper light with
+              your inner sight, comprehend – then shall you exalt me to the stars, in luminous
+              distance: for you shall learn from me!</p>
           </sp>
           <sp who="#onkel">
             <speaker>The Uncle.</speaker>
-            <p>O weh! Er ist toll!</p>
+            <p>Alas! He is mad!</p>
           </sp>
         </div>
         <div n="265" subtype="manicule-right" type="segment">
           <sp who="#liebhaberin">
             <speaker>The Niece.</speaker>
-            <p>Füllhorn des Unglücks! wenn es eines giebt: über mich wirst du ausgeschüttet.</p>
+            <p>Horn of misfortune! If such a thing exists: it is poured out upon me.</p>
           </sp>
         </div>
         <div n="266" type="segment">
