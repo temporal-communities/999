@@ -5,9 +5,18 @@
     children?: import("svelte").Snippet
   }
   import { browser } from "$app/environment"
-  import { locale } from "$lib/stores/locale"
+  import { locale, sourceLocale } from "$lib/stores/locale"
 
   let { children }: Props = $props()
+
+  // Example: titles per locale
+  const titles = {
+    de: "Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele durch den Würfel",
+    en: "Rolling the Dice for 999 and Many More Almanac Comedies"
+  }
+
+  // Derive title based on locale
+  let title = $derived(titles[$sourceLocale] || titles.en)
 
   onMount(() => {
     if (browser) {
@@ -18,7 +27,7 @@
 </script>
 
 <svelte:head>
-  <title>Neunhundert neun und neunzig und noch etliche Almanachs-Lustspiele durch den Würfel</title>
+  <title>{title}</title>
 </svelte:head>
 
 <div class="contents" lang={$locale}>
