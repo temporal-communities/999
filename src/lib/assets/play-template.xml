@@ -6,10 +6,10 @@
     <fileDesc>
       <titleStmt>
         <title type="main">
-        <!-- generated title -->
+          <!-- generated title -->
         </title>
         <title type="sub">
-        <!-- generated subtitle -->
+          <!-- generated subtitle -->
         </title>
         <author>
           <persName type="pseudo">Simplicius</persName>
@@ -21,7 +21,7 @@
           <idno type="wikidata">Q1505487</idno>
           <idno type="pnd">107968169</idno>
         </author>
-        <author> 
+        <author>
           <persName type="pseudo">Du</persName>
         </author>
         <respStmt>
@@ -44,12 +44,9 @@
       <sourceDesc>
         <bibl type="digitalSource">
           <!-- Name of the app -->
-          <name>
-            »999 und noch etliche [mehr]«: Web app for Georg Nikolaus Bärmann’s Würfelalmanach from 1829
-          </name>
-          <!-- insert URL to the generated play -->
-          <idno type="URL">
-          </idno>
+          <name> »999 und noch etliche [mehr]«: Web app for Georg Nikolaus Bärmann’s Würfelalmanach
+            from 1829 </name>
+          <idno type="URL"> </idno>
           <availability status="free">
             <p>In the public domain.</p>
           </availability>
@@ -61,16 +58,16 @@
               <pubPlace>Zwickau</pubPlace>: <publisher>Gebrüder Schumann</publisher>
             <date>1829</date>.</bibl>
         </bibl>
-         <bibl type="edition">
-            <edition>
+        <bibl type="edition">
+          <edition>
             <!-- dice sequence goes here -->
-               <idno type="sequence"></idno>
-           </edition>
+            <idno type="sequence"/>
+          </edition>
         </bibl>
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
-      <listChange> <!-- TODO: use iso8601, add atrribute when=<datetime> -->
+      <listChange>
         <change>file generated</change>
       </listChange>
     </revisionDesc>
@@ -80,13 +77,13 @@
       <titlePage>
         <docTitle>
           <titlePart type="main">
-          <!-- generated title -->
+            <!-- generated title -->
           </titlePart>
           <titlePart type="sub">
-          <!-- generated subtitle -->
+            <!-- generated subtitle -->
           </titlePart>
         </docTitle>
-    <epigraph>
+        <epigraph>
           <quote>
             <l>„– Dans l’art dangereux de rimer et d’écrire,</l>
             <l>Il n’est point de degrés du médiocre au pire.“</l>
@@ -94,21 +91,10 @@
           <bibl>Boileau.</bibl>
         </epigraph>
       </titlePage>
-      <!-- insert cast list and set here (roll 2) -->
     </front>
     <pb/>
     <body>
-      <div type="main">
-        <!-- play segments will be inserted here (leave out roll 1 and 2) -->
-      </div>
+      <div type="main"/>
     </body>
   </text>
 </TEI>
-
-
-<!-- TODO
- - fill url tag with url to generated play
- - use timestamp as filename (iso8601)
- - add atrribute when=<datetime>
- - don't add title and cast/set (roll 1, 2) to segments section
- - add cast/set below title page tag -->
