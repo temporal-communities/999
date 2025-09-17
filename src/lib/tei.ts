@@ -1,17 +1,5 @@
+import xmlTemplate from "$lib/assets/play-template.xml?raw"
 import { Almanac } from "./almanac"
-
-const TEINS = "http://www.tei-c.org/ns/1.0"
-
-function generateIdFromSequence(sequence: number[]): string {
-  return sequence.join("-") // this is a temporary solution
-}
-
-async function fetchTemplate(): Promise<Document> {
-  const res = await fetch("/play-template.xml")
-  const xmlText = await res.text()
-  const parser = new DOMParser()
-  return parser.parseFromString(xmlText, "text/xml")
-}
 
 function getSegment(almanacDoc: Document, roll: number, pips: number): Element | null {
   const segmentId = Almanac.getSegmentId(roll, pips).toString()
@@ -59,8 +47,8 @@ function collectSegments(sequence: number[], almanacDoc: Document): DocumentFrag
 export async function createTEIDoc(
   sequence: number[]
 ): Promise<{ doc: string; timestamp: string }> {
-  const almanacDoc = Almanac.getDom() // parse almanac text XML into dom document
-  const templateDoc = await fetchTemplate() // get xml file template as dom document
+  const almanacDoc = Almanac.getDom()
+  const templateDoc = new window.DOMParser().parseFromString(xmlTemplate, "text/xml")
 
   const segments = collectSegments(sequence, almanacDoc)
 
@@ -119,32 +107,5 @@ export async function downloadTEIDoc(sequence: number[]) {
   a.href = url
   a.download = file.name
   a.click()
-  // window.open(url, "_blank") // open file in new window
   setTimeout(() => URL.revokeObjectURL(url), 10000)
 }
-
-// NOTES
-// improve and complete download function
-// wann endet letzte szene? bevor der vorhang fällt oder danach? oder direkt vor Ende des Vorspiels?
-
-//   1. Wurf: Titel + Untertitel
-//   2. Wurf: Personen
-//   3. Wurf: Szene 1
-//   4. Wurf: Szene 2
-//  13. Wurf: Szene 3 // WENN 2 GEWÜRFELT WIRD, FEHLT HEADER FÜR SZENE 3
-//  18. Wurf: Szene 4
-//  27. Wurf: Szene 5
-//  28. Wurf: Szene 6
-//  29. Wurf: Szene 7
-//  57. Wurf: Szene 8
-//  61. Wurf: Szene 9
-//  96. Wurf: Szene 10
-// 112. Wurf: Szene 11
-// 114. Wurf: Szene 12
-// 131. Wurf: Szene 13
-// 145. Wurf: Szene 14 // WENN 2 ODER 6 GEWÜRFELT WIRD, FEHLT HEADER FÜR SZENE 14
-// 170. Wurf: Szene 15
-// 184. Wurf: Szene 16
-// 191. Wurf: Szene 17 (Letzter Auftritt)
-// 199. Wurf: (Der Vorhang fällt.)
-// 200. Wurf: Ende des Vorspiels.
