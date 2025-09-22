@@ -6,10 +6,8 @@
     <fileDesc>
       <titleStmt>
         <title type="main">
-          <!-- generated title -->
         </title>
         <title type="sub">
-          <!-- generated subtitle -->
         </title>
         <author>
           <persName type="pseudo">Simplicius</persName>
@@ -43,7 +41,6 @@
       </publicationStmt>
       <sourceDesc>
         <bibl type="digitalSource">
-          <!-- Name of the app -->
           <name> »999 und noch etliche [mehr]«: Web app for Georg Nikolaus Bärmann’s Würfelalmanach
             from 1829 </name>
           <idno type="URL"> </idno>
@@ -60,7 +57,6 @@
         </bibl>
         <bibl type="edition">
           <edition>
-            <!-- dice sequence goes here -->
             <idno type="sequence"/>
           </edition>
         </bibl>
@@ -77,10 +73,8 @@
       <titlePage>
         <docTitle>
           <titlePart type="main">
-            <!-- generated title -->
           </titlePart>
           <titlePart type="sub">
-            <!-- generated subtitle -->
           </titlePart>
         </docTitle>
         <epigraph>

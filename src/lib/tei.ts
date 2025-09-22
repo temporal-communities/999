@@ -1,6 +1,10 @@
 import xmlTemplate from "$lib/assets/play-template.xml?raw"
 import { Almanac } from "./almanac"
 
+function removePBsFromDiv(div: Element) {
+  Array.from(div.getElementsByTagName("pb")).forEach((pb) => pb.parentNode?.removeChild(pb))
+}
+
 function getSegment(almanacDoc: Document, roll: number, pips: number): Element | null {
   const segmentId = Almanac.getSegmentId(roll, pips).toString()
   const segment = almanacDoc.querySelector(`div[type="segment"][n="${segmentId}"]`)
@@ -26,6 +30,8 @@ function collectSegments(sequence: number[], almanacDoc: Document): DocumentFrag
         currentSceneDiv.setAttribute("type", "scene")
         currentSceneDiv.setAttribute("n", sceneNumber.toString())
       }
+      removePBsFromDiv(segment) // remove page breaks from segment
+
       // append only the children of the div, not the outer <div type=segment> tag
       Array.from(segment.childNodes).forEach((child) => {
         if (currentSceneDiv) {
@@ -61,6 +67,13 @@ export async function createTEIDoc(
     mainTitle
   templateDoc.querySelector('front > titlePage > docTitle > titlePart[type="sub"]')!.textContent =
     subTitle
+  segments.removeChild(segments.children[0]) // remove main title
+  segments.removeChild(segments.children[0]) // remove subtitle
+
+  // add cast list and set description to front page (removed automatically)
+  const front = templateDoc.querySelector("front")
+  front?.appendChild(segments.children[0]) // cast list
+  front?.appendChild(segments.children[0]) // set description
 
   // add url to generated play
   templateDoc.querySelector(
@@ -78,13 +91,6 @@ export async function createTEIDoc(
   templateDoc
     .querySelector("teiHeader revisionDesc > listChange > change")!
     .setAttribute("when", timestamp)
-
-  // add titles, cast list and set description to front page and remove from segments
-  const front = templateDoc.querySelector("front")
-  for (let i = 0; i < 4 && segments.children[i]; i++) {
-    front?.appendChild(segments.children[i])
-    segments.removeChild(segments.children[i])
-  }
 
   // append segments wrapped in scene divs to template's main section
   const mainDiv = templateDoc.querySelector('body > div[type="main"]')
