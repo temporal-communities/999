@@ -56,6 +56,7 @@
         <change when="2024-02-22">initial conversion from source</change>
         <change when="2024-06-26">minor corrections</change>
         <change when="2025-02-05">minor corrections</change>
+        <change when="2025-09-23">add scene titles missing in original</change>
       </listChange>
     </revisionDesc>
   </teiHeader>
@@ -2507,7 +2508,7 @@
           <sp who="#zofe">
             <speaker>Das Kammerm.</speaker>
             <p>Richtig. Und das Stück könnte heißen. U. A. z. n., oder: <emph>Der geprellte
-                Akte</emph>.</p>
+                Alte</emph>.</p>
           </sp>
           <sp who="#liebhaberin">
             <speaker>Die Nichte.</speaker>
@@ -3531,6 +3532,8 @@
         </div>
         <pb n="95"/>
         <div n="418" type="segment">
+          <head><supplied>Dritter Auftritt.</supplied></head>
+          <stage><supplied>Die Vorigen. Der Liebhaber.</supplied></stage>
           <sp who="#liebhaber">
             <speaker>Der Liebh.</speaker>
             <stage>(sie umfassend)</stage>
@@ -5996,6 +5999,7 @@
           </sp>
         </div>
         <div n="725" subtype="manicule-left" type="segment">
+          <head><supplied>Vierzehnter Auftritt.</supplied></head>
           <stage>Der Oheim. Das Kammermädchen.</stage>
           <pb n="160"/>
           <sp who="#diener">
@@ -8718,6 +8722,7 @@
           </sp>
         </div>
         <div n="1047" type="segment">
+          <head><supplied>Vierzehnter Auftritt.</supplied></head>
           <stage>Der Oheim. Das Kammermädchen. Der Diener.</stage>
           <stage>(Der Letztere ist auffallend als Stutzer gekleidet. Er spricht <pb n="235"/> im
             Berlinischen, sächsischen, pommerschen oder im Mecklenburger-Bauern-Dialekt; wie es dem
