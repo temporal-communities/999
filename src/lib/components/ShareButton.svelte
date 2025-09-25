@@ -2,6 +2,7 @@
   import shareIcon from "$lib/assets/share-icon.svg"
   import { locale } from "$lib/stores/locale"
   import { fade } from "svelte/transition"
+  import { downloadTEIDoc } from "$lib/tei"
 
   let { sequence } = $props<{ sequence: number[] }>()
 
@@ -67,6 +68,15 @@
             : $locale === "de"
               ? "Link kopieren"
               : "Copy link"}
+        </button>
+      </div>
+      <!-- Download TEI file button -->
+      <div class="mt-3 flex justify-center">
+        <button
+          class="w-full rounded bg-sky-800 p-1 text-white transition hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
+          onclick={() => downloadTEIDoc([...sequence])}
+        >
+          {$locale === "de" ? "TEI-Datei herunterladen" : "Download TEI file"}
         </button>
       </div>
     </div>
