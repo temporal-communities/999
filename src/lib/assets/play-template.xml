@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<?xml-stylesheet type="text/css" href="../css/tei.css"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="ger">
   <teiHeader>
@@ -20,13 +19,14 @@
           <idno type="pnd">107968169</idno>
         </author>
         <author>
-          <persName type="pseudo">Du</persName>
+          <persName>Du</persName>
         </author>
         <respStmt>
           <resp>Edited by</resp>
           <name ref="https://orcid.org/0000-0003-2419-6629" type="person">Frank Fischer</name>
           <name ref="https://orcid.org/0000-0002-7334-781X" type="person">Viktor J. Illmer</name>
           <name ref="https://orcid.org/0009-0005-9680-3995" type="person">Nele Heindorf</name>
+          <name ref="https://orcid.org/0000-0002-4337-2467" type="person">Mark Schwindt</name>
         </respStmt>
       </titleStmt>
       <publicationStmt>
@@ -41,8 +41,8 @@
       </publicationStmt>
       <sourceDesc>
         <bibl type="digitalSource">
-          <name> »999 und noch etliche [mehr]«: Web app for Georg Nikolaus Bärmann’s Würfelalmanach
-            from 1829 </name>
+          <name>»999 und noch etliche [mehr]«: Web app for Georg Nikolaus Bärmann’s Würfelalmanach
+            from 1829</name>
           <idno type="URL"> </idno>
           <availability status="free">
             <p>In the public domain.</p>
@@ -86,9 +86,7 @@
         </epigraph>
       </titlePage>
     </front>
-    <pb/>
     <body>
-      <div type="main"/>
     </body>
   </text>
 </TEI>
