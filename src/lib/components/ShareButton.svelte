@@ -76,7 +76,7 @@
           class="w-full cursor-pointer rounded bg-sky-800 p-1 text-white transition hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
           onclick={() => downloadTEIDoc([...sequence])}
         >
-          {$locale === "de" ? "TEI-Datei herunterladen" : "Download TEI file"}
+          {$locale === "de" ? "TEI-Dokument herunterladen" : "Download TEI document"}
         </button>
       </div>
     </div>
