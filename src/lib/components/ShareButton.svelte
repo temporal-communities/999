@@ -1,6 +1,6 @@
 <script lang="ts">
   import shareIcon from "$lib/assets/share-icon.svg"
-  import { locale } from "$lib/stores/locale"
+  import { locale, sourceLocale } from "$lib/stores/locale"
   import { fade } from "svelte/transition"
   import { downloadTEIDoc } from "$lib/tei"
 
@@ -74,7 +74,7 @@
       <div class="mt-2 flex justify-center">
         <button
           class="w-full cursor-pointer rounded bg-sky-800 p-1 text-white transition hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
-          onclick={() => downloadTEIDoc([...sequence])}
+          onclick={() => downloadTEIDoc([...sequence], $sourceLocale)}
         >
           {$locale === "de" ? "TEI-Dokument herunterladen" : "Download TEI document"}
         </button>
