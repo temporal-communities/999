@@ -51,7 +51,7 @@
     </fileDesc>
     <revisionDesc>
       <listChange>
-        <change when="2025-11-21">initital commit of translated file</change>
+        <change when="2025-11-21">initial commit of translated file</change>
       </listChange>
     </revisionDesc>
   </teiHeader>
@@ -405,8 +405,8 @@
         <div n="48" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Stratagem? „That is in my department!“ exclaims a famous writer of jest and
-              stratagem-play.</p>
+            <p>Cunning? „That is in my department!“ exclaims a famous writer of plays of cunning and
+              comedy.</p>
           </sp>
         </div>
         <div n="49" type="segment">
@@ -1341,7 +1341,7 @@
           </sp>
         </div>
         <div n="167" type="segment">
-          <titlePart type="main">Without Stratagem No Love Succeeds.</titlePart>
+          <titlePart type="main">Without Cunning No Love Succeeds.</titlePart>
           <titlePart type="sub">A Comedy in One Act.</titlePart>
         </div>
         <div n="168" type="segment">
@@ -1660,7 +1660,7 @@
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
             <p>Be calm, Sir. There is but <emph>one</emph> remedy here, and it must be employed: it
-              is called <emph>stratagem</emph>!</p>
+              is called <emph>cunning</emph>!</p>
           </sp>
         </div>
         <div n="213" type="segment">
@@ -1765,7 +1765,7 @@
           <sp who="#diener">
             <speaker>The Servant.</speaker>
             <p>Pst! That would be throwing out the child with the bathwater. Who here is to carry
-              off the triumph of the stratagem? Answer: I! You shall have only the bride and with
+              off the spoils of the stratagem? Answer: I! You shall have only the bride and with
               that you must be content.</p>
           </sp>
         </div>
@@ -2606,7 +2606,7 @@
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
             <p>Easy! What must come to our aid in comedy when force accomplishes nothing?
-                <emph>Stratagem</emph>!</p>
+                <emph>Cunning</emph>!</p>
           </sp>
         </div>
         <div n="331" type="segment">
@@ -2637,7 +2637,7 @@
         <div n="335" subtype="manicule-right" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Stratagem? I have that for sale! „Whoever bids the most, gets me!“ says one of the
+            <p>Cunning? I have that for sale! „Whoever bids the most, gets me!“ says one of the
               bandits in The Robbers; I believe the fellow's name is Schufterle.</p>
           </sp>
         </div>
@@ -3258,7 +3258,7 @@
         <div n="412" type="segment">
           <sp who="#liebhaber">
             <speaker>The Lover.</speaker>
-            <p>Through his stratagem we are united. Nothing separates us anymore. <stage>(To the
+            <p>Through his cunning we are united. Nothing separates us anymore. <stage>(To the
                 Servant, throwing him his purse)</stage> Take your well-earned reward!</p>
           </sp>
         </div>
@@ -3411,7 +3411,7 @@
         <div n="431" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Stratagem? That is my trade.</p>
+            <p>Cunning? That is my trade.</p>
           </sp>
         </div>
         <div n="432" type="segment">
@@ -4419,14 +4419,14 @@
         <div n="562" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Sir, yours body and soul! <stage>(to the Chamberm.)</stage> Speak, you oracle of our
-              stratagem. What is to be done?</p>
+            <p>Sir, yours body and soul! <stage>(to the Chamberm.)</stage> Speak, you oracle of
+              cunning. What is to be done?</p>
           </sp>
         </div>
         <div n="563" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Stratagem? That is water to my mill.</p>
+            <p>Cunning? That is water to my mill.</p>
           </sp>
         </div>
         <div n="564" type="segment">
@@ -4455,7 +4455,7 @@
         <div n="567" type="segment">
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
-            <p>Just don't rage! That won't help us. Stratagem alone – –</p>
+            <p>Just don't rage! That won't help us. Cunning alone – –</p>
           </sp>
         </div>
         <div n="568" type="segment">
@@ -5644,7 +5644,7 @@
         <div n="717" type="segment">
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
-            <p>Be calm! Where there is love, there is also stratagem; and at times embarrassment:
+            <p>Be calm! Where there is love, there is also cunning; and at times embarrassment:
               Kotzebue knew that well enough, why should not we?</p>
           </sp>
         </div>
@@ -8053,7 +8053,7 @@
         <div n="1003" type="segment">
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
-            <p>Compose yourself! Stratagem must help us.</p>
+            <p>Compose yourself! Cunning must help us.</p>
           </sp>
         </div>
         <div n="1004" type="segment">
@@ -8065,7 +8065,7 @@
         <div n="1005" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Stratagem? With that I can serve.</p>
+            <p>Cunning? With that I can serve.</p>
           </sp>
         </div>
         <div n="1006" type="segment">
@@ -9393,7 +9393,7 @@
         <div n="1167" type="segment">
           <sp who="#zofe">
             <speaker>The Chamberm.</speaker>
-            <p>Patience! Only stratagem can save us.</p>
+            <p>Patience! Only cunning can save us.</p>
           </sp>
         </div>
         <div n="1168" type="segment">
@@ -9435,7 +9435,7 @@
         <div n="1174" type="segment">
           <sp who="#diener">
             <speaker>The Servant.</speaker>
-            <p>Stratagem? – Pomade to me!</p>
+            <p>Cunning? – Pomade to me!</p>
           </sp>
         </div>
         <div n="1175" type="segment">
