@@ -1,19 +1,21 @@
 <script lang="ts">
   import { replaceState } from "$app/navigation"
+  import { resolve } from "$app/paths"
   import { page } from "$app/state"
+  import {
+    generateAllSamePipsSequence,
+    getRandomLongestPlay,
+    getRandomShortestPlay
+  } from "$lib/analysis"
   import Carousel from "$lib/components/Carousel.svelte"
   import Dice3D from "$lib/components/Dice3D.svelte"
+  import Header from "$lib/components/Header.svelte"
   import ShareButton from "$lib/components/ShareButton.svelte"
   import { generateRandomSequence } from "$lib/dice"
   import { locale, sourceLocale } from "$lib/stores/locale"
   import emblaCarouselSvelte from "embla-carousel-svelte"
   import { onMount } from "svelte"
   import { fade } from "svelte/transition"
-  import {
-    getRandomShortestPlay,
-    getRandomLongestPlay,
-    generateAllSamePipsSequence
-  } from "$lib/analysis"
 
   emblaCarouselSvelte.globalOptions = {
     loop: true,
@@ -240,196 +242,195 @@
 
 <svelte:window bind:scrollY bind:innerHeight onkeydown={handleEscape} />
 
-<header class="h-screen w-full p-4 md:p-16">
-  <div
-    class="relative flex h-full w-full flex-col items-center justify-evenly bg-sky-800 px-8 text-center text-amber-50 ring-4 ring-sky-800 ring-offset-4 ring-offset-amber-50"
+<Header screenHeight={true}>
+  <!-- Hamburger Menu Button -->
+  <button
+    class="absolute top-6 left-6 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-lg text-sky-800 transition-all focus:ring-2 focus:ring-amber-300 focus:outline-none"
+    onclick={toggleMenu}
+    data-hamburger="true"
+    aria-label={$locale === "de" ? "Menü öffnen" : "Open menu"}
   >
-    <!-- Hamburger Menu Button -->
-    <button
-      class="absolute top-6 left-6 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-lg text-sky-800 transition-all focus:ring-2 focus:ring-amber-300 focus:outline-none"
-      onclick={toggleMenu}
-      data-hamburger="true"
-      aria-label={$locale === "de" ? "Menü öffnen" : "Open menu"}
-    >
-      <div class="hamburger-icon">
-        <span class="hamburger-line" class:open={isMenuOpen}></span>
-        <span class="hamburger-line" class:open={isMenuOpen}></span>
-        <span class="hamburger-line" class:open={isMenuOpen}></span>
-      </div>
-    </button>
+    <div class="hamburger-icon">
+      <span class="hamburger-line" class:open={isMenuOpen}></span>
+      <span class="hamburger-line" class:open={isMenuOpen}></span>
+      <span class="hamburger-line" class:open={isMenuOpen}></span>
+    </div>
+  </button>
+  <a class="absolute top-6 right-6 z-50" href={resolve("/about")}
+    >{$locale === "de" ? "Über" : "About"}</a
+  >
 
-    <!-- Slide-out Menu -->
-    <nav
-      class="fixed top-0 left-0 z-50 h-full w-80 bg-sky-900 text-amber-50 shadow-lg transition-transform duration-300 ease-in-out"
-      style="transform: translateX({isMenuOpen ? '0px' : '-320px'})"
-      data-menu="true"
-    >
-      <div class="p-6">
-        <div class="mb-8 flex items-center justify-between">
-          <h2 class="text-xl font-bold">
-            {$locale === "de" ? "Menü" : "Menu"}
-          </h2>
+  <!-- Slide-out Menu -->
+  <nav
+    class="fixed top-0 left-0 z-50 h-full w-80 bg-sky-900 text-amber-50 shadow-lg transition-transform duration-300 ease-in-out"
+    style="transform: translateX({isMenuOpen ? '0px' : '-320px'})"
+    data-menu="true"
+  >
+    <div class="p-6">
+      <div class="mb-8 flex items-center justify-between">
+        <h2 class="text-xl font-bold">
+          {$locale === "de" ? "Menü" : "Menu"}
+        </h2>
+        <button
+          onclick={handleCloseButtonClick}
+          class="relative z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-4xl font-bold text-amber-50 focus:ring-2 focus:ring-amber-300 focus:outline-none"
+          aria-label={$locale === "de" ? "Menü schließen" : "Close menu"}
+          type="button"
+        >
+          ×
+        </button>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Language Toggle -->
+        <div class="border-b border-sky-700 pb-4">
+          <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
+            {$locale === "de" ? "Sprache umschalten" : "Toggle Language"}
+          </h3>
           <button
-            onclick={handleCloseButtonClick}
-            class="relative z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-4xl font-bold text-amber-50 focus:ring-2 focus:ring-amber-300 focus:outline-none"
-            aria-label={$locale === "de" ? "Menü schließen" : "Close menu"}
-            type="button"
+            onclick={() => {
+              toggleLanguage()
+            }}
+            class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
           >
-            ×
+            {$locale === "de" ? "Deutsch" : "English"}
           </button>
         </div>
 
-        <div class="space-y-6">
-          <!-- Language Toggle -->
-          <div class="border-b border-sky-700 pb-4">
-            <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
-              {$locale === "de" ? "Sprache umschalten" : "Toggle Language"}
-            </h3>
-            <button
-              onclick={() => {
-                toggleLanguage()
-              }}
-              class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-            >
-              {$locale === "de" ? "Deutsch" : "English"}
-            </button>
-          </div>
+        <!-- Source Language Toggle -->
+        <div class="border-b border-sky-700 pb-4">
+          <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
+            {$locale === "de" ? "Quelltext umschalten" : "Toggle Source Text"}
+          </h3>
+          <button
+            onclick={() => {
+              toggleSourceLanguage()
+            }}
+            class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
+          >
+            {$sourceLocale === "de" ? "Deutsch" : "English"}
+          </button>
+        </div>
 
-          <!-- Source Language Toggle -->
-          <div class="border-b border-sky-700 pb-4">
-            <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
-              {$locale === "de" ? "Quelltext umschalten" : "Toggle Source Text"}
-            </h3>
-            <button
-              onclick={() => {
-                toggleSourceLanguage()
-              }}
-              class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-            >
-              {$sourceLocale === "de" ? "Deutsch" : "English"}
-            </button>
+        <!-- Play Generation Options -->
+        <div class="border-b border-sky-700 pb-4">
+          <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
+            {$locale === "de" ? "Stück generieren" : "Generate Play"}
+          </h3>
+          <div class="space-y-2">
+            {#each playGenerationOptions as option}
+              <button
+                onclick={() => {
+                  playMode = option.mode
+                  isRolling = true
+                }}
+                class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
+              >
+                {$locale === "de" ? option.labelDe : option.labelEn}
+              </button>
+            {/each}
           </div>
+        </div>
 
-          <!-- Play Generation Options -->
-          <div class="border-b border-sky-700 pb-4">
-            <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
-              {$locale === "de" ? "Stück generieren" : "Generate Play"}
-            </h3>
-            <div class="space-y-2">
-              {#each playGenerationOptions as option}
-                <button
-                  onclick={() => {
-                    playMode = option.mode
-                    isRolling = true
-                  }}
-                  class="w-full cursor-pointer rounded-lg bg-amber-50 px-4 py-2 text-sky-800 transition-colors hover:bg-amber-100"
-                >
-                  {$locale === "de" ? option.labelDe : option.labelEn}
-                </button>
-              {/each}
-            </div>
-          </div>
-
-          <!-- Same Pip Options -->
-          <div class="border-b border-sky-700 pb-4">
-            <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
-              {$locale === "de" ? "Gleiche Augenzahl" : "Same Pips"}
-            </h3>
-            <div class="grid grid-cols-3 gap-2">
-              {#each pipOptions as option}
-                <button
-                  onclick={() => {
-                    playMode = option.mode
-                    isRolling = true
-                  }}
-                  class="cursor-pointer rounded-lg bg-white p-1 transition-colors hover:bg-amber-100"
-                  aria-label={option.label}
-                >
-                  <div class="rounded-lg bg-white">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                      {#if option.label === "1"}
-                        <circle cx="50" cy="50" r="10" fill="#075985" />
-                      {:else if option.label === "2"}
-                        <circle cx="30" cy="30" r="10" fill="#075985" />
-                        <circle cx="70" cy="70" r="10" fill="#075985" />
-                      {:else if option.label === "3"}
-                        <circle cx="30" cy="30" r="10" fill="#075985" />
-                        <circle cx="50" cy="50" r="10" fill="#075985" />
-                        <circle cx="70" cy="70" r="10" fill="#075985" />
-                      {:else if option.label === "4"}
-                        <circle cx="30" cy="30" r="10" fill="#075985" />
-                        <circle cx="30" cy="70" r="10" fill="#075985" />
-                        <circle cx="70" cy="30" r="10" fill="#075985" />
-                        <circle cx="70" cy="70" r="10" fill="#075985" />
-                      {:else if option.label === "5"}
-                        <circle cx="30" cy="30" r="10" fill="#075985" />
-                        <circle cx="30" cy="70" r="10" fill="#075985" />
-                        <circle cx="50" cy="50" r="10" fill="#075985" />
-                        <circle cx="70" cy="30" r="10" fill="#075985" />
-                        <circle cx="70" cy="70" r="10" fill="#075985" />
-                      {:else if option.label === "6"}
-                        <circle cx="30" cy="20" r="10" fill="#075985" />
-                        <circle cx="30" cy="50" r="10" fill="#075985" />
-                        <circle cx="30" cy="80" r="10" fill="#075985" />
-                        <circle cx="70" cy="20" r="10" fill="#075985" />
-                        <circle cx="70" cy="50" r="10" fill="#075985" />
-                        <circle cx="70" cy="80" r="10" fill="#075985" />
-                      {/if}
-                    </svg>
-                  </div>
-                </button>
-              {/each}
-            </div>
+        <!-- Same Pip Options -->
+        <div class="border-b border-sky-700 pb-4">
+          <h3 class="mb-2 text-sm font-semibold text-amber-50 uppercase">
+            {$locale === "de" ? "Gleiche Augenzahl" : "Same Pips"}
+          </h3>
+          <div class="grid grid-cols-3 gap-2">
+            {#each pipOptions as option}
+              <button
+                onclick={() => {
+                  playMode = option.mode
+                  isRolling = true
+                }}
+                class="cursor-pointer rounded-lg bg-white p-1 transition-colors hover:bg-amber-100"
+                aria-label={option.label}
+              >
+                <div class="rounded-lg bg-white">
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    {#if option.label === "1"}
+                      <circle cx="50" cy="50" r="10" fill="#075985" />
+                    {:else if option.label === "2"}
+                      <circle cx="30" cy="30" r="10" fill="#075985" />
+                      <circle cx="70" cy="70" r="10" fill="#075985" />
+                    {:else if option.label === "3"}
+                      <circle cx="30" cy="30" r="10" fill="#075985" />
+                      <circle cx="50" cy="50" r="10" fill="#075985" />
+                      <circle cx="70" cy="70" r="10" fill="#075985" />
+                    {:else if option.label === "4"}
+                      <circle cx="30" cy="30" r="10" fill="#075985" />
+                      <circle cx="30" cy="70" r="10" fill="#075985" />
+                      <circle cx="70" cy="30" r="10" fill="#075985" />
+                      <circle cx="70" cy="70" r="10" fill="#075985" />
+                    {:else if option.label === "5"}
+                      <circle cx="30" cy="30" r="10" fill="#075985" />
+                      <circle cx="30" cy="70" r="10" fill="#075985" />
+                      <circle cx="50" cy="50" r="10" fill="#075985" />
+                      <circle cx="70" cy="30" r="10" fill="#075985" />
+                      <circle cx="70" cy="70" r="10" fill="#075985" />
+                    {:else if option.label === "6"}
+                      <circle cx="30" cy="20" r="10" fill="#075985" />
+                      <circle cx="30" cy="50" r="10" fill="#075985" />
+                      <circle cx="30" cy="80" r="10" fill="#075985" />
+                      <circle cx="70" cy="20" r="10" fill="#075985" />
+                      <circle cx="70" cy="50" r="10" fill="#075985" />
+                      <circle cx="70" cy="80" r="10" fill="#075985" />
+                    {/if}
+                  </svg>
+                </div>
+              </button>
+            {/each}
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    {#if $locale === "de"}
-      <div lang="de" class="max-w-[75ch]">
-        <h1 class="text-3xl md:text-6xl">Ein Dramenautomat von 1829 digital aufbereitet</h1>
-        <p class="pt-8 md:text-xl">
-          Der 1829 von Georg Nikolaus Bärmann veröffentlichte <a
-            class="underline"
-            target="_blank"
-            href="https://de.wikisource.org/wiki/Neunhundert_neun_und_neunzig_und_noch_etliche_Almanachs-Lustspiele_durch_den_W%C3%BCrfel"
-            ><em>Würfelalmanach</em></a
-          >
-          ist ein spielerisches System zur Erzeugung von Einaktern per Würfelwurf. Diese kurzen Dramen
-          waren auf der Bühne und im privaten Kreis beliebt, und Bärmanns Buch ermöglichte die Erstellung
-          von 4×10<sup>155</sup> Variationen aus 1.200 Textfragmenten. Diese Webanwendung bringt den
-          Almanach in digitaler Form zurück und lädt dazu ein, eine frühe Form algorithmischen Erzählens
-          interaktiv zu erkunden.
-        </p>
-      </div>
-    {:else}
-      <div lang="en" class="max-w-[75ch]">
-        <h1 class="text-3xl md:text-6xl">A literary automaton from 1829, reborn online</h1>
-        <p class="pt-8 md:text-xl">
-          The <a
-            class="underline"
-            target="_blank"
-            href="https://de.wikisource.org/wiki/Neunhundert_neun_und_neunzig_und_noch_etliche_Almanachs-Lustspiele_durch_den_W%C3%BCrfel"
-            ><em>Würfelalmanach</em></a
-          >, published by Georg Nikolaus Bärmann in 1829, is a playful system for generating one-act
-          plays by rolling dice. These short dramas were popular on stage and in private gatherings,
-          and Bärmann's book offered a way to create 4×10<sup>155</sup> possible variations from 1,200
-          text fragments. This web app recreates the experience, letting you explore an early example
-          of algorithmic storytelling in an interactive way.
-        </p>
-      </div>
-    {/if}
+  {#if $locale === "de"}
+    <div lang="de" class="max-w-[75ch]">
+      <h1 class="text-3xl md:text-6xl">Ein Dramenautomat von 1829 digital aufbereitet</h1>
+      <p class="pt-8 md:text-xl">
+        Der 1829 von Georg Nikolaus Bärmann veröffentlichte <a
+          class="underline"
+          target="_blank"
+          href="https://de.wikisource.org/wiki/Neunhundert_neun_und_neunzig_und_noch_etliche_Almanachs-Lustspiele_durch_den_W%C3%BCrfel"
+          ><em>Würfelalmanach</em></a
+        >
+        ist ein spielerisches System zur Erzeugung von Einaktern per Würfelwurf. Diese kurzen Dramen
+        waren auf der Bühne und im privaten Kreis beliebt, und Bärmanns Buch ermöglichte die Erstellung
+        von 4×10<sup>155</sup> Variationen aus 1.200 Textfragmenten. Diese Webanwendung bringt den Almanach
+        in digitaler Form zurück und lädt dazu ein, eine frühe Form algorithmischen Erzählens interaktiv
+        zu erkunden.
+      </p>
+    </div>
+  {:else}
+    <div lang="en" class="max-w-[75ch]">
+      <h1 class="text-3xl md:text-6xl">A literary automaton from 1829, reborn online</h1>
+      <p class="pt-8 md:text-xl">
+        The <a
+          class="underline"
+          target="_blank"
+          href="https://de.wikisource.org/wiki/Neunhundert_neun_und_neunzig_und_noch_etliche_Almanachs-Lustspiele_durch_den_W%C3%BCrfel"
+          ><em>Würfelalmanach</em></a
+        >, published by Georg Nikolaus Bärmann in 1829, is a playful system for generating one-act
+        plays by rolling dice. These short dramas were popular on stage and in private gatherings,
+        and Bärmann's book offered a way to create 4×10<sup>155</sup> possible variations from 1,200
+        text fragments. This web app recreates the experience, letting you explore an early example of
+        algorithmic storytelling in an interactive way.
+      </p>
+    </div>
+  {/if}
 
-    <!-- Scroll to main button -->
-    <button
-      onclick={scrollToMain}
-      class="pulse-animation flex h-26 w-26 cursor-pointer items-center justify-center rounded-full bg-amber-50 text-2xl text-sky-800 transition-colors hover:bg-amber-100 focus:outline-none"
-      aria-label="Scroll to content"
-    >
-      START
-    </button>
-  </div>
-</header>
+  <!-- Scroll to main button -->
+  <button
+    onclick={scrollToMain}
+    class="pulse-animation flex h-26 w-26 cursor-pointer items-center justify-center rounded-full bg-amber-50 text-2xl text-sky-800 transition-colors hover:bg-amber-100 focus:outline-none"
+    aria-label="Scroll to content"
+  >
+    START
+  </button>
+</Header>
 
 <main class="overflow-x-hidden p-4" bind:this={mainElement}>
   <!-- Center column backdrop -->
