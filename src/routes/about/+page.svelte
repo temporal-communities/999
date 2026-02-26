@@ -1,11 +1,13 @@
 <script lang="ts">
   import Header from "$lib/components/Header.svelte"
+  import HamburgerMenu from "$lib/components/HamburgerMenu.svelte"
   import crossIcon from "$lib/assets/cross-circled.svg"
   import { locale } from "$lib/stores/locale"
   import { resolve } from "$app/paths"
 </script>
 
 <Header>
+  <HamburgerMenu showSourceToggle={false} />
   <a class="absolute top-6 right-6 z-50" href={resolve("/")} aria-label={$locale === "de" ? "Zurück zur Startseite" : "Back to main page"}>
     <img src={crossIcon} alt={$locale === "de" ? "Zurück zur Startseite" : "Back to main page"} class="h-[3.2rem] w-[3.2rem]" />
   </a>
