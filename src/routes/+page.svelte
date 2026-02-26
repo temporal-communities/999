@@ -12,6 +12,7 @@
   import Header from "$lib/components/Header.svelte"
   import ShareButton from "$lib/components/ShareButton.svelte"
   import { generateRandomSequence } from "$lib/dice"
+  import infoIcon from "$lib/assets/info-circled.svg"
   import { locale, sourceLocale } from "$lib/stores/locale"
   import emblaCarouselSvelte from "embla-carousel-svelte"
   import { onMount } from "svelte"
@@ -256,9 +257,9 @@
       <span class="hamburger-line" class:open={isMenuOpen}></span>
     </div>
   </button>
-  <a class="absolute top-6 right-6 z-50" href={resolve("/about")}
-    >{$locale === "de" ? "Über" : "About"}</a
-  >
+  <a class="absolute top-6 right-6 z-50" href={resolve("/about")} aria-label={$locale === "de" ? "Über" : "About"}>
+    <img src={infoIcon} alt={$locale === "de" ? "Über" : "About"} class="h-8 w-8" />
+  </a>
 
   <!-- Slide-out Menu -->
   <nav
