@@ -7,7 +7,7 @@
 
 <Header>
   <a class="absolute top-6 right-6 z-50" href={resolve("/")} aria-label={$locale === "de" ? "Zurück zur Startseite" : "Back to main page"}>
-    <img src={crossIcon} alt={$locale === "de" ? "Zurück zur Startseite" : "Back to main page"} class="h-8 w-8" />
+    <img src={crossIcon} alt={$locale === "de" ? "Zurück zur Startseite" : "Back to main page"} class="h-[3.2rem] w-[3.2rem]" />
   </a>
 
   <article class="p-8 text-left text-lg">

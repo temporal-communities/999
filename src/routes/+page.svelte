@@ -258,7 +258,7 @@
     </div>
   </button>
   <a class="absolute top-6 right-6 z-50" href={resolve("/about")} aria-label={$locale === "de" ? "Über" : "About"}>
-    <img src={infoIcon} alt={$locale === "de" ? "Über" : "About"} class="h-8 w-8" />
+    <img src={infoIcon} alt={$locale === "de" ? "Über" : "About"} class="h-[3.2rem] w-[3.2rem]" />
   </a>
 
   <!-- Slide-out Menu -->
