@@ -61,7 +61,6 @@
         <h2>How to Use</h2>
         <ol type="1">
           <li>
-            <p>
               Begin by taking a look at the
               <a
                 href="https://de.wikisource.org/wiki/Neunhundert_neun_und_neunzig_und_noch_etliche_Almanachs-Lustspiele_durch_den_W%C3%BCrfel"
@@ -73,42 +72,31 @@
                 >dice table</a
               >
               to understand what the app sets out to do.
-            </p>
           </li>
           <li>
-            <p>
               In the app, you can click on the large dice at the top. This rolls one of six variants
               for each of the 200 different scenes. This is the simplest way to generate one of the
               6<sup>200</sup> possible variants of the play.
-            </p>
           </li>
           <li>
-            <p>
               The main path highlighted in the centre of the screen represents the randomly
               generated trajectory through the play. Each of the 200 scenes can be shifted left and
               right to view all variants available for that scene.
-            </p>
           </li>
           <li>
-            <p>
               Any combination of scenes that constitutes a complete play can be shared via a unique
               link (Share button at the bottom right).
-            </p>
           </li>
           <li>
-            <p>
               Any combination of scenes can be saved in the
               <a href="https://en.wikipedia.org/wiki/Text_Encoding_Initiative">TEI format</a> (Download
               button at the bottom right).
-            </p>
           </li>
           <li>
-            <p>
               The English translation was produced with the assistance of ChatGPT (GPT-4o) and
               subsequently checked manually. The translation does not aim to be perfect; several
               historical allusions and wordplays are difficult to render. The main goal was to
               enable non-German-speaking users to make meaningful use of the app.
-            </p>
           </li>
         </ol>
 
@@ -133,7 +121,38 @@
           <li>Frank Fischer (<a href="https://orcid.org/0000-0003-2419-6629">ORCID</a>)</li>
         </ul>
 
-        <h2>Zitation</h2>
+        <h2>Zitationsempfehlungen</h2>
+        <ul>
+          <li>
+            Viktor J. Illmer, Frank Fischer, Mark Schwindt, Jonas Rohe:
+            <strong
+              >»999 und noch etliche [mehr]«. Georg Nikolaus Bärmanns »Würfel-Almanach« von 1829 als
+              Web-App.</strong
+            >
+            In: DHd2025: »Under Construction«. 3.–7. März 2025. Book of Abstracts. Universität Bielefeld.
+            (<a href="https://doi.org/10.5281/zenodo.14943242">doi:10.5281/zenodo.14943242</a>)
+            &lcub;ger&rcub;
+          </li>
+          <li>
+            Viktor J. Illmer, Dîlan Canan Çakir, Frank Fischer, Mark Schwindt, Jonas Rohe:
+            <strong
+              >More Plays than Atoms in the Universe: The Digitization of a 19th-Century Generator
+              for One-Act Comedies.</strong
+            >
+            In: IEEE Transactions on Games. 2025. (<a href="https://doi.org/10.1109/TG.2025.3608847"
+              >doi:10.1109/TG.2025.3608847</a
+            >) &lcub;eng&rcub;
+          </li>
+          <li>
+            Viktor J. Illmer, Nele Heindorf, Roya Zendebudie, Mark Schwindt, Frank Fischer:
+            <strong>Generating TEI Documents Through a Game of Dice.</strong> In: TEI2025: »New
+            Territories«. 16.–19. September 2025. Krakau. Book of Abstracts, S.&nbsp;109–110. (<a
+              href="https://doi.org/10.5281/zenodo.17312233">doi:10.5281/zenodo.17312233</a
+            >) &lcub;eng&rcub;
+          </li>
+        </ul>
+
+        <h2>Kurzanleitung</h2>
         <ol type="1">
           <li>
             Wirf zunächst einen Blick auf das
@@ -146,7 +165,7 @@
               href="https://commons.wikimedia.org/wiki/File:Simplicius_Wurftabelle_999_Lustspiele.pdf"
               >Wurftabelle</a
             >
-            um zu verstehen, worum es in der App geht.
+            um zu erfahren, worum es in der App geht.
           </li>
           <li>
             In der App kannst du auf den großen Würfel ganz oben klicken; dadurch wird für jede der
@@ -169,8 +188,8 @@
           </li>
           <li>
             Die englische Übersetzung aller Textsegmente wurde mit Unterstützung von ChatGPT
-            (GPT-4o) angefertigt und danach händisch überprüft. Se erhebt keinen Anspruch auf
-            Perfektion; einige historische Anspielungen und Wortspiele lassen sich nur schwer
+            (GPT-4o) angefertigt und danach von uns überprüft. Sie erhebt keinen Anspruch darauf
+            perfekt zu sein; einige historische Anspielungen und Wortspiele lassen sich nur schwer
             übertragen. Ziel war es vor allem, nicht-deutschsprachigen Nutzer*innen eine sinnvolle
             Verwendung der App zu ermöglichen.
           </li>
