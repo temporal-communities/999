@@ -8,8 +8,16 @@
 
 <Header>
   <HamburgerMenu showSourceToggle={false} />
-  <a class="absolute top-6 right-6 z-50" href={resolve("/")} aria-label={$locale === "de" ? "Zurück zur Startseite" : "Back to main page"}>
-    <img src={crossIcon} alt={$locale === "de" ? "Zurück zur Startseite" : "Back to main page"} class="h-[3.2rem] w-[3.2rem]" />
+  <a
+    class="absolute top-6 right-6 z-50"
+    href={resolve("/")}
+    aria-label={$locale === "de" ? "Zurück zur Startseite" : "Back to main page"}
+  >
+    <img
+      src={crossIcon}
+      alt={$locale === "de" ? "Zurück zur Startseite" : "Back to main page"}
+      class="h-[3.2rem] w-[3.2rem]"
+    />
   </a>
 
   <article class="p-8 text-left text-lg">
@@ -61,42 +69,43 @@
         <h2>How to Use</h2>
         <ol type="1">
           <li>
-              Begin by taking a look at the
-              <a
-                href="https://de.wikisource.org/wiki/Neunhundert_neun_und_neunzig_und_noch_etliche_Almanachs-Lustspiele_durch_den_W%C3%BCrfel"
-                >original 1829 book</a
-              >
-              and the associated
-              <a
-                href="https://commons.wikimedia.org/wiki/File:Simplicius_Wurftabelle_999_Lustspiele.pdf"
-                >dice table</a
-              >
-              to understand what the app sets out to do.
+            Begin by taking a look at the
+            <a
+              href="https://de.wikisource.org/wiki/Neunhundert_neun_und_neunzig_und_noch_etliche_Almanachs-Lustspiele_durch_den_W%C3%BCrfel"
+              >original 1829 book</a
+            >
+            and the associated
+            <a
+              href="https://commons.wikimedia.org/wiki/File:Simplicius_Wurftabelle_999_Lustspiele.pdf"
+              >dice table</a
+            >
+            to understand what the app sets out to do.
           </li>
           <li>
-              In the app, you can click on the large dice at the top. This rolls one of six variants
-              for each of the 200 different scenes. This is the simplest way to generate one of the
-              6<sup>200</sup> possible variants of the play.
+            In the app, you can click on the large dice at the top. This rolls one of six variants
+            for each of the 200 different scenes. This is the simplest way to generate one of the 6<sup
+              >200</sup
+            > possible variants of the play.
           </li>
           <li>
-              The main path highlighted in the centre of the screen represents the randomly
-              generated trajectory through the play. Each of the 200 scenes can be shifted left and
-              right to view all variants available for that scene.
+            The main path highlighted in the centre of the screen represents the randomly generated
+            trajectory through the play. Each of the 200 scenes can be shifted left and right to
+            view all variants available for that scene.
           </li>
           <li>
-              Any combination of scenes that constitutes a complete play can be shared via a unique
-              link (Share button at the bottom right).
+            Any combination of scenes that constitutes a complete play can be shared via a unique
+            link (Share button at the bottom right).
           </li>
           <li>
-              Any combination of scenes can be saved in the
-              <a href="https://en.wikipedia.org/wiki/Text_Encoding_Initiative">TEI format</a> (Download
-              button at the bottom right).
+            Any combination of scenes can be saved in the
+            <a href="https://en.wikipedia.org/wiki/Text_Encoding_Initiative">TEI format</a> (Download
+            button at the bottom right).
           </li>
           <li>
-              The English translation was produced with the assistance of ChatGPT (GPT-4o) and
-              subsequently checked manually. The translation does not aim to be perfect; several
-              historical allusions and wordplays are difficult to render. The main goal was to
-              enable non-German-speaking users to make meaningful use of the app.
+            The English translation was produced with the assistance of ChatGPT (GPT-4o) and
+            subsequently checked manually. The translation does not aim to be perfect; several
+            historical allusions and wordplays are difficult to render. The main goal was to enable
+            non-German-speaking users to make meaningful use of the app.
           </li>
         </ol>
 

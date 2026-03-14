@@ -184,7 +184,6 @@
     { mode: "allFive", label: "5" },
     { mode: "allSix", label: "6" }
   ]
-
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -198,11 +197,13 @@
       isRolling = true
     }}
   />
-  <a class="absolute top-6 right-6 z-50" href={resolve("/about")} aria-label={$locale === "de" ? "Über" : "About"}>
+  <a
+    class="absolute top-6 right-6 z-50"
+    href={resolve("/about")}
+    aria-label={$locale === "de" ? "Über" : "About"}
+  >
     <img src={infoIcon} alt={$locale === "de" ? "Über" : "About"} class="h-[3.2rem] w-[3.2rem]" />
   </a>
-
-
 
   {#if $locale === "de"}
     <div lang="de" class="max-w-[75ch]">
