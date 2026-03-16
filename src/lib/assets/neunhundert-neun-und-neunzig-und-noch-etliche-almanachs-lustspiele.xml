@@ -850,7 +850,7 @@
           <stage>Der Onkel. Der Liebhaber. (Beide zugleich herein.)</stage>
         </div>
         <pb n="21"/>
-        <div n="90" subtype="manicule-right" type="segment">
+        <div n="90" subtype="manicule-left" type="segment">
           <head>Vierter Auftritt.</head>
           <stage>Die Nichte. Der Liebhaber.</stage>
           <sp who="#liebhaberin">
@@ -1611,7 +1611,7 @@
             <p>Theures Mädchen. <stage>(Er umschlingt sie.)</stage></p>
           </sp>
         </div>
-        <div n="180" type="segment">
+        <div n="180" subtype="manicule-right" type="segment">
           <sp who="#onkel">
             <speaker>Der Oheim.</speaker>
             <p>Vergißmeinnichtgeschichten!</p>
@@ -3497,7 +3497,7 @@
           </sp>
         </div>
         <pb n="94"/>
-        <div n="415" type="segment">
+        <div n="415" subtype="manicule-right" type="segment">
           <spGrp>
             <sp who="#zofe">
               <speaker>Das Kammerm.</speaker>
