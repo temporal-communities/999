@@ -1,27 +1,31 @@
 import { browser } from "$app/environment"
 import diceChart from "$lib/assets/dice_chart.json"
-import almanacText from "$lib/assets/neunhundert-neun-und-neunzig-und-noch-etliche-almanachs-lustspiele.xml?raw"
+import germanAlmanacText from "$lib/assets/neunhundert-neun-und-neunzig-und-noch-etliche-almanachs-lustspiele.xml?raw"
+import englishAlmanacText from "$lib/assets/rolling-the-dice-for-999-and-many-more-almanac-comedies.xml?raw"
 import xslStyle from "$lib/assets/transform.xsl?raw"
 import { validateDiceChart, validateSegments } from "$lib/validate"
 import { xsltTransform } from "$lib/xslt"
 
-export class Almanac {
-  static segmentsCache: Record<string, string> | null = null
-  static segmentsPromise: Promise<Record<string, string>> | null = null
+type Locale = "de" | "en"
 
-  static getDom() {
+export class Almanac {
+  static segmentsCache: Partial<Record<Locale, Record<string, string>>> = {}
+  static segmentsPromise: Partial<Record<Locale, Promise<Record<string, string>>>> = {}
+
+  static getDom(locale: Locale = "de") {
     if (!browser) {
       throw new Error("getDom is only available in the browser")
     }
-    return new window.DOMParser().parseFromString(almanacText, "text/xml")
+    const text = locale === "de" ? germanAlmanacText : englishAlmanacText
+    return new window.DOMParser().parseFromString(text, "text/xml")
   }
 
-  static async getSegments(): Promise<Record<string, string>> {
-    if (this.segmentsCache) return this.segmentsCache
-    if (this.segmentsPromise) return this.segmentsPromise
+  static async getSegments(locale: Locale = "de"): Promise<Record<string, string>> {
+    if (this.segmentsCache[locale]) return this.segmentsCache[locale]!
+    if (this.segmentsPromise[locale]) return this.segmentsPromise[locale]!
 
-    this.segmentsPromise = (async () => {
-      const dom = this.getDom()
+    this.segmentsPromise[locale] = (async () => {
+      const dom = this.getDom(locale)
       const segments: Record<string, string> = {}
       const segmentDivs = dom.querySelectorAll('div[type="segment"]')
 
@@ -33,11 +37,11 @@ export class Almanac {
       await Promise.all(promises)
 
       validateSegments(segments, 200 * 6)
-      this.segmentsCache = segments
+      this.segmentsCache[locale] = segments
       return segments
     })()
 
-    return this.segmentsPromise
+    return this.segmentsPromise[locale]!
   }
 
   static getDiceChart() {
@@ -52,9 +56,9 @@ export class Almanac {
     return diceChart[roll - 1][pips - 1]
   }
 
-  static async getSegment(roll: number, pips: number): Promise<Segment> {
+  static async getSegment(roll: number, pips: number, locale: Locale = "de"): Promise<Segment> {
     const id = this.getSegmentId(roll, pips)
-    return { id, html: (await this.getSegments())[id] }
+    return { id, html: (await this.getSegments(locale))[id] }
   }
 }
 

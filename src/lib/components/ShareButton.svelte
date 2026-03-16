@@ -1,6 +1,6 @@
 <script lang="ts">
   import shareIcon from "$lib/assets/share-icon.svg"
-  import { locale } from "$lib/stores/locale"
+  import { locale, sourceLocale } from "$lib/stores/locale"
   import { fade } from "svelte/transition"
   import { downloadTEIDoc } from "$lib/tei"
 
@@ -40,7 +40,7 @@
   {#if showDialogue}
     <div
       transition:fade={{ duration: 200 }}
-      class="absolute right-20 bottom-0 rounded-lg border border-gray-300 bg-white p-3 shadow-lg"
+      class="absolute right-20 bottom-0 rounded-lg border border-gray-300 bg-white p-2 shadow-lg"
     >
       <button
         class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
@@ -48,13 +48,13 @@
       >
         ✕
       </button>
-      <p class="text-gray-700">
+      <p class="mb-1 text-gray-700">
         {$locale === "de"
           ? "Teile deinen gewürfelten Einakter:"
           : "Share your randomised one-act play:"}
       </p>
       <div
-        class="mt-2 flex flex-col items-center space-y-2 space-x-2 sm:flex-row sm:space-y-0 sm:space-x-2"
+        class="flex flex-col items-center space-y-2 space-x-2 sm:flex-row sm:space-y-0 sm:space-x-2"
       >
         <input type="text" class="rounded border bg-gray-100 p-1" value={sharingUrl} readonly />
         <button
@@ -71,10 +71,10 @@
         </button>
       </div>
       <!-- Download TEI file button -->
-      <div class="mt-3 flex justify-center">
+      <div class="mt-2 flex justify-center">
         <button
           class="w-full cursor-pointer rounded bg-sky-800 p-1 text-white transition hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
-          onclick={() => downloadTEIDoc([...sequence])}
+          onclick={() => downloadTEIDoc([...sequence], $sourceLocale)}
         >
           {$locale === "de" ? "TEI-Dokument herunterladen" : "Download TEI document"}
         </button>

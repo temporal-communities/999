@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Almanac } from "$lib/almanac"
+  import { sourceLocale } from "$lib/stores/locale"
 
   // Object containing dice asset URLs: { "1": <url>, "2": <url> } etc.
   const DiceAssets = Object.entries(
@@ -21,7 +22,7 @@
   } = $props()
 
   // Read segmentId from diceChart
-  let segmentPromise = Almanac.getSegment(index, pips)
+  let segmentPromise = $derived(Almanac.getSegment(index, pips, $sourceLocale))
 </script>
 
 {#await segmentPromise}
